@@ -5,7 +5,7 @@ function NavBar() {
     <nav className="bg-purple-300 w-full p-4">
       <div className="flex justify-between items-center">
       <div className='flex items-center'>
-        <a className='text-gray-900' href="#">Categories</a>
+        <a className='text-white text-lg' href="#">Categories</a>
 
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center justify-center pl-3 pointer-events-none">
