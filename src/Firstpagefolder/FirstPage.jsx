@@ -6,7 +6,7 @@ import MainSection from "./MainSection"
 function FirstPage (){
     return(     
         <>
-
+            <NavBar />
             <MainSection />
             <Footer/>
             
