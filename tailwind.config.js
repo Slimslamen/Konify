@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        libre: ['"League Spartan"', ...defaultTheme.fontFamily.sans]
+        Playfair : ['Playfair Display']
       }
     },
   },
