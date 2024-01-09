@@ -1,5 +1,5 @@
 import React from "react"
-import NavBar from "./NavBar"
+import Footer from "./Footer"
 import MainSection from "./MainSection"
 
 
@@ -8,6 +8,7 @@ function FirstPage (){
         <>
             <NavBar />
             <MainSection />
+            <Footer/>
             
         </>
     )
