@@ -38,7 +38,7 @@ function NavBar() {
 
         {/* Konify with Fashion - center */}
         <div className=" flex flex-col items-center text-center justify-self-center">
-          <h1 className="font-libre mb-0 font-bold text-4xl">Konify .</h1>
+          <h1 className="font-libre mb-0 font-bold xs:text-3xl sm:text-4xl">Konify .</h1>
           <h4 className="font-libre mt-0 text-xs tracking-widest">Fashion</h4>
         </div>
 
