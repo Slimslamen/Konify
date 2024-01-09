@@ -1,6 +1,7 @@
 import React from "react"
 import Footer from "./Footer"
 import MainSection from "./MainSection"
+import NavBar from "./NavBar"
 
 
 function FirstPage (){
