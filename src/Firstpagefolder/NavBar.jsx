@@ -3,7 +3,7 @@ function NavBar () {
     return (
         <nav className="bg-purple-300 fixed top-0 w-full z-10">
         <span className="text-gray-900">Categories</span>
-  <div className="max-w-screen-xl flex flex-wrap mx-auto p-4">
+  <div className="max-w-screen-xl flex mx-auto p-4">
   <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
       <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
@@ -28,17 +28,13 @@ function NavBar () {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
           </svg>
         </div>
-
       </div>
-    <div className="flex flex-col items-center">
+ </div>
+ <div className="flex flex-col items-center justify-center">
         <h1 className="font-libre font-bold text-4xl">Konify .</h1>
         <h4 className="font-libre text-xs tracking-widest">Fashion</h4>
     </div>
-
-
- </div>
- 
- <div className="flex justify-self-end space-x-10">
+ <div className="flex items-center space-x-10 ml-auto">
       <Icon icon="mdi:heart-outline" className="w-8 h-8 text-gray-900" />
       <Icon icon="material-symbols:mail-outline" className="w-8 h-8 text-gray-900" />
       <Icon icon="mdi:cart-outline" className="w-8 h-8 text-gray-900" />
