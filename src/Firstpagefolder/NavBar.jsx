@@ -43,11 +43,11 @@ function NavBar() {
         </div>
 
         {/* Icons - right */}
-        <div className=" md:col-span-2 flex items-center space-x-10 hidden md:inline-flex justify-self-end">
-          <a href="#">Login</a>
-          <Icon icon="mdi:heart-outline" className="w-8 h-8 text-gray-900" />
-          <Icon icon="material-symbols:mail-outline" className="w-8 h-8 text-gray-900" />
-          <Icon icon="mdi:cart-outline" className="w-8 h-8 text-gray-900" />
+        <div className=" md:col-span-2 flex items-center space-x-5 md:inline-flex justify-self-end">
+          <a href="#" className="hidden sm:inline-block">Login</a>
+          <Icon icon="mdi:heart-outline" className=" md:w-8 h-8 text-gray-900" />
+          <Icon icon="material-symbols:mail-outline" className=" md:w-8 h-8 text-gray-900" />
+          <Icon icon="mdi:cart-outline" className=" md:w-8 h-8 text-gray-900" />
         </div>
       </div>
     </nav>
