@@ -42,7 +42,7 @@ function NavBar() {
           <h4 className="font-libre mt-0 text-xs tracking-widest">Fashion</h4>
         </div>
 
-        {/* Icons - right */}
+        {/* Icons  right */}
         <div className=" md:col-span-2 flex items-center space-x-5 md:inline-flex justify-self-end">
           <a href="#" className="hidden sm:inline-block">Login</a>
           <Icon icon="mdi:heart-outline" className=" md:w-8 h-8 text-gray-900" />
