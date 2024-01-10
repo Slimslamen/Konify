@@ -3,7 +3,7 @@ import '../style.css';
 
 function NavBar() {
   return (
-    <nav className="bg-purple-300 w-full p-2">
+    <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
       <div className="grid grid-cols-3 flex-row md:grid-cols-5 justify-items-center items-center">
         {/* Categories - left */}
         <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start" href="#">
