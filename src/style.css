@@ -4,4 +4,23 @@
 .inset-shadow {
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2); 
   }
-
+.animation{
+  animation: movebtn 2s ease-in-out infinite;
+}
+@keyframes movebtn {
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(3px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  75%{
+    transform: translateY(-3px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
