@@ -3,7 +3,7 @@ import '../style.css';
 
 function NavBar() {
   return (
-    <nav className="bg-purple-300 w-full p-2">
+    <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
       <div className="grid grid-cols-3 flex-row md:grid-cols-5 justify-items-center items-center">
         {/* Categories - left */}
         <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start" href="#">
@@ -43,11 +43,11 @@ function NavBar() {
         </div>
 
         {/* Icons - right */}
-        <div className=" md:col-span-2 flex items-center space-x-10 hidden md:inline-flex justify-self-end">
-          <a href="#">Login</a>
-          <Icon icon="mdi:heart-outline" className="w-8 h-8 text-gray-900" />
-          <Icon icon="material-symbols:mail-outline" className="w-8 h-8 text-gray-900" />
-          <Icon icon="mdi:cart-outline" className="w-8 h-8 text-gray-900" />
+        <div className=" md:col-span-2 flex items-center space-x-2 md:inline-flex justify-self-end">
+          <a href="#" className="hidden sm:inline-block">Login</a>
+          <Icon icon="mdi:heart-outline" className="md:w-8 h-8 text-gray-900" />
+          <Icon icon="material-symbols:mail-outline" className="md:w-8 h-8  text-gray-900" />
+          <Icon icon="mdi:cart-outline" className="md:w-8 h-8 text-gray-900" />
         </div>
       </div>
     </nav>
