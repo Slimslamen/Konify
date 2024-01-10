@@ -26,7 +26,7 @@ function Footer () {
             </ul>
         </div>
         <div>
-            <h2 className="mb-6 text-4xl text-center md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white">Konify</h2>
+          <a href="#">  <h2 className="mb-6 text-2xl text-center md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white">Konify</h2></a>
             <ul className="text-gray-500 dark:text-gray-400 font-medium hidden md:block">
                 <li className="mb-4">
                     <a href="#" className=" hover:underline">About us</a>
@@ -40,7 +40,7 @@ function Footer () {
             </ul>
         </div>
         <div>
-            <h2 className="mb-6 text-4xl text-center md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white">Customer Service</h2>
+          <a href="#">  <h2 className="mb-6 text-2xl text-center md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white">Customer Service</h2></a>
             <ul className="text-gray-500 dark:text-gray-400 font-medium hidden md:block">
                 <li className="mb-4">
                     <a href="#" className="hover:underline">Contact us</a>
@@ -54,7 +54,7 @@ function Footer () {
             </ul>
         </div>
         <div>
-            <h2 className="mb-6 text-4xl text-center md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white">Terms & Conditions</h2>
+           <a href="#"> <h2 className="mb-6 text-2xl text-center md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white">Terms & Conditions</h2></a>
             <ul className="text-gray-500 dark:text-gray-400 font-medium hidden md:block">
                 <li className="mb-4">
                     <a href="#" className="hover:underline">Terms of use</a>
@@ -68,7 +68,7 @@ function Footer () {
             </ul>
         </div>
         <div>
-            <h2 className="mb-6 text-4xl text-center md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white">Clothes</h2>
+           <a href="#"> <h2 className="mb-6 text-2xl text-center md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white">Clothes</h2></a>
             <ul className="text-gray-500 dark:text-gray-400 font-large md:font-medium hidden md:block">
                 <li className="mb-4">
                     <a href="#" className="hover:underline">Size Guide</a>
