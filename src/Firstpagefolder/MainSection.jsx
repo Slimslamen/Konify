@@ -35,13 +35,11 @@ function MainSection (){
                                 </p>
                             </button>
                             </Link>
-                            <Link >
                             <button className="text-4xl font-Playfair hover:text-purple-900 opacity-45">  
                                 <p className="bg-purple-300 bg-opacity-47 w-48 h-16 flex justify-center items-center opacity-100">
                                     NEWS
                                 </p>
                             </button>
-                            </Link>
                         </div>
                 </section>    
             </main>
@@ -50,7 +48,6 @@ function MainSection (){
         
         <Routes>
             <Route path="/Tshirts" element={<Tshirts />}/>
-           {/*  <Route path="/" element={<MainSection />}/> */}
         </Routes>
         </>
     )
