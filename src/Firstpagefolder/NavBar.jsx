@@ -8,7 +8,7 @@ function NavBar() {
         {/* Categories - left */}
         <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start" href="#">
           Categories
-        </a>
+        </a>  
         <div className="relative hidden md:inline">
           <div className="border-r border-gray-500 absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
@@ -51,6 +51,7 @@ function NavBar() {
         </div>
       </div>
     </nav>
+
   );
 }
 
