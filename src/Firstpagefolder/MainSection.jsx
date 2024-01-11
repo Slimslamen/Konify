@@ -28,15 +28,13 @@ function MainSection (){
                     className="md:w-1/2 h-1/2 md:h-full" />
                 {/* Buttons for sales and news */}
                         <div className="buttonsMain flex flex-col md:flex-row absolute top-[57%] md:top-[80%] left-1/2 translate-x-[-50%] ">
-                            <Link to={"/Tshirts"}>
-                            <button className="text-4xl font-Playfair z-10 top-50 mb-5 md:mb-0 hover:text-purple-900 opacity-45">
-                                <p className="bg-purple-300 bg-opacity-47 w-48 h-16 flex justify-center items-center opacity-100">
+                            <button className="text-4xl font-Playfair z-10 top-50 mb-5 md:mb-0 hover:text-purple-900">
+                                <p className="bg-purple-300  w-48 h-16 flex justify-center items-center bg-opacity-45 hover:bg-opacity-50">
                                     SALES
                                 </p>
                             </button>
-                            </Link>
-                            <button className="text-4xl font-Playfair hover:text-purple-900 opacity-45">  
-                                <p className="bg-purple-300 bg-opacity-47 w-48 h-16 flex justify-center items-center opacity-100">
+                            <button className="text-4xl font-Playfair z-10 top-50 mb-5 md:mb-0 hover:text-purple-900 ">  
+                                <p className="bg-purple-300  w-48 h-16 flex justify-center items-center bg-opacity-45 hover:bg-opacity-50">
                                     NEWS
                                 </p>
                             </button>
@@ -45,10 +43,6 @@ function MainSection (){
             </main>
                  <Scroll />
         </div>
-        
-        <Routes>
-            <Route path="/Tshirts" element={<Tshirts />}/>
-        </Routes>
         </>
     )
 }
