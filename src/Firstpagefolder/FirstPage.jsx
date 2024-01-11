@@ -5,12 +5,12 @@ import NavBar from "./NavBar"
 
 
 function FirstPage (){
+
     return(     
         <>
             <NavBar />
             <MainSection />
             <Footer/>
-            
         </>
     )
 }
