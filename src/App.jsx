@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import FirstPage from './Firstpagefolder/FirstPage'
-import { BrowserRouter } from 'react-router-dom'
+import Tshirts from './Tshirts/Tshirts'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,6 +9,7 @@ function App() {
   return (
     <>
         <FirstPage />
+        <Tshirts />
     </>
   )
 }
