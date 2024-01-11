@@ -1,12 +1,12 @@
 import FirstPage from './Firstpagefolder/FirstPage'
-import Tshirts from './Tshirts/Tshirts'
+import TshirtList from './Tshirts/TshirtList'
 
 
 function App() {
   return (
     <>
         <FirstPage />
-        <Tshirts />
+        <TshirtList numberOfTshirts={4} /> {/*Ändra siffran för att bestämma hur många produkter vi vill visa */}
     </>
   )
 }
