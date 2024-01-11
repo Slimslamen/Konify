@@ -1,14 +1,26 @@
 import { Icon } from '@iconify/react';
 import '../style.css';
+import SidebarMenu from './SidebarMenu';
+import { useState } from 'react';
+import Searchbar from './searchbar';
 
 function NavBar() {
+  const [isMenuVisible, setMenuVisible] = useState(false)
+  function toggleMenu() {
+      return setMenuVisible(!isMenuVisible);
+  }
   return (
+    <>
     <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
       <div className="grid grid-cols-3 flex-row md:grid-cols-5 justify-items-center items-center">
         {/* Categories - left */}
-        <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start" href="#">
-          Categories
+        
+          <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start" 
+          onClick={toggleMenu}>
+        Categories
         </a>
+      
+        
         <div className="relative hidden md:inline">
           <div className="border-r border-gray-500 absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
@@ -51,6 +63,13 @@ function NavBar() {
         </div>
       </div>
     </nav>
+    {isMenuVisible && (
+        <div>
+          <Searchbar visible={false} />
+          <SidebarMenu />
+        </div>
+  )}
+  </>
   );
 }
 
