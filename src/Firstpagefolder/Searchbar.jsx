@@ -1,11 +1,7 @@
-function Searchbar () {
-    function isVisible (){
-        if (window.innerWidth < "400px" ){
-            return true
-        }
-    }
+function Searchbar ( {visible} ) {
+        
     return (
-    <div className="relative hidden md:inline">
+    <div className="md:relative hidden">
           <div className="border-r border-gray-500 absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
               className="w-4 h-4 mr-1 text-gray-500 dark:text-gray-400"
