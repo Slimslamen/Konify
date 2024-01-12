@@ -9,17 +9,22 @@ function NavBar() {
   function toggleMenu() {
       return setMenuVisible(!isMenuVisible);
   }
+  const [isVisible, setVisible] = useState(false)
+  function toggleSearchBar() {
+      return setVisible(!isVisible);
+  }
   return (
     <>
     <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
       <div className="grid grid-cols-3 flex-row md:grid-cols-5 justify-items-center items-center">
-        {/* Categories - left */}
+        {/*Categories - left */}
         
-          <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start" 
+        <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start cursor-pointer" 
           onClick={toggleMenu}>
         Categories
         
-        </a>
+        </a> 
+
       
         
         <div className="relative hidden md:inline">
@@ -65,9 +70,9 @@ function NavBar() {
         </div>
       </div>
     </nav>
-    {isMenuVisible && (
-        <div className="bg-purple-300 w-[180px] h-80 md:w-65 md:h-96 space-y-3 absolute z-10 rounded-br-lg">
-          <Searchbar isVisible />
+    {isMenuVisible &&(
+        <div className="bg-purple-300 w-[180px] h-96 md:w-65 md:h-96 space-y-3 fixed z-10 rounded-br-lg">
+          <Searchbar />
           <SidebarMenu />
         </div>
   )}
