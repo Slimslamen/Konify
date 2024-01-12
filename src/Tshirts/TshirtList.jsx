@@ -7,7 +7,7 @@ import Tshirts from "./Tshirts";
 const Product_URL = 'https://api.escuelajs.co/api/v1/products';
 
 //list of T-shirts
-function TshirtList({ numberOfTshirts }) {
+function TshirtList({numberOfTshirts}) {
 
     // A state to store the fetched products
   const [products, setProducts] = useState([]);
@@ -34,7 +34,7 @@ function TshirtList({ numberOfTshirts }) {
   return (
     <>
     <NavBar/>
-    <main >
+    <main>
     <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
                 <img 
                 src="src/images/Tshirtimg.jpg" 
@@ -57,19 +57,17 @@ function TshirtList({ numberOfTshirts }) {
                 </div>
                 <button className="hover:font-semibold">Sort</button>
       </section>
-      <section className="flex flex-wrap">
+      <section className="md:w-9/12 mx-auto flex flex-wrap">
       {/* Maping over the products array and render Tshirts component and CardBtn for each product */}
       {products.map((product) => (
-      <>
             
-      <Tshirts
-        key={product.id}
-        id={product.id}
-        imageUrl={product.images}
-        title={product.title}
-      />
-    </>
-      ))}
+            <Tshirts
+              key={product.id}
+              id={product.id}
+              imageUrl={product.category.image}
+              title={product.title}
+            />
+           ))}
       </section>
     </main>
     <Footer />

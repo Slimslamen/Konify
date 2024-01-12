@@ -6,7 +6,7 @@ function App() {
   return (
     <>
         <FirstPage />
-        <TshirtList numberOfTshirts={4} /> {/*Ändra siffran för att bestämma hur många produkter vi vill visa */}
+        <TshirtList numberOfTshirts={8} /> {/*Ändra siffran för att bestämma hur många produkter vi vill visa */}
     </>
   )
 }
