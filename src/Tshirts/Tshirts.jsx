@@ -16,3 +16,4 @@ const Tshirts = ({ id, imageUrl, title }) => (
 );
 
 export default Tshirts;
+
