@@ -58,6 +58,7 @@ function NavBar() {
         {/* Icons  right */}
         <div className=" md:col-span-2 flex items-center space-x-5 md:inline-flex justify-self-end">
           <a href="#" className="hidden sm:inline-block">Login</a>
+          <Icon icon="material-symbols:home-outline" className='md:w-8 h-8' />
           <Icon icon="mdi:heart-outline" className=" md:w-8 h-8 text-gray-900" />
           <Icon icon="material-symbols:mail-outline" className=" md:w-8 h-8 text-gray-900" />
           <Icon icon="mdi:cart-outline" className=" md:w-8 h-8 text-gray-900" />
