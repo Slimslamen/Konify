@@ -3,6 +3,7 @@ import Footer from "../Firstpagefolder/Footer.jsx";
 import { useState, useEffect } from "react";
 import Tshirts from "./Tshirts";
 import FilterSortButton from "./FilterSortButton.jsx";
+import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
 
 // API URL for fetching product data
 const Product_URL = 'https://api.escuelajs.co/api/v1/products';
@@ -42,12 +43,9 @@ function TshirtList({numberOfTshirts}) {
                 alt="Girl with grey shirt" 
                 className="h-[300px] md:h-[500px] w-full"
                 />
-                <div className="font-Playfair bg-opacity-50 bg-purple-300 w-68 flex justify-center items-center absolute top-1/3 left-1/2 translate-x-[-50%] z-10">
-                    <h1 
-                    className="p-4 flex justify-center items-center opacity-100 text-4xl md:text-6xl text-slate-950 z-20">
-                        T-SHIRTS
-                    </h1>
-                </div>
+                <div className="font-Playfair flex justify-center items-center absolute top-1/3 left-1/2 translate-x-[-50%] z-10">
+<ImageTitle title="TSHIRTS" />
+             </div>
             </section>
             <section className="flex flex-row justify-between m-5 text-xl md:mx-48">
                 <div className="flex flex-row justify-between w-1/3">

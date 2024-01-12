@@ -2,6 +2,7 @@ import React from "react"
 import Scroll from "../Scroll"
 import { Routes, Route, Link } from "react-router-dom"
 import Tshirts from "../Tshirts/Tshirts"
+import ImageTitle from "./ImageTitle"
 
 function MainSection (){
 
@@ -28,16 +29,9 @@ function MainSection (){
                     className="md:w-1/2 h-1/2 md:h-full" />
                 {/* Buttons for sales and news */}
                         <div className="buttonsMain flex flex-col md:flex-row absolute top-[57%] md:top-[80%] left-1/2 translate-x-[-50%] ">
-                            <button className="text-4xl font-Playfair z-10 top-50 mb-5 md:mb-0 hover:text-purple-900">
-                                <p className="bg-purple-300  w-48 h-16 flex justify-center items-center bg-opacity-45 hover:bg-opacity-50">
-                                    SALES
-                                </p>
-                            </button>
-                            <button className="text-4xl font-Playfair z-10 top-50 mb-5 md:mb-0 hover:text-purple-900 ">  
-                                <p className="bg-purple-300  w-48 h-16 flex justify-center items-center bg-opacity-45 hover:bg-opacity-50">
-                                    NEWS
-                                </p>
-                            </button>
+         <ImageTitle title="SALE" />
+         <ImageTitle title="NEWS" />
+
                         </div>
                 </section>    
             </main>
