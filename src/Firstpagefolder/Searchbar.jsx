@@ -1,4 +1,9 @@
-function Searchbar ( {visible} ) {
+function Searchbar () {
+    function isVisible (){
+        if (window.innerWidth < "400px" ){
+            return true
+        }
+    }
     return (
     <div className="relative hidden md:inline">
           <div className="border-r border-gray-500 absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

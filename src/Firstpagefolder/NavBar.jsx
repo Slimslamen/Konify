@@ -18,6 +18,7 @@ function NavBar() {
           <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start" 
           onClick={toggleMenu}>
         Categories
+        
         </a>
       
         
@@ -43,7 +44,7 @@ function NavBar() {
             type="search"
             id="default-search"
             className="inset-shadow w-full px-4 py-4 pl-12 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search product..."
+            placeholder="Search product.. ."
             required
           />
         </div>
@@ -64,8 +65,8 @@ function NavBar() {
       </div>
     </nav>
     {isMenuVisible && (
-        <div>
-          <Searchbar visible={false} />
+        <div className="bg-purple-300 w-[180px] h-80 md:w-65 md:h-96 space-y-3 absolute z-10 rounded-br-lg">
+          <Searchbar isVisible />
           <SidebarMenu />
         </div>
   )}
