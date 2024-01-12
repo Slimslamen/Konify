@@ -2,6 +2,7 @@ import NavBar from "../Firstpagefolder/NavBar.jsx";
 import Footer from "../Firstpagefolder/Footer.jsx";
 import { useState, useEffect } from "react";
 import Tshirts from "./Tshirts";
+import FilterSortButton from "./FilterSortButton.jsx";
 
 // API URL for fetching product data
 const Product_URL = 'https://api.escuelajs.co/api/v1/products';
@@ -50,12 +51,9 @@ function TshirtList({numberOfTshirts}) {
             </section>
             <section className="flex flex-row justify-between m-5 text-xl md:mx-48">
                 <div className="flex flex-row justify-between w-1/3">
-                    <button className="hidden md:block hover:font-semibold">Price-Range</button>
-                    <button className="hidden md:block hover:font-semibold">Size</button>
-                    <button className="hidden md:block hover:font-semibold">Colour</button>
-                    <button className="md:hidden">Filter</button>
+               <FilterSortButton name="Filter" op1="price-Range" op2="Size" op3="Colour"/>
                 </div>
-                <button className="hover:font-semibold">Sort</button>
+                <FilterSortButton name="Sort" op1="Högsta pris" op2="Lägsta pris" op3="Pupularitet"/>
       </section>
       <section className="md:w-9/12 mx-auto flex flex-wrap">
       {/* Maping over the products array and render Tshirts component and CardBtn for each product */}
