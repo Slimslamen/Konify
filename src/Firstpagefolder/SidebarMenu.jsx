@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 function SidebarMenu () {
     const links = [
-        { title: "sweatshirts", path: "/sweatshirt" },
-        { title: "blouses", path: "/blouses" },
+        { title: "sweatshirts", path: "/Sweatshirt" },
+        { title: "blouses", path: "/Blouses" },
         { title: "t-shirts", path: "/Tshirts" },
-        { title: "jeans", path: "/jeans" },
-        { title: "skirts", path: "/skirts" },
-        { title: "dresses", path: "/dresses" },
-        { title: "sales", path: "/sales" },
-        { title: "news", path: "/news" },
+        { title: "jeans", path: "/Jeans" },
+        { title: "skirts", path: "/Skirts" },
+        { title: "dresses", path: "/Dress" },
+        { title: "sales", path: "/Sales" },
+        { title: "news", path: "/News" },
       ];
 
     return (
