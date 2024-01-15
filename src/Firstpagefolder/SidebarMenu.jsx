@@ -1,11 +1,11 @@
-import { Route, Routes, Link, useNavigate } from "react-router-dom";
-import Tshirts from "../Tshirts/Tshirts";
+import { Route, Routes, Link, } from "react-router-dom";
+import TshirtList from "../Tshirts/TshirtList";
 
 function SidebarMenu () {
     const links = [
         { title: "sweatshirt", path: "/sweatshirt" },
         { title: "blouses", path: "/blouses" },
-        { title: "t-shirts", path: "/tshirts" },
+        { title: "t-shirts", path: "/Tshirt" },
         { title: "jeans", path: "/jeans" },
         { title: "skirts", path: "/skirts" },
         { title: "dresses", path: "/dresses" },
@@ -13,11 +13,6 @@ function SidebarMenu () {
         { title: "news", path: "/news" },
       ];
 
-    const navigate = useNavigate();
-
-  const handleLinkClick = (path) => {
-    navigate(path);
-  };
     return (
         <>
          {links.map((link)=>(
@@ -26,15 +21,12 @@ function SidebarMenu () {
                     <Link className="cursor-pointer hover:font-bold ml-5 uppercase font-semibold font-libre" key={link.title} to={link.path}>{link.title}</Link>
                 </div>
             </div>
-         ))
-
-        }
+         ))}
 
         <Routes>
           <Route
-            key={t-shirts}
-            path="/tshirts"
-            element={<Tshirts />}
+            path="/Tshirt"
+            element={<TshirtList />}
           />
 
         </Routes>
