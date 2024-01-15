@@ -1,7 +1,7 @@
 import FirstPage from './Firstpagefolder/FirstPage'
 import Tshirts from './Tshirts/Tshirts'
 import Sale from './Tshirts/Sale'
-import Blouses from './Tshirts/blouses'
+import Dress from './Tshirts/Dress'
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
         <FirstPage />
         <Tshirts />
-        <Blouses />
+        <Dress />
     </>
   )
 }
