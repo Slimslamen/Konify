@@ -1,26 +1,36 @@
-import CardBtn from "./CardBtn.jsx";
+import NavBar from "../Firstpagefolder/NavBar.jsx";
+import Footer from "../Firstpagefolder/Footer.jsx";
+import ProductList from "./ProductList.jsx";
+import FilterSortButton from "./FilterSortButton.jsx";
+import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
 
-//an individual T-shirt item
-const Tshirts = ({ id, imageUrl, title }) => {
-    console.log("Product:", { id, imageUrl, title });
-  
-  return (<div className="tshirt-item p-4 w-1/1 md:w-1/2 lg:w-1/4">
-    <div className="min-h-[250px]">
-    <img
-    
-      key={id}
-      src={imageUrl}
-      alt={title}
-      className="max-w-full mb-2"
-    />
-     {/* Putting the CardBtn component below the image */}
-     </div>
-     <CardBtn/>
-    
-  </div>
-  )
-};
+function Tshirts () {
+return (
+        <>
+        <NavBar/>
+        <main>
+        <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
+                    <img 
+                    src="src/images/Tshirtimg.jpg" 
+                    alt="Girl with grey shirt" 
+                    className="h-[300px] md:h-[500px] w-full"
+                    />
+                    <div className="font-Playfair flex justify-center items-center absolute top-1/3 left-1/2 translate-x-[-50%] z-10">
+    <ImageTitle title="TSHIRTS" />
+                 </div>
+                </section>
+                <section className="flex flex-row justify-between m-5 text-xl md:mx-48">
+                    <div className="flex flex-row justify-between w-1/3">
+                   <FilterSortButton name="Filter" op1="price-Range" op2="Size" op3="Colour"/>
+                    </div>
+                    <FilterSortButton name="Sort" op1="Högsta pris" op2="Lägsta pris" op3="Pupularitet"/>
+          </section>
+          <ProductList numberOfproducts={8} /> {/*Ändra siffran för att bestämma hur många produkter vi vill visa */}
+        </main>
+        <Footer />
+        </>
+      );
+
+}
 
 export default Tshirts;
-
-
