@@ -38,7 +38,7 @@ function MainSection (){
                  <Scroll />
         </div>
         </>
-    )
+    );
 }
 
-export default MainSection
+export default MainSection;
