@@ -1,7 +1,5 @@
-import React from "react"
 import Scroll from "../Scroll"
-import { Routes, Route, Link } from "react-router-dom"
-import Tshirts from "../Pages/Tshirts"
+import { Link } from "react-router-dom"
 import ImageTitle from "./ImageTitle"
 
 function MainSection (){
@@ -29,8 +27,8 @@ function MainSection (){
                     className="md:w-1/2 h-1/2 md:h-full" />
                 {/* Buttons for sales and news */}
                         <div className="buttonsMain flex flex-col md:flex-row absolute top-[57%] md:top-[80%] left-1/2 translate-x-[-50%] ">
-         <ImageTitle title="SALE" />
-         <ImageTitle title="NEWS" />
+        <Link to="/Sales"> <ImageTitle title="SALE" /></Link>
+         <Link to="/News"> <ImageTitle title="NEWS" /></Link>
 
                         </div>
                 </section>    

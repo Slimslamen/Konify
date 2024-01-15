@@ -7,6 +7,7 @@ import Skirts from './Pages/Skirts'
 import Dress from './Pages/Dress'
 import Sale from './Pages/Sale'
 import News from './Pages/News'
+import Productdetails from './Productpage/Productdetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
@@ -51,6 +52,10 @@ function App() {
              <Route
             path="/News"
             element={<News />}
+            />
+            <Route 
+            path="/Productdetails"
+            element={<Productdetails />}
             />
         </Routes>
       </BrowserRouter>
