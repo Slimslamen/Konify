@@ -1,8 +1,13 @@
+import Size from "./Size";
 function SelectSize (){
     return (
-        <div>
+        <div classNme="flex flex-row">
             <p>Select size</p>
-            <div><span>{size}</span></div>
+            <Size size="XS"/>
+            <Size size="S"/>
+            <Size size="M"/>
+            <Size size="L"/>
+            <Size size="XL"/>
         </div>
     )
 }

@@ -9,6 +9,7 @@ import Sale from './Pages/Sale'
 import News from './Pages/News'
 import Productdetails from './Productpage/Productdetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import SelectSize from './Productpage/SelectSize'
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
             />
         </Routes>
       </BrowserRouter>
+      <SelectSize />
     </>
   )
 }
