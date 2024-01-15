@@ -1,15 +1,28 @@
 import FirstPage from './Firstpagefolder/FirstPage'
-import Tshirts from './Tshirts/Tshirts'
-import Sale from './Tshirts/Sale'
-import Blouses from './Tshirts/blouses'
+import Blouses from './Pages/blouses'
+import Tshirts from './Pages/Tshirts'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 function App() {
   return (
     <>
-        <FirstPage />
-        <Tshirts />
-        <Blouses />
+      <BrowserRouter>
+        <Routes>
+            <Route 
+              path="/"
+              element={<FirstPage />}
+            />
+            <Route
+              path="/Tshirts"
+              element={<Tshirts />}
+            />
+            <Route
+            path="/Blouses"
+            element={<Blouses />}
+            />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

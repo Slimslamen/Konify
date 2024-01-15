@@ -1,5 +1,5 @@
-import { Route, Routes, Link, } from "react-router-dom";
-import Tshirts from "../Tshirts/Tshirts";
+import { Link } from "react-router-dom";
+
 
 function SidebarMenu () {
     const links = [
@@ -23,14 +23,6 @@ function SidebarMenu () {
             </div>
          ))}
 
-        <Routes>
-          <Route
-            key={Tshirts}
-            path="../Tshirts/Tshirts"
-            element={<Tshirts />}
-          />
-
-        </Routes>
     </>
     )
 }
