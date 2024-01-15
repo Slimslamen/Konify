@@ -1,7 +1,7 @@
 import Size from "./Size";
 function SelectSize (){
     return (
-        <div classNme="flex flex-row">
+        <div className="flex flex-row">
             <p>Select size</p>
             <Size size="XS"/>
             <Size size="S"/>
