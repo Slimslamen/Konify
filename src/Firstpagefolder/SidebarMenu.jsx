@@ -3,9 +3,9 @@ import TshirtList from "../Tshirts/TshirtList";
 
 function SidebarMenu () {
     const links = [
-        { title: "sweatshirt", path: "/sweatshirt" },
+        { title: "sweatshirts", path: "/sweatshirt" },
         { title: "blouses", path: "/blouses" },
-        { title: "t-shirts", path: "/Tshirt" },
+        { title: "t-shirts", path: "/Tshirts" },
         { title: "jeans", path: "/jeans" },
         { title: "skirts", path: "/skirts" },
         { title: "dresses", path: "/dresses" },
@@ -25,8 +25,9 @@ function SidebarMenu () {
 
         <Routes>
           <Route
-            path="/Tshirt"
-            element={<TshirtList />}
+            key={Tshirts}
+            path="/Tshirts"
+            element={<Tshirts />}
           />
 
         </Routes>
