@@ -10,10 +10,6 @@ function NavBar() {
   function toggleMenu() {
     return setMenuVisible(!isMenuVisible);
   }
-  // const [isVisible, setVisible] = useState(false)
-  // function toggleSearchBar() {
-  //     return setVisible(!isVisible);
-  // }
   return (
     <>
     <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
@@ -32,7 +28,7 @@ function NavBar() {
         </div>
 
         {/* Icons  right */}
-        <div className="md:col-span-1 flex items-center space-x-2 md:space-x-5 md:inline-flex justify-self-end">
+        <div className="md:col-span-1 flex items-center space-x-2 md:space-x-5 md:inline-flex justify-self-end cursor-pointer">
           <a href="#" className="hidden sm:inline-block">Login</a>
           <Link to="/"><Icon icon="material-symbols:home-outline" className='md:w-8 h-8' /></Link>
           <Icon icon="mdi:heart-outline" className=" md:w-8 h-8 text-gray-900" />

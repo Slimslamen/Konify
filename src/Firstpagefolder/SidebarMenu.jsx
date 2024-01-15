@@ -5,7 +5,7 @@ function SidebarMenu () {
     const links = [
         { title: "sweatshirts", path: "/sweatshirt" },
         { title: "blouses", path: "/blouses" },
-        { title: "t-shirts", path: "/Tshirts" },
+        { title: "t-shirts", path: "../Tshirts/Tshirts" },
         { title: "jeans", path: "/jeans" },
         { title: "skirts", path: "/skirts" },
         { title: "dresses", path: "/dresses" },
