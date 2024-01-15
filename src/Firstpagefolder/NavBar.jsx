@@ -16,7 +16,7 @@ function NavBar() {
   return (
     <>
     <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
-      <div className="grid grid-cols-3 flex-row md:grid-cols-4 justify-items-center items-center">
+      <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center">
         {/*Categories - left */}
         
         <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start cursor-pointer hover:font-semibold" 
@@ -25,13 +25,13 @@ function NavBar() {
         </a> 
 
         {/* Konify with Fashion - center */}
-        <div className=" flex flex-col items-center text-center justify-self-end">
+        <div className=" flex flex-col items-center text-center justify-self-center">
           <h1 className="font-libre mb-0 font-bold xs:text-3xl sm:text-4xl">Konify .</h1>
           <h4 className="font-libre mt-0 text-xs tracking-widest">Fashion</h4>
         </div>
 
         {/* Icons  right */}
-        <div className="md:col-span-2 flex items-center space-x-2 md:space-x-5 md:inline-flex justify-self-end">
+        <div className="md:col-span-1 flex items-center space-x-2 md:space-x-5 md:inline-flex justify-self-end">
           <a href="#" className="hidden sm:inline-block">Login</a>
           <Icon icon="material-symbols:home-outline" className='md:w-8 h-8' />
           <Icon icon="mdi:heart-outline" className=" md:w-8 h-8 text-gray-900" />
