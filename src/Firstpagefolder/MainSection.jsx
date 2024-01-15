@@ -1,7 +1,7 @@
 import React from "react"
 import Scroll from "../Scroll"
 import { Routes, Route, Link } from "react-router-dom"
-import Tshirts from "../Tshirts/Tshirts"
+import Tshirts from "../Pages/Tshirts"
 import ImageTitle from "./ImageTitle"
 
 function MainSection (){
