@@ -15,7 +15,7 @@ function Blouses() {
       const response = await fetch(SWEAT_URL);
       const jsonResponse = await response.json();
 
-        const sweatshirtProducts = jsonResponse.products.filter(product => product.category === 'blouses');
+        const sweatshirtProducts = jsonResponse.products.filter(product => product.category.includes("blouses" || "news"));
        
         setProducts(sweatshirtProducts);
         setIsLoading(false)

@@ -71,7 +71,7 @@
       "price": 39.99,
       "description": "Make a fashion statement with our Fashionable Blouse. Featuring a modern design and high-quality materials, this blouse is suitable for both casual and formal occasions. The intricate details and comfortable fit make it a must-have in your collection.",
       "image": "src/images/blouses1.jpg",
-      "category": "blouses"
+      "category": ["blouses", "news"]
     },
     {
       "id": 8,
@@ -79,7 +79,7 @@
       "price": 42.99,
       "description": "Step into the world of fashion with our Striped Blouse. The stylish stripes add a playful element to your outfit, while the comfortable fit ensures all-day wearability. This blouse is a versatile choice for both work and casual settings.",
       "image": "src/images/blouses2.jpg",
-      "category": ["blouses", "news"]
+      "category": "blouses"
     },
     {
       "id": 14,
@@ -136,7 +136,7 @@
       "price": 19.99,
       "description": "Elevate your casual wardrobe with our Classic T-shirt. Made from breathable cotton, this timeless piece ensures comfort without compromising style. With a versatile design, it's the perfect go-to shirt for everyday wear.",
       "image": "src/images/tshirt1.jpg",
-      "category": "tshirts"
+      "category": ["tshirts", "news"]
     },
     {
       "id": 9,
@@ -144,7 +144,7 @@
       "price": 24.99,
       "description": "Express your personality with our Graphic Print T-shirt. Featuring unique and eye-catching graphics, this shirt adds a trendy touch to your wardrobe. The comfortable fabric ensures a relaxed fit, making it perfect for casual outings.",
       "image": "src/images/tshirt2.jpg",
-      "category": ["tshirts", "news"]
+      "category": "tshirts"
     },
     {
       "id": 15,
@@ -169,7 +169,7 @@
       "price": 23.99,
       "description": "A striped V-neck T-shirt for a casual and stylish look.",
       "image": "src/images/tshirt5.jpg",
-      "category": "tshirts"
+      "category": ["tshirts", "news"]
     },
     {
       "id": 33,
@@ -201,7 +201,7 @@
       "price": 56.99,
       "description": "Achieve a flattering silhouette with our High-waisted Jeans. The high-rise design and slim fit create a stylish and elongated look. Pair them with your favorite top for a chic and on-trend outfit.",
       "image": "src/images/jeans1.jpg",
-      "category": "jeans"
+      "category": ["jeans", "news"]
     },
     {
       "id": 43,
@@ -209,7 +209,7 @@
       "price": 52.99,
       "description": "Step into the latest trend with our Wide-leg Jeans. The wide silhouette adds a touch of retro-inspired style to your wardrobe. Comfortable and fashion-forward, these jeans are perfect for making a statement.",
       "image": "src/images/jeans2.jpg",
-      "category": ["jeans", "news"]
+      "category": "jeans"
     },
     {
       "id": 4,
@@ -226,7 +226,7 @@
       "price": 44.99,
       "description": "Upgrade your denim collection with our Classic Blue Jeans. The timeless blue hue and classic design make these jeans a staple in any wardrobe. Crafted with durability in mind, they are perfect for various occasions and styles.",
       "image": "src/images/jeans4.jpg",
-      "category": ["jeans", "news"]
+      "category": "jeans"
     },
     {
       "id": 16,
@@ -266,7 +266,7 @@
       "price": 40.99,
       "description": "Update your denim collection with our Denim Pencil Skirt. The classic pencil skirt design and denim fabric create a versatile piece for both casual and semi-formal occasions. Pair it with your favorite top for a chic and timeless look.",
       "image": "src/images/skirts1.jpg",
-      "category": "skirts"
+      "category": ["skirts", "news"]
     },
     {
       "id": 44,
@@ -282,7 +282,7 @@
       "price": 34.99,
       "description": "Add a touch of femininity to your look with our Floral Skirt. The vibrant floral pattern and flared silhouette create a playful and chic vibe. Crafted with care and attention to detail, this skirt is perfect for both casual outings and special occasions.",
       "image": "src/images/skirts3.jpg",
-      "category": ["skirts", "news"]
+      "category": "skirts"
     },
     {
       "id": 11,
@@ -349,7 +349,7 @@
       "price": 69.99,
       "description": "An off-shoulder dress for a glamorous style.",
       "image": "src/images/dress3.jpg",
-      "category": "dresses"
+      "category": ["dresses", "news"]
     },
     {
       "id": 24,
@@ -357,7 +357,7 @@
       "price": 74.99,
       "description": "An elegant red dress for a bold statement.",
       "image": "src/images/dress4.jpg",
-      "category": ["dresses", "news"]
+      "category": "dresses"
     },
     {
       "id": 30,
@@ -392,6 +392,5 @@
       "sale": "€30.99",
       "category": "dresses"
     }
-
   ]
   }

@@ -15,9 +15,7 @@ function Dress() {
       const response = await fetch(SWEAT_URL);
       const jsonResponse = await response.json();
 
-      const sweatshirtProducts = jsonResponse.products.filter(
-        (product) => product.category === "dresses"
-      );
+      const sweatshirtProducts = jsonResponse.products.filter((product) => product.category.includes("dresses" || "news"));
 
       setProducts(sweatshirtProducts);
       setIsLoading(false);
@@ -61,7 +59,7 @@ function Dress() {
               imageUrl={product.image}
               title={product.title}
               price={product.price}
-                sale={product.sale}
+              sale={product.sale}
               description={product.description}
             />
           ))}
