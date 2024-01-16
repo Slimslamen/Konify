@@ -58,7 +58,6 @@ return (
               
             )
             )}
-            <p className="transition-opacity duration-1000" style={{opacity: isLoading ? 1 : 0}}>Loading...</p>
           </section>
           <div className="md:w-full mx-auto flex flex-wrap">
             {isLoading && <Loading />}
