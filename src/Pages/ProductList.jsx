@@ -38,8 +38,10 @@ function ProductList({numberOfproducts}) {
             <Product
               key={product.id}
               id={product.id}
-              imageUrl={product.category.image}
+              imageUrl={product.image}
               title={product.title}
+              price={product.price}
+              description={product.description}
             />
            ))}
       </section>
