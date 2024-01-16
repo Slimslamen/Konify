@@ -8,7 +8,7 @@ function CardBtn() {
     
     return(
         <div className='flex justify-between my-2 w-[225px]'>
-            <AddtocartButton />
+          <p className='hover:font-semibold cursor-pointer'>View product</p>
             <Favorites />
         </div>
     )
