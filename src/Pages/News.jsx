@@ -15,9 +15,11 @@ function News () {
         const response = await fetch(NEWS_URL);
         const jsonResponse = await response.json();
 
-        const sweatshirtProducts = jsonResponse.products.filter(product => product.category.includes ('news'));
+      
+
+        const filteredProducts = jsonResponse.products.filter(product => product.category.includes('news'));
        
-        setProducts(sweatshirtProducts);
+        setProducts(filteredProducts);
     }
     fetchData();
 
