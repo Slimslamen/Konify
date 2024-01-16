@@ -1,0 +1,183 @@
+[
+    {
+        "Id": 1,
+        "Title": "Women's High-Waisted Wide Leg Pants",
+        "Price": 42.99,
+        "Description": "Elegant and comfortable high-waisted wide leg pants for women.",
+        "ImageUrl": "https://example.com/images/high-waisted-wide-leg-pants-women.jpg",
+        "Category": "Pants",
+        "Key": "high-waisted-wide-leg-pants-women"
+    },
+    {
+      "Id": 2,
+      "Title": "Women's Slim Fit Jeans",
+      "Price": 39.99,
+      "Description": "High-quality slim fit jeans for women, perfect for any occasion.",
+      "ImageUrl": "https://example.com/images/jeans1.jpg",
+      "Category": "Jeans",
+      "Key": "slim-fit-jeans-women"
+    },
+    {
+        "Id": 3,
+        "Title": "Women's Cable Knit Sweater",
+        "Price": 49.99,
+        "Description": "Stay cozy with this stylish cable knit sweater for women.",
+        "ImageUrl": "https://example.com/images/cable-knit-sweater-women.jpg",
+        "Category": "Sweaters",
+        "Key": "cable-knit-sweater-women"
+    },
+    {
+      "Id": 4,
+      "Title": "Women's Elegant Blouse",
+      "Price": 49.99,
+      "Description": "A sophisticated and elegant blouse for women.",
+      "ImageUrl": "https://example.com/images/blouse1.jpg",
+      "Category": "Blouses",
+      "Key": "elegant-blouse-women"
+    },
+    {
+        "Id": 5,
+        "Title": "Women's Faux Leather Jacket",
+        "Price": 59.99,
+        "Description": "Add a touch of edge to your look with this faux leather jacket for women.",
+        "ImageUrl": "https://example.com/images/faux-leather-jacket-women.jpg",
+        "Category": "Jackets",
+        "Key": "faux-leather-jacket-women"
+    },
+    {
+      "Id": 6,
+      "Title": "Women's A-Line Skirt",
+      "Price": 29.99,
+      "Description": "A stylish A-line skirt for women.",
+      "ImageUrl": "https://example.com/images/skirt1.jpg",
+      "Category": "Skirts",
+      "Key": "a-line-skirt-women"
+    },
+    {
+        "Id": 7,
+        "Title": "Women's Floral Print Maxi Dress",
+        "Price": 54.99,
+        "Description": "Make a statement with this floral print maxi dress for women.",
+        "ImageUrl": "https://example.com/images/floral-print-maxi-dress-women.jpg",
+        "Category": "Dresses",
+        "Key": "floral-print-maxi-dress-women"
+    },
+    {
+      "Id": 8,
+      "Title": "Women's Floral Print Dress",
+      "Price": 59.99,
+      "Description": "A beautiful floral print dress for women.",
+      "ImageUrl": "https://example.com/images/floral-dress-women.jpg",
+      "Category": "Dresses",
+      "Key": "floral-print-dress-women"
+    },
+    {
+        "Id": 9,
+        "Title": "Women's Active Leggings",
+        "Price": 29.99,
+        "Description": "Stay active in style with these comfortable active leggings for women.",
+        "ImageUrl": "https://example.com/images/active-leggings-women.jpg",
+        "Category": "Activewear",
+        "Key": "active-leggings-women"
+      },
+      {
+        "Id": 10,
+        "Title": "Women's Wrap Dress",
+        "Price": 54.99,
+        "Description": "A stylish and flattering wrap dress for women.",
+        "ImageUrl": "https://example.com/images/wrap-dress-women.jpg",
+        "Category": "Dresses",
+        "Key": "wrap-dress-women"
+      },
+      {
+        "Id": 11,
+        "Title": "Women's Ruffled Blouse",
+        "Price": 39.99,
+        "Description": "A charming and elegant ruffled blouse for women.",
+        "ImageUrl": "https://example.com/images/ruffled-blouse-women.jpg",
+        "Category": "Blouses",
+        "Key": "ruffled-blouse-women"
+      },
+      {
+        "Id": 12,
+        "Title": "Women's Casual Jumpsuit",
+        "Price": 42.99,
+        "Description": "An easy-going and comfortable casual jumpsuit for women.",
+        "ImageUrl": "https://example.com/images/casual-jumpsuit-women.jpg",
+        "Category": "Dresses",
+        "Key": "casual-jumpsuit-women"
+      },
+      {
+        "Id": 13,
+        "Title": "Women's Wide Brim Hat",
+        "Price": 24.99,
+        "Description": "Complete your look with this stylish wide brim hat for women.",
+        "ImageUrl": "https://example.com/images/wide-brim-hat-women.jpg",
+        "Category": "Accessories",
+        "Key": "wide-brim-hat-women"
+      },
+      {
+        "Id": 14,
+        "Title": "Women's Denim Mini Skirt",
+        "Price": 29.99,
+        "Description": "A trendy and versatile denim mini skirt for women.",
+        "ImageUrl": "https://example.com/images/denim-mini-skirt-women.jpg",
+        "Category": "Skirts",
+        "Key": "denim-mini-skirt-women"
+      },
+      {
+        "Id": 15,
+        "Title": "Women's Knee-Length Pencil Skirt",
+        "Price": 34.99,
+        "Description": "A versatile and classic knee-length pencil skirt for women.",
+        "ImageUrl": "https://example.com/images/pencil-skirt-women.jpg",
+        "Category": "Skirts",
+        "Key": "knee-length-pencil-skirt-women"
+      },
+      {
+        "Id": 16,
+        "Title": "Women's Floral Print Blouse",
+        "Price": 39.99,
+        "Description": "A feminine and stylish floral print blouse for women.",
+        "ImageUrl": "https://example.com/images/floral-print-blouse-women.jpg",
+        "Category": "Blouses",
+        "Key": "floral-print-blouse-women"
+      },
+      {
+        "Id": 17,
+        "Title": "Women's Striped Sweater Dress",
+        "Price": 46.99,
+        "Description": "Stay stylish and warm with this striped sweater dress for women.",
+        "ImageUrl": "https://example.com/images/striped-sweater-dress-women.jpg",
+        "Category": "Dresses",
+        "Key": "striped-sweater-dress-women"
+      },
+      {
+        "Id": 18,
+        "Title": "Women's Midi Wrap Skirt",
+        "Price": 34.99,
+        "Description": "A versatile and elegant midi wrap skirt for women.",
+        "ImageUrl": "https://example.com/images/midi-wrap-skirt-women.jpg",
+        "Category": "Skirts",
+        "Key": "midi-wrap-skirt-women"
+      },
+      {
+        "Id": 19,
+        "Title": "Women's Cropped Denim Jacket",
+        "Price": 44.99,
+        "Description": "Add a trendy touch to your outfit with this cropped denim jacket for women.",
+        "ImageUrl": "https://example.com/images/cropped-denim-jacket-women.jpg",
+        "Category": "Jackets",
+        "Key": "cropped-denim-jacket-women"
+      },
+      {
+        "Id": 20,
+        "Title": "Women's Striped Maxi Dress",
+        "Price": 49.99,
+        "Description": "A stylish and comfortable striped maxi dress for women.",
+        "ImageUrl": "https://example.com/images/striped-maxi-dress-women.jpg",
+        "Category": "Dresses",
+        "Key": "striped-maxi-dress-women"
+      }
+  ]
+  
