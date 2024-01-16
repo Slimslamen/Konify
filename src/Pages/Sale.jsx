@@ -13,7 +13,7 @@ return (
                     className="h-[300px] md:h-[500px] w-full"
                     />
                     <div className="font-Playfair flex justify-center items-center absolute top-1/3 left-1/2 translate-x-[-50%] z-10">
-    <ImageTitle title="SALE" />
+    <ImageTitle title="SALES" />
                  </div>
                 </section>
                 <section className="flex flex-row justify-between m-5 text-xl md:mx-48">
