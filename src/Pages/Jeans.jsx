@@ -16,7 +16,7 @@ function Jeans() {
       const jsonResponse = await response.json();
 
       const sweatshirtProducts = jsonResponse.products.filter(
-        (product) => product.category === "jeans"
+        (product) => product.category.includes("jeans" || "news")
       );
 
       setProducts(sweatshirtProducts);
