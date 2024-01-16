@@ -7,9 +7,13 @@ import Skirts from './Pages/Skirts'
 import Dress from './Pages/Dress'
 import Sale from './Pages/Sale'
 import News from './Pages/News'
+import NavBar from './Firstpagefolder/NavBar'
+import Footer from './Firstpagefolder/Footer'
+
 import Productdetails from './Productpage/Productdetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import SelectSize from './Productpage/SelectSize'
+
 
 
 function App() {
@@ -17,6 +21,7 @@ function App() {
     <>
     
       <BrowserRouter>
+        <NavBar />
         <Routes>
             <Route 
               path="/"
@@ -59,6 +64,7 @@ function App() {
             element={<Productdetails />}
             />
         </Routes>
+        <Footer />
       </BrowserRouter>
       <SelectSize />
     </>

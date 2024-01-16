@@ -1,5 +1,4 @@
-import NavBar from "../Firstpagefolder/NavBar.jsx";
-import Footer from "../Firstpagefolder/Footer.jsx";
+
 import ProductList from "./ProductList.jsx";
 import FilterSortButton from "./FilterSortButton.jsx";
 import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
@@ -7,7 +6,6 @@ import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
 function Dress () {
 return (
         <>
-        <NavBar/>
         <main>
         <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
                     <img 
@@ -27,7 +25,6 @@ return (
           </section>
           <ProductList numberOfproducts={8} /> {/*Ändra siffran för att bestämma hur många produkter vi vill visa */}
         </main>
-        <Footer />
         </>
       );
 

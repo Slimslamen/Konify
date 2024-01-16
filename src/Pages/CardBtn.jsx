@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react';
 import AddtocartButton from '../Productpage/AddtocartButton';
 import Favorites from '../Productpage/Favorites';
 

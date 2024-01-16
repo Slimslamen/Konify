@@ -17,9 +17,7 @@ function SidebarMenu () {
         <>
          {links.map((link)=>(
             <div key={link.title}>
-                <div>
-                    <Link className="cursor-pointer hover:font-bold ml-5 uppercase font-semibold font-libre" key={link.title} to={link.path}>{link.title}</Link>
-                </div>
+                <Link className="cursor-pointer hover:font-bold ml-5 uppercase font-semibold font-libre" key={link.title} to={link.path}>{link.title}</Link>
             </div>
          ))}
 
