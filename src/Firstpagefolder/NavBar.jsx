@@ -17,7 +17,7 @@ function NavBar() {
         {/*Categories - left */}
         
         <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start cursor-pointer hover:font-semibold" 
-          onClick={toggleMenu}>
+          onMouseEnter={toggleMenu}>
         Categories
         </a> 
 
@@ -38,7 +38,7 @@ function NavBar() {
       </div>
     </nav>
     {isMenuVisible &&(
-        <div className="bg-purple-300 w-[180px] h-96 md:w-65 md:h-96 space-y-3 fixed z-10 rounded-br-lg">
+        <div className="bg-purple-300 w-[180px] h-96 md:w-65 md:h-96 space-y-3 fixed z-10 rounded-br-lg" onMouseLeave={toggleMenu}>
           <Searchbar />
           <SidebarMenu />
         </div>
