@@ -197,7 +197,7 @@
       "title": "High-waisted Jeans",
       "price": 56.99,
       "description": "Achieve a flattering silhouette with our High-waisted Jeans. The high-rise design and slim fit create a stylish and elongated look. Pair them with your favorite top for a chic and on-trend outfit.",
-      "image": "",
+      "image": "./images/jeans1.jpg",
       "category": "jeans"
     },
     {
@@ -205,7 +205,7 @@
       "title": "Wide-leg Jeans",
       "price": 52.99,
       "description": "Step into the latest trend with our Wide-leg Jeans. The wide silhouette adds a touch of retro-inspired style to your wardrobe. Comfortable and fashion-forward, these jeans are perfect for making a statement.",
-      "image": "",
+      "image": "./images/jeans2.jpg",
       "category": "jeans"
     },
     {
@@ -213,7 +213,7 @@
       "title": "Slim Fit Jeans",
       "price": 49.99,
       "description": "Show off your style with our Slim Fit Jeans. The slim cut provides a modern and flattering look, while the high-quality denim ensures durability. Whether you're dressing up or down, these jeans are a versatile choice for any wardrobe.",
-      "image": "",
+      "image": "./images/jeans3.jpg",
       "category": "jeans"
     },
     {
@@ -221,7 +221,7 @@
       "title": "Classic Blue Jeans",
       "price": 44.99,
       "description": "Upgrade your denim collection with our Classic Blue Jeans. The timeless blue hue and classic design make these jeans a staple in any wardrobe. Crafted with durability in mind, they are perfect for various occasions and styles.",
-      "image": "",
+      "image": "./images/jeans4.jpg",
       "category": "jeans"
     },
     {
@@ -229,7 +229,7 @@
       "title": "Slim Fit Black Jeans",
       "price": 54.99,
       "description": "Slim fit black jeans for a sleek appearance.",
-      "image": "",
+      "image": "./images/jeans5.jpg",
       "category": "jeans"
     },
     {
@@ -237,7 +237,7 @@
       "title": "Distressed Jeans",
       "price": 47.99,
       "description": "Distressed jeans for a casual and edgy look.",
-      "image": "",
+      "image": "./images/jeans6.jpg",
       "category": "jeans"
     },
     {
@@ -245,7 +245,7 @@
       "title": "Relaxed Fit Jeans",
       "price": 52.99,
       "description": "Stay comfortable and stylish with our Relaxed Fit Jeans. The loose fit provides ease of movement, while the high-quality denim ensures durability. Pair them with your favorite T-shirt or blouse for a laid-back yet trendy look.",
-      "image": "",
+      "image": "./images/jeans7.jpg",
       "category": "jeans"
     },
     {
@@ -253,7 +253,7 @@
       "title": "High-Waisted Jeans",
       "price": 49.99,
       "description": "Achieve a fashionable look with our High-Waisted Jeans. The high-rise design and classic denim make these jeans a versatile choice for various occasions. Elevate your style by pairing them with your favorite top and accessories.",
-      "image": "",
+      "image": "./images/jeans8.jpg",
       "category": "jeans"
     },
     {
