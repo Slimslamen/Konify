@@ -2,11 +2,13 @@ import FilterSortButton from "./FilterSortButton.jsx";
 import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
 import { useEffect, useState } from "react";
 import Product from "./Product.jsx";
+import Loading from "./Loading.jsx";
 
 function Sale () {
   const SWEAT_URL = 'src/data.json'; // Replace with the correct absolute path
 
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -15,8 +17,9 @@ function Sale () {
         const jsonResponse = await response.json();
 
         const filterProduct = jsonResponse.products.filter(product => typeof product.sale !== 'undefined');
-       
+    
         setProducts(filterProduct);
+        setIsLoading(false);
     }
     fetchData();
 
@@ -52,6 +55,9 @@ return (
                 description={product.description}
               />
             ))}
+                <div className="md:w-full mx-auto flex flex-wrap">
+            {isLoading && <Loading />}
+          </div>
           </section>
         </main>
         </>
