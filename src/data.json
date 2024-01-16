@@ -133,7 +133,7 @@
       "title": "Classic T-shirt",
       "price": 19.99,
       "description": "Elevate your casual wardrobe with our Classic T-shirt. Made from breathable cotton, this timeless piece ensures comfort without compromising style. With a versatile design, it's the perfect go-to shirt for everyday wear.",
-      "image": "",
+      "image": "./images/tshirt1.jpg",
       "category": "tshirts"
     },
     {
@@ -141,7 +141,7 @@
       "title": "Graphic Print T-shirt",
       "price": 24.99,
       "description": "Express your personality with our Graphic Print T-shirt. Featuring unique and eye-catching graphics, this shirt adds a trendy touch to your wardrobe. The comfortable fabric ensures a relaxed fit, making it perfect for casual outings.",
-      "image": "",
+      "image": "./images/tshirt2.jpg",
       "category": "tshirts"
     },
     {
@@ -149,7 +149,7 @@
       "title": "V-neck T-shirt",
       "price": 21.99,
       "description": "Enhance your casual look with our V-neck T-shirt. The stylish V-neck design adds a modern twist to the classic T-shirt, while the comfortable fabric ensures a relaxed fit. A wardrobe essential for a laid-back yet trendy style.",
-      "image": "",
+      "image": "./images/tshirt3.jpg",
       "category": "tshirts"
     },
     {
@@ -157,7 +157,7 @@
       "title": "Graphic Print T-shirt",
       "price": 26.99,
       "description": "Express yourself with another graphic print T-shirt.",
-      "image": "",
+      "image": "./images/tshirt4.jpg",
       "category": "tshirts"
     },
     {
