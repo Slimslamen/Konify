@@ -2,28 +2,29 @@ import Product from "./Product.jsx";
 import FilterSortButton from "./FilterSortButton.jsx";
 import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
 import { useEffect, useState } from "react";
+import Loading from "./Loading.jsx";
 
-function Blouses () {
-  const SWEAT_URL = 'src/data.json'; // Replace with the correct absolute path
+function Blouses() {
+  const SWEAT_URL = "src/data.json"; // Replace with the correct absolute path
 
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
-
-        const response = await fetch(SWEAT_URL);
-        const jsonResponse = await response.json();
+      const response = await fetch(SWEAT_URL);
+      const jsonResponse = await response.json();
 
         const sweatshirtProducts = jsonResponse.products.filter(product => product.category === 'blouses');
        
         setProducts(sweatshirtProducts);
+        setIsLoading(false)
     }
     fetchData();
-
   }, []);
-return (
-        <>
-        <main>
+  return (
+    <>
+      <main>
         <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
                     <img 
                     src="src/images/blouses.jpg" 
@@ -52,11 +53,13 @@ return (
                 description={product.description}
               />
             ))}
+                 <div className="md:w-full mx-auto flex flex-wrap">
+            {isLoading && <Loading />}
+          </div>
           </section>
         </main>
         </>
       );
-
 }
 
 export default Blouses;

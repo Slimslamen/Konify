@@ -6,7 +6,7 @@
       "price": 29.99,
       "description": "Indulge in the ultimate comfort with our Comfort Sweatshirt. Crafted with soft, high-quality fabric, this sweatshirt is perfect for lounging at home or staying warm on chilly days. Its simple yet stylish design makes it a versatile addition to your wardrobe.",
       "image": "src/images/sweat1.jpg",
-      "category": "sweatshirts"
+      "category": ["sweatshirts", "news"]
     },
     {
       "id": 7,
@@ -79,7 +79,7 @@
       "price": 42.99,
       "description": "Step into the world of fashion with our Striped Blouse. The stylish stripes add a playful element to your outfit, while the comfortable fit ensures all-day wearability. This blouse is a versatile choice for both work and casual settings.",
       "image": "src/images/blouses2.jpg",
-      "category": "blouses"
+      "category": ["blouses", "news"]
     },
     {
       "id": 14,
@@ -144,7 +144,7 @@
       "price": 24.99,
       "description": "Express your personality with our Graphic Print T-shirt. Featuring unique and eye-catching graphics, this shirt adds a trendy touch to your wardrobe. The comfortable fabric ensures a relaxed fit, making it perfect for casual outings.",
       "image": "src/images/tshirt2.jpg",
-      "category": "tshirts"
+      "category": ["tshirts", "news"]
     },
     {
       "id": 15,
@@ -209,7 +209,7 @@
       "price": 52.99,
       "description": "Step into the latest trend with our Wide-leg Jeans. The wide silhouette adds a touch of retro-inspired style to your wardrobe. Comfortable and fashion-forward, these jeans are perfect for making a statement.",
       "image": "src/images/jeans2.jpg",
-      "category": "jeans"
+      "category": ["jeans", "news"]
     },
     {
       "id": 4,
@@ -226,7 +226,7 @@
       "price": 44.99,
       "description": "Upgrade your denim collection with our Classic Blue Jeans. The timeless blue hue and classic design make these jeans a staple in any wardrobe. Crafted with durability in mind, they are perfect for various occasions and styles.",
       "image": "src/images/jeans4.jpg",
-      "category": "jeans"
+      "category": ["jeans", "news"]
     },
     {
       "id": 16,
@@ -282,7 +282,7 @@
       "price": 34.99,
       "description": "Add a touch of femininity to your look with our Floral Skirt. The vibrant floral pattern and flared silhouette create a playful and chic vibe. Crafted with care and attention to detail, this skirt is perfect for both casual outings and special occasions.",
       "image": "src/images/skirts3.jpg",
-      "category": "skirts"
+      "category": ["skirts", "news"]
     },
     {
       "id": 11,
@@ -341,7 +341,7 @@
       "price": 64.99,
       "description": "Make a bold statement with our Chic Black Dress. The sophisticated design, combined with the striking black color, creates an elegant and timeless look. Whether it's a cocktail party or a formal event, this dress ensures you stand out.",
       "image": "src/images/dress2.jpg",
-      "category": "dresses"
+      "category": ["dresses", "news"]
     },
     {
       "id": 18,
@@ -357,7 +357,7 @@
       "price": 74.99,
       "description": "An elegant red dress for a bold statement.",
       "image": "src/images/dress4.jpg",
-      "category": "dresses"
+      "category": ["dresses", "news"]
     },
     {
       "id": 30,
