@@ -1,9 +1,10 @@
-
 import ProductList from "./ProductList.jsx";
 import FilterSortButton from "./FilterSortButton.jsx";
 import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
 
+
 function Jeans () {
+
 return (
         <>
         <main>
