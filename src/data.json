@@ -14,6 +14,7 @@
       "price": 32.99,
       "description": "Stay warm and stylish with our Cozy Hooded Sweatshirt. The hooded design and soft fabric provide extra comfort, making it ideal for outdoor activities or relaxed evenings at home. This sweatshirt combines practicality with a trendy look.",
       "image": "src/images/sweat2.jpg",
+      "sale": "€21.99",
       "category": "sweatshirts"
     },
     {
@@ -86,6 +87,7 @@
       "price": 49.99,
       "description": "Add a touch of elegance to your wardrobe with our Lace Blouse. The delicate lace details and flattering fit make it a versatile piece for both formal and casual occasions. Embrace timeless style with this sophisticated blouse.",
       "image": "src/images/blouses3.jpg",
+      "sale": "€36.89",
       "category": "blouses"
     },
     {
@@ -150,6 +152,7 @@
       "price": 21.99,
       "description": "Enhance your casual look with our V-neck T-shirt. The stylish V-neck design adds a modern twist to the classic T-shirt, while the comfortable fabric ensures a relaxed fit. A wardrobe essential for a laid-back yet trendy style.",
       "image": "src/images/tshirt3.jpg",
+      "sale": "€19.99",
       "category": "tshirts"
     },
     {
@@ -214,6 +217,7 @@
       "price": 49.99,
       "description": "Show off your style with our Slim Fit Jeans. The slim cut provides a modern and flattering look, while the high-quality denim ensures durability. Whether you're dressing up or down, these jeans are a versatile choice for any wardrobe.",
       "image": "src/images/jeans3.jpg",
+      "sale": "€40.00",
       "category": "jeans"
     },
     {
@@ -286,6 +290,7 @@
       "price": 36.99,
       "description": "Achieve a casual yet stylish look with our Denim Skirt. The denim fabric and flattering cut make it a versatile piece for everyday wear. Whether you pair it with a T-shirt or a blouse, this skirt adds a touch of laid-back charm to your outfit.",
       "image": "src/images/skirts4.jpg",
+      "sale": "€32.99",
       "category": "skirts"
     },
     {
@@ -302,6 +307,7 @@
       "price": 42.99,
       "description": "A pleated skirt for a sophisticated appearance.",
       "image": "src/images/skirts6.jpg",
+      "sale": "€40.99",
       "category": "skirts"
     },
     {
@@ -318,6 +324,7 @@
       "price": 44.99,
       "description": "Make a statement with our Printed Maxi Skirt. The bold print and flowing silhouette add a touch of bohemian flair to your outfit. Whether you're heading to a summer festival or a casual day out, this skirt is a stylish choice.",
       "image": "src/images/skirts8.jpg",
+      "sale": "€40.89",
       "category": "skirts"
     },
     {
@@ -382,6 +389,7 @@
       "price": 62.99,
       "description": "Flaunt a flattering silhouette with our Wrap Midi Dress. The wrap design and midi length create an elegant and feminine look. Whether it's a daytime event or a night out, this dress ensures you stand out in style.",
       "image": "src/images/dress8.jpg",
+      "sale": "€30.99",
       "category": "dresses"
     }
 

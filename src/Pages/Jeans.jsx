@@ -63,6 +63,7 @@ function Jeans() {
               imageUrl={product.image}
               title={product.title}
               price={product.price}
+              sale={product.sale}
               description={product.description}
             />
           ))}
