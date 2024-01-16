@@ -5,7 +5,7 @@
       "title": "Comfort Sweatshirt",
       "price": 29.99,
       "description": "Indulge in the ultimate comfort with our Comfort Sweatshirt. Crafted with soft, high-quality fabric, this sweatshirt is perfect for lounging at home or staying warm on chilly days. Its simple yet stylish design makes it a versatile addition to your wardrobe.",
-      "image": "",
+      "image": "./images/sweat1.jpg",
       "category": "sweatshirts"
     },
     {
@@ -13,7 +13,7 @@
       "title": "Cozy Hooded Sweatshirt",
       "price": 32.99,
       "description": "Stay warm and stylish with our Cozy Hooded Sweatshirt. The hooded design and soft fabric provide extra comfort, making it ideal for outdoor activities or relaxed evenings at home. This sweatshirt combines practicality with a trendy look.",
-      "image": "",
+      "image": "./images/sweat2.jpg",
       "category": "sweatshirts"
     },
     {
@@ -21,7 +21,7 @@
       "title": "Sporty Sweatshirt",
       "price": 27.99,
       "description": "Stay active in style with our Sporty Sweatshirt. The sporty design and comfortable fit make it an ideal choice for workouts or casual outings. Crafted from high-quality materials, this sweatshirt combines fashion and functionality.",
-      "image": "",
+      "image": "./images/sweat3.jpg",
       "category": "sweatshirts"
     },
     {
@@ -29,7 +29,7 @@
       "title": "Hooded Zip-up Sweatshirt",
       "price": 34.99,
       "description": "A hooded zip-up sweatshirt for versatility.",
-      "image": "",
+      "image": "./images/sweat4.jpg",
       "category": "sweatshirts"
     },
     {
@@ -37,7 +37,7 @@
       "title": "Casual Sweatshirt",
       "price": 28.99,
       "description": "A casual sweatshirt for everyday wear.",
-      "image": "",
+      "image": "./images/sweat5.jpg",
       "category": "sweatshirts"
     },
     {
@@ -45,7 +45,7 @@
       "title": "Color Block Sweatshirt",
       "price": 36.99,
       "description": "Stay on-trend with our Color Block Sweatshirt. The vibrant color combination adds a playful touch to your look, while the soft fabric ensures maximum comfort. Perfect for casual outings or lounging at home.",
-      "image": "",
+      "image": "./images/sweat6.jpg",
       "category": "sweatshirts"
     },
     {
@@ -53,7 +53,7 @@
       "title": "Retro Sweatshirt",
       "price": 37.99,
       "description": "Go retro with our stylish Retro Sweatshirt. The vintage-inspired design and comfortable fit make it a unique addition to your wardrobe. Whether you're heading out with friends or relaxing at home, this sweatshirt adds a touch of nostalgia to your look.",
-      "image": "",
+      "image": "./images/sweat7.jpg",
       "category": "sweatshirts"
     },
     {
@@ -61,7 +61,7 @@
       "title": "Color Block Sweatshirt",
       "price": 39.99,
       "description": "Make a bold statement with our Color Block Sweatshirt. The vibrant color combinations and modern design create a trendy and eye-catching look. Crafted with care, this sweatshirt is perfect for those who love to stand out in style.",
-      "image": "",
+      "image": "./images/sweat8.jpg",
       "category": "sweatshirts"
     },
     {
@@ -69,7 +69,7 @@
       "title": "Fashionable Blouse",
       "price": 39.99,
       "description": "Make a fashion statement with our Fashionable Blouse. Featuring a modern design and high-quality materials, this blouse is suitable for both casual and formal occasions. The intricate details and comfortable fit make it a must-have in your collection.",
-      "image": "",
+      "image": "./images/blouses1.jpg",
       "category": "blouses"
     },
     {
@@ -77,7 +77,7 @@
       "title": "Striped Blouse",
       "price": 42.99,
       "description": "Step into the world of fashion with our Striped Blouse. The stylish stripes add a playful element to your outfit, while the comfortable fit ensures all-day wearability. This blouse is a versatile choice for both work and casual settings.",
-      "image": "",
+      "image": "./images/blouses2.jpg",
       "category": "blouses"
     },
     {
@@ -85,7 +85,7 @@
       "title": "Lace Blouse",
       "price": 49.99,
       "description": "Add a touch of elegance to your wardrobe with our Lace Blouse. The delicate lace details and flattering fit make it a versatile piece for both formal and casual occasions. Embrace timeless style with this sophisticated blouse.",
-      "image": "",
+      "image": "./images/blouses3.jpg",
       "category": "blouses"
     },
     {
@@ -93,7 +93,7 @@
       "title": "Ruffled Blouse",
       "price": 46.99,
       "description": "A blouse with charming ruffled details.",
-      "image": "",
+      "image": "./images/blouses4.jpg",
       "category": "blouses"
     },
     {
@@ -101,7 +101,7 @@
       "title": "Casual Striped Blouse",
       "price": 44.99,
       "description": "A casual striped blouse for a relaxed look.",
-      "image": "",
+      "image": "./images/blouses5.jpg",
       "category": "blouses"
     },
     {
@@ -109,7 +109,7 @@
       "title": "Printed Blouse",
       "price": 38.99,
       "description": "Make a statement with our Printed Blouse. The bold print adds a touch of personality to your outfit, while the comfortable fit ensures you stay stylish and at ease. Perfect for both casual and semi-formal occasions.",
-      "image": "",
+      "image": "./images/blouses6.jpg",
       "category": "blouses"
     },
     {
@@ -117,7 +117,7 @@
       "title": "Floral Blouse",
       "price": 45.99,
       "description": "Embrace femininity with our Floral Blouse. The delicate floral pattern and elegant design make it a charming choice for both casual and formal occasions. Elevate your style with this timeless and romantic blouse.",
-      "image": "",
+      "image": "./images/blouses7.jpg",
       "category": "blouses"
     },
     {
@@ -125,7 +125,7 @@
       "title": "Boho-Chic Blouse",
       "price": 48.99,
       "description": "Channel your inner bohemian spirit with our Boho-Chic Blouse. The relaxed fit and bohemian-inspired details create a free-spirited look. Perfect for festivals or adding a touch of boho charm to your everyday style.",
-      "image": "",
+      "image": "./images/blouses8.jpg",
       "category": "blouses"
     },
     {
