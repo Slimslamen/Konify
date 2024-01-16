@@ -27,13 +27,13 @@
         "Key": "cable-knit-sweater-women"
     },
     {
-      "Id": 4,
-      "Title": "Women's Elegant Blouse",
-      "Price": 49.99,
-      "Description": "A sophisticated and elegant blouse for women.",
-      "ImageUrl": "https://example.com/images/blouse1.jpg",
-      "Category": "Blouses",
-      "Key": "elegant-blouse-women"
+        "Id": 4,
+        "Title": "Women's Elegant Blouse",
+        "Price": 49.99,
+        "Description": "A sophisticated and elegant blouse for women.",
+        "ImageUrl": "https://example.com/images/blouse1.jpg",
+        "Category": "Blouses",
+        "Key": "elegant-blouse-women"
     },
     {
         "Id": 5,
@@ -77,7 +77,7 @@
         "Price": 29.99,
         "Description": "Stay active in style with these comfortable active leggings for women.",
         "ImageUrl": "https://example.com/images/active-leggings-women.jpg",
-        "Category": "Activewear",
+        "Category": "Jeans",
         "Key": "active-leggings-women"
       },
       {
@@ -106,15 +106,6 @@
         "ImageUrl": "https://example.com/images/casual-jumpsuit-women.jpg",
         "Category": "Dresses",
         "Key": "casual-jumpsuit-women"
-      },
-      {
-        "Id": 13,
-        "Title": "Women's Wide Brim Hat",
-        "Price": 24.99,
-        "Description": "Complete your look with this stylish wide brim hat for women.",
-        "ImageUrl": "https://example.com/images/wide-brim-hat-women.jpg",
-        "Category": "Accessories",
-        "Key": "wide-brim-hat-women"
       },
       {
         "Id": 14,
@@ -160,15 +151,6 @@
         "ImageUrl": "https://example.com/images/midi-wrap-skirt-women.jpg",
         "Category": "Skirts",
         "Key": "midi-wrap-skirt-women"
-      },
-      {
-        "Id": 19,
-        "Title": "Women's Cropped Denim Jacket",
-        "Price": 44.99,
-        "Description": "Add a trendy touch to your outfit with this cropped denim jacket for women.",
-        "ImageUrl": "https://example.com/images/cropped-denim-jacket-women.jpg",
-        "Category": "Jackets",
-        "Key": "cropped-denim-jacket-women"
       },
       {
         "Id": 20,
