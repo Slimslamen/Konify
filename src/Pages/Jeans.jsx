@@ -1,9 +1,26 @@
-import ProductList from "./ProductList.jsx";
+import Product from "./Product.jsx";
 import FilterSortButton from "./FilterSortButton.jsx";
 import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
-import Product from "./Product.jsx";
+import { useEffect, useState } from "react";
 
 function Jeans () {
+  const SWEAT_URL = 'src/data.json'; // Replace with the correct absolute path
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+
+        const response = await fetch(SWEAT_URL);
+        const jsonResponse = await response.json();
+
+        const sweatshirtProducts = jsonResponse.products.filter(product => product.category === 'jeans');
+       
+        setProducts(sweatshirtProducts);
+    }
+    fetchData();
+
+  }, []);
 
 return (
         <>

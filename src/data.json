@@ -165,7 +165,7 @@
       "title": "Striped V-neck T-shirt",
       "price": 23.99,
       "description": "A striped V-neck T-shirt for a casual and stylish look.",
-      "image": "",
+      "image": "src/images/tshirt5.jpg",
       "category": "tshirts"
     },
     {
@@ -173,7 +173,7 @@
       "title": "Basic Crew Neck T-shirt",
       "price": 18.99,
       "description": "Keep it simple and stylish with our Basic Crew Neck T-shirt. The classic design and comfortable fit make it a wardrobe essential for everyday wear. Pair it with jeans or shorts for a relaxed and timeless look.",
-      "image": "",
+      "image": "src/images/tshirt6.jpg",
       "category": "tshirts"
     },
     {
@@ -181,7 +181,7 @@
       "title": "Basic White T-shirt",
       "price": 17.99,
       "description": "Every wardrobe needs a Basic White T-shirt. Versatile and timeless, this shirt is a staple for casual and classic looks. The comfortable fit and high-quality cotton make it a must-have for everyday wear.",
-      "image": "",
+      "image": "src/images/tshirt7.jpg",
       "category": "tshirts"
     },
     {
@@ -189,7 +189,7 @@
       "title": "Slogan T-shirt",
       "price": 23.99,
       "description": "Make a statement with our Slogan T-shirt. Featuring a bold slogan, this shirt adds a touch of personality to your outfit. Express yourself and stay on-trend with this versatile and comfortable piece.",
-      "image": "",
+      "image": "src/images/tshirt8.jpg",
       "category": "tshirts"
     },
     {

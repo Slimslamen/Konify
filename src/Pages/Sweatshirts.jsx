@@ -4,17 +4,21 @@ import { useEffect, useState } from "react";
 import Product from "./Product.jsx";
 
 function Sweatshirts() {
-  const SWEAT_URL = 'src/data.json'; // Replace with the correct absolute path
+  const SWEAT_URL = 'src/data.json'; 
 
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     async function fetchData() {
 
         const response = await fetch(SWEAT_URL);
         const jsonResponse = await response.json();
-        const sweatshirt = jsonResponse.products
-        setProducts(sweatshirt);
+
+        const sweatshirtProducts = jsonResponse.products.filter(product => product.category === 'sweatshirts');
+       
+        setProducts(sweatshirtProducts);
+        setIsLoading(false)
     }
     fetchData();
 
@@ -42,7 +46,7 @@ return (
           </section>
           <section className="md:w-9/12 mx-auto flex flex-wrap">
             {products.map((product) => (
-              <Product
+              <Product       
                 key={product.id}
                 id={product.id}
                 imageUrl={product.image}
@@ -50,7 +54,10 @@ return (
                 price={product.price}
                 description={product.description}
               />
-            ))}
+              
+            )
+            )}
+            <p className="transition-opacity duration-1000" style={{opacity: isLoading ? 1 : 0}}>Loading...</p>
           </section>
         </main>
         </>
