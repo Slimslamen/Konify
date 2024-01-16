@@ -1,8 +1,26 @@
 import ProductList from "./ProductList.jsx";
 import FilterSortButton from "./FilterSortButton.jsx";
 import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
+import { useEffect, useState } from "react";
+import Product from "./Product.jsx";
 
 function Sweatshirts () {
+
+const SWEAT_URL = '../data.json'
+
+const [sweatshirts, setSweatshirts] = useState([])
+
+useEffect(() => {
+  async function getSweatshirts(){
+
+    const response = await fetch(SWEAT_URL)
+    const data = await response.json()
+
+    setSweatshirts(data)
+  }
+  getSweatshirts()
+},[])
+
 return (
         <>
         <main>
@@ -22,7 +40,19 @@ return (
                     </div>
                     <FilterSortButton name="Sort" op1="Högsta pris" op2="Lägsta pris" op3="Pupularitet"/>
           </section>
-          <ProductList numberOfproducts={8} /> {/*Ändra siffran för att bestämma hur många produkter vi vill visa */}
+          {sweatshirts.filter((sweatshirt) => {
+
+              <Product 
+                key={product.id}
+                id={product.id}
+                imageUrl={product.image}
+                title={product.title}
+                price={product.price}
+                description={product.description}
+              />
+
+          })}
+         {/*  <ProductList numberOfproducts={8} /> {/*Ändra siffran för att bestämma hur många produkter vi vill visa */} */}
         </main>
         </>
       );
