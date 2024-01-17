@@ -7,9 +7,9 @@ import { ProductContext } from "../Components/ProductContext.jsx";
 function Blouses() {
   const { products, setProducts } = useContext(ProductContext)
 
- 
-  // const filteredProducts = products.filter(product => product.category.includes("blouses" || "news"));
-  console.log(products)
+
+  const filteredProducts = products.filter((product) => product.category.includes("blouses" || "news"));
+  
   return (
     <>
       <main>

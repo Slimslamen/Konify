@@ -16,8 +16,8 @@ function ProductProvider ( {children} ){
         try{
             const response = await fetch(PRODUCT_URL);
             const jsonResponse = await response.json();
-            
-            setProducts(jsonResponse);
+
+            setProducts(jsonResponse.products);
         }  catch (error) {
             console.error("Error fetching data:", error);
         }
@@ -27,10 +27,15 @@ function ProductProvider ( {children} ){
       fetchData();
     }, []);
     
+    // const contextValue = {
+    //     products,
+    //     setProducts,
+    // };
+
     const contextValue = {
-        products,
+        products: Array.isArray(products) ? products : [], // Säkerställ att products alltid är en array
         setProducts,
-    };
+      };
 
     return (
         <>
