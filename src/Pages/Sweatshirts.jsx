@@ -54,6 +54,7 @@ return (
                 price={product.price}
                 sale={product.sale}
                 description={product.description}
+              
               />
               
             )
