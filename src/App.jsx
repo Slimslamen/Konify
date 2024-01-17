@@ -1,5 +1,5 @@
 import FirstPage from './Firstpagefolder/FirstPage'
-import Blouses from './Pages/blouses'
+import Blouses from './Pages/Blouses.jsx'
 import Tshirts from './Pages/Tshirts'
 import Sweatshirts from './Pages/Sweatshirts'
 import Jeans from './Pages/Jeans'
@@ -9,20 +9,23 @@ import Sale from './Pages/Sale'
 import News from './Pages/News'
 import NavBar from './Firstpagefolder/NavBar'
 import Footer from './Firstpagefolder/Footer'
-
 import Productdetails from './Productpage/Productdetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import SelectSize from './Productpage/SelectSize'
+import ProductProvider from './Components/ProductContext'
+
 
 
 
 function App() {
   return (
     <>
-    
+      
       <BrowserRouter>
         <NavBar />
+        
+          <ProductProvider>
         <Routes>
+
             <Route 
               path="/"
               element={<FirstPage />}
@@ -64,9 +67,13 @@ function App() {
             element={<Productdetails />}
             />
         </Routes>
+            </ProductProvider>
+        
         <Footer />
+      
       </BrowserRouter>
-      <SelectSize />
+
+     
     </>
   )
 }
