@@ -2,14 +2,14 @@ import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
 import Product from "./PageComponents/Product.jsx";
 import { useEffect, useState } from "react";
-import Loading from "./PageComponents/Loading.jsx";
+
 
 function News () {
 
   const NEWS_URL = 'src/data.json'; // Replace with the correct absolute path
 
   const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     async function fetchData() {
@@ -20,7 +20,7 @@ function News () {
         const sweatshirtProducts = jsonResponse.products.filter(product => product.category.includes ('news'));
            
         setProducts(sweatshirtProducts);
-        setIsLoading(false)
+
     }
     fetchData();
 
@@ -56,9 +56,7 @@ return (
               description={product.description}
             />
           ))}
-              <div className="md:w-full mx-auto flex flex-wrap">
-            {isLoading && <Loading />}
-          </div>
+             
         </section>
         </main>
         </>

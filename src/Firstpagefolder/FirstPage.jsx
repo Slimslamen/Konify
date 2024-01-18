@@ -11,14 +11,14 @@ function FirstPage (){
                 {/* Hero image */}
                 <section className="md:h-8/12 ">
                     <img 
-                    src="src/Assets/heroimg.png" 
+                    src="src/Assets/heroimg.jpg" 
                     alt="Girl with orange shirt touching her hair" 
                     />
                 </section>
                 {/* Images for sale and news */}
                 <section className="flex flex-col md:flex-row md:h-[500px] md:w-full">
                     <img 
-                    src="src/Assets/SalesFirst.jpg" 
+                    src="src/Assets/Sales.jpg" 
                     alt="Girl with orange sweater and 2 oranges infront of her eyes"
                     className="md:w-1/2 bg-cover h-1/2 md:h-full" />
                     <img 

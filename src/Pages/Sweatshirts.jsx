@@ -1,29 +1,14 @@
 import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
-import { useEffect, useState } from "react";
 import Product from "./PageComponents/Product.jsx";
-import Loading from "./PageComponents/Loading.jsx";
+import { useContext } from "react";
+import { ProductContext } from "../Components/ProductContext.jsx";
 
 function Sweatshirts() {
-  const SWEAT_URL = "src/Assets/data.json";
 
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+const {products/* , setProducts */} = useContext(ProductContext)
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(SWEAT_URL);
-      const jsonResponse = await response.json();
-
-        const sweatshirtProducts = jsonResponse.products.filter(product => product.category.includes("sweatshirts" || "news"));
-       
-        setProducts(sweatshirtProducts);
-        setIsLoading(false)
-    }
-    fetchData();
-
-  }, []);
-
+const FilteredProducts = products.filter((product) => product.category.includes("sweatshirts"))
 
 return (
         <>
@@ -45,7 +30,7 @@ return (
                     <FilterSortButton name="Sort" op1="Högsta pris" op2="Lägsta pris" op3="Pupularitet"/>
           </section>
           <section className="md:w-9/12 mx-auto flex flex-wrap">
-            {products.map((product) => (
+            {FilteredProducts.map((product) => (
               <Product       
                 key={product.id}
                 id={product.id}
@@ -60,9 +45,6 @@ return (
             )
             )}
           </section>
-          <div className="md:w-full mx-auto flex flex-wrap">
-            {isLoading && <Loading />}
-          </div>
         </main>
         </>
       );

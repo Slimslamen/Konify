@@ -2,13 +2,13 @@ import Product from "./PageComponents/Product.jsx";
 import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
 import { useEffect, useState } from "react";
-import Loading from "./PageComponents/Loading.jsx";
+
 
 function Tshirts() {
   const SWEAT_URL = "src/data.json"; // Replace with the correct absolute path
 
   const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     async function fetchData() {
@@ -18,7 +18,7 @@ function Tshirts() {
         const sweatshirtProducts = jsonResponse.products.filter(product => product.category.includes("tshirts" || "news"));
        
         setProducts(sweatshirtProducts);
-        setIsLoading(false)
+
     }
     fetchData();
   }, []);
@@ -53,9 +53,7 @@ function Tshirts() {
                 description={product.description}
               />
             ))}
-                <div className="md:w-full mx-auto flex flex-wrap">
-            {isLoading && <Loading />}
-          </div>
+             
           </section>
         </main>
         </>
