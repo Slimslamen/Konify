@@ -1,8 +1,8 @@
-import FilterSortButton from "./FilterSortButton.jsx";
-import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
+import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
+import ImageTitle from "../Components/ImageTitle.jsx";
 import { useEffect, useState } from "react";
-import Product from "./Product.jsx";
-import Loading from "./Loading.jsx";
+import Product from "./PageComponents/Product.jsx";
+import Loading from "./PageComponents/Loading.jsx";
 
 function Sale () {
   const SWEAT_URL = 'src/data.json'; // Replace with the correct absolute path
@@ -29,7 +29,7 @@ return (
         <main>
         <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
                     <img 
-                    src="src/images/sale.jpg" 
+                    src="src/Assets/sale.jpg" 
                     alt="Girl with longboard" 
                     className="h-[300px] md:h-[500px] w-full"
                     />

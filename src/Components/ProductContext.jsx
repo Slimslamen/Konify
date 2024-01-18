@@ -1,10 +1,10 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
 export const ProductContext = createContext()
 
 function ProductProvider ( {children} ){
-    const PRODUCT_URL = "src/data.json";
+    const PRODUCT_URL = "src/Assets/data.json";
 
     const [products, setProducts] = useState([]);
     

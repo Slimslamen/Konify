@@ -1,8 +1,8 @@
-import Product from "./Product.jsx";
-import FilterSortButton from "./FilterSortButton.jsx";
-import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
+import Product from "./PageComponents/Product.jsx";
+import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
+import ImageTitle from "../Components/ImageTitle.jsx";
 import { useEffect, useState } from "react";
-import Loading from "./Loading.jsx";
+import Loading from "./PageComponents/Loading.jsx";
 
 function Tshirts() {
   const SWEAT_URL = "src/data.json"; // Replace with the correct absolute path
@@ -27,12 +27,12 @@ function Tshirts() {
       <main>
         <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
                     <img 
-                    src="src/images/Tshirtimg.jpg" 
+                    src="src/Assets/Tshirtimg.jpg" 
                     alt="Girl with grey shirt" 
                     className="h-[300px] md:h-[500px] w-full"
                     />
                     <div className="font-Playfair flex justify-center items-center absolute top-1/3 left-1/2 translate-x-[-50%] z-10">
-    <ImageTitle title="TSHIRTS" />
+    <ImageTitle title="T-SHIRTS" />
                  </div>
                 </section>
                 <section className="flex flex-row justify-between m-5 text-xl md:mx-48">

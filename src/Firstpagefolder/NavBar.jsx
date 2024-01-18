@@ -1,8 +1,7 @@
 import { Icon } from '@iconify/react';
-import '../style.css';
-import SidebarMenu from './SidebarMenu';
+import SidebarMenu from '../Components/SidebarMenu';
 import { useState } from 'react';
-import Searchbar from './searchbar';
+import Searchbar from '../Components/Searchbar';
 import { Link } from 'react-router-dom';
 
 function NavBar() {

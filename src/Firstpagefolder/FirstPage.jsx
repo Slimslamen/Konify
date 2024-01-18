@@ -1,6 +1,6 @@
 import Scroll from "../Scroll"
 import { Link } from "react-router-dom"
-import ImageTitle from "./ImageTitle"
+import ImageTitle from "../Components/ImageTitle"
 
 
 function FirstPage (){
@@ -11,18 +11,18 @@ function FirstPage (){
                 {/* Hero image */}
                 <section className="md:h-8/12 ">
                     <img 
-                    src="src/images/heroimg.png" 
+                    src="src/Assets/heroimg.png" 
                     alt="Girl with orange shirt touching her hair" 
                     />
                 </section>
                 {/* Images for sale and news */}
                 <section className="flex flex-col md:flex-row md:h-[500px] md:w-full">
                     <img 
-                    src="src/images/Sales.jpg" 
+                    src="src/Assets/SalesFirst.jpg" 
                     alt="Girl with orange sweater and 2 oranges infront of her eyes"
                     className="md:w-1/2 bg-cover h-1/2 md:h-full" />
                     <img 
-                    src="src/images/News.jpg" 
+                    src="src/Assets/News.jpg" 
                     alt="Guy with a dark T-shirt laying down on a carpet"
                     className="md:w-1/2 h-1/2 md:h-full" />
                 {/* Buttons for sales and news */}

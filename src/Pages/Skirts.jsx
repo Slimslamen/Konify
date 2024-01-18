@@ -1,8 +1,8 @@
-import Product from "./Product.jsx";
-import FilterSortButton from "./FilterSortButton.jsx";
-import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
+import Product from "./PageComponents/Product.jsx";
+import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
+import ImageTitle from "../Components/ImageTitle.jsx";
 import { useEffect, useState } from "react";
-import Loading from "./Loading.jsx";
+import Loading from "./PageComponents/Loading.jsx";
 
 function Skirts() {
   const SWEAT_URL = "src/data.json"; // Replace with the correct absolute path
@@ -27,7 +27,7 @@ function Skirts() {
       <main>
         <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
                     <img 
-                    src="src/images/skirts.jpg" 
+                    src="src/Assets/skirts.jpg" 
                     alt="Girl with grey shirt" 
                     className="h-[300px] md:h-[500px] w-full"
                     />

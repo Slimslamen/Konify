@@ -1,8 +1,8 @@
-import FilterSortButton from "./FilterSortButton.jsx";
-import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
-import Product from "./Product.jsx";
+import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
+import ImageTitle from "../Components/ImageTitle.jsx";
+import Product from "./PageComponents/Product.jsx";
 import { useEffect, useState } from "react";
-import Loading from "./Loading.jsx";
+import Loading from "./PageComponents/Loading.jsx";
 
 function News () {
 
@@ -30,7 +30,7 @@ return (
         <main>
         <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
                     <img 
-                    src="src/images/NewsSite.jpg" 
+                    src="src/Assets/NewsSite.jpg" 
                     alt="Girl with grey shirt" 
                     className="h-[300px] md:h-[500px] w-full"
                     />

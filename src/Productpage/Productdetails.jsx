@@ -1,4 +1,4 @@
-import Product from "../Pages/Product"
+import Product from "../Pages/PageComponents/Product"
 
 
 function Productdetails(){

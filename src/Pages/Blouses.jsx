@@ -1,7 +1,7 @@
-import Product from "./Product.jsx";
-import FilterSortButton from "./FilterSortButton.jsx";
-import ImageTitle from "../Firstpagefolder/ImageTitle.jsx";
-import { useContext, useState } from "react";
+import Product from "./PageComponents/Product.jsx";
+import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
+import ImageTitle from "../Components/ImageTitle.jsx";
+import { useContext } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
 
 function Blouses() {
@@ -15,7 +15,7 @@ function Blouses() {
       <main>
         <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
           <img
-            src="src/images/blouses.jpg"
+            src="src/Assets/blouses.jpg"
             alt="Girl with grey shirt"
             className="h-[300px] md:h-[500px] w-full"
           />
