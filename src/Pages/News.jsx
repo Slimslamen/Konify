@@ -1,30 +1,14 @@
+import Product from "./PageComponents/Product.jsx";
 import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
-import Product from "./PageComponents/Product.jsx";
-import { useEffect, useState } from "react";
-import Loading from "./PageComponents/Loading.jsx";
+import { useContext } from "react";
+import { ProductContext } from "../Components/ProductContext.jsx";
 
-function News () {
+function News() {
+  const { products, setProducts } = useContext(ProductContext)
 
-  const NEWS_URL = 'src/data.json'; // Replace with the correct absolute path
-
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchData() {
-
-        const response = await fetch(NEWS_URL);
-        const jsonResponse = await response.json();
-
-        const sweatshirtProducts = jsonResponse.products.filter(product => product.category.includes ('news'));
+        const filteredProducts = products.filter(product => product.category.includes ('news'));
            
-        setProducts(sweatshirtProducts);
-        setIsLoading(false)
-    }
-    fetchData();
-
-  }, []);
 return (
         <>
         <main>
@@ -46,7 +30,7 @@ return (
           </section>
           <section className="md:w-9/12 mx-auto flex flex-wrap">
           {/* Mapping over the products array and rendering Product components */}
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <Product
               key={product.id}
               id={product.id}
@@ -56,9 +40,7 @@ return (
               description={product.description}
             />
           ))}
-              <div className="md:w-full mx-auto flex flex-wrap">
-            {isLoading && <Loading />}
-          </div>
+
         </section>
         </main>
         </>
