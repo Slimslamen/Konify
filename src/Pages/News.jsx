@@ -1,30 +1,14 @@
+import Product from "./PageComponents/Product.jsx";
 import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
-import Product from "./PageComponents/Product.jsx";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ProductContext } from "../Components/ProductContext.jsx";
 
+function News() {
+  const { products, setProducts } = useContext(ProductContext)
 
-function News () {
-
-  const NEWS_URL = 'src/data.json'; // Replace with the correct absolute path
-
-  const [products, setProducts] = useState([]);
-
-
-  useEffect(() => {
-    async function fetchData() {
-
-        const response = await fetch(NEWS_URL);
-        const jsonResponse = await response.json();
-
-        const sweatshirtProducts = jsonResponse.products.filter(product => product.category.includes ('news'));
+        const filteredProducts = products.filter(product => product.category.includes ('news'));
            
-        setProducts(sweatshirtProducts);
-
-    }
-    fetchData();
-
-  }, []);
 return (
         <>
         <main>
@@ -46,7 +30,7 @@ return (
           </section>
           <section className="md:w-9/12 mx-auto flex flex-wrap">
           {/* Mapping over the products array and rendering Product components */}
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <Product
               key={product.id}
               id={product.id}
@@ -56,7 +40,6 @@ return (
               description={product.description}
             />
           ))}
-             
         </section>
         </main>
         </>

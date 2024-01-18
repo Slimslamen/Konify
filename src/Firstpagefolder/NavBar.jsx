@@ -15,7 +15,7 @@ function NavBar() {
       <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center">
         {/*Categories - left */}
         
-        <a className="text-white text-sm md:text-lg md:mr-0 mr-auto justify-self-start cursor-pointer hover:font-semibold" 
+        <a className="text-black text-sm md:text-lg md:mr-0 mr-auto justify-self-start cursor-pointer hover:font-semibold" 
           onMouseEnter={toggleMenu}>
         Categories
         </a> 
