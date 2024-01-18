@@ -2,26 +2,16 @@ import Loading from "./PageComponents/Loading.jsx";
 import Product from "./PageComponents/Product.jsx";
 import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ProductContext } from "../Components/ProductContext.jsx";
 
 function Dress() {
-  const SWEAT_URL = "src/Assets/data.json"; // Replace with the correct absolute path
 
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const { products, setProducts } = useContext(ProductContext)
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await fetch(SWEAT_URL);
-      const jsonResponse = await response.json();
+  const filteredProducts = products.filter((product) => product.category.includes("dresses" || "news"));
 
-      const sweatshirtProducts = jsonResponse.products.filter((product) => product.category.includes("dresses" || "news"));
-
-      setProducts(sweatshirtProducts);
-      setIsLoading(false);
-    }
-    fetchData();
-  }, []);
+    
   return (
     <>
       <main>
@@ -52,7 +42,7 @@ function Dress() {
           />
         </section>
         <section className="md:w-9/12 mx-auto flex flex-wrap">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <Product
               key={product.id}
               id={product.id}
@@ -63,9 +53,7 @@ function Dress() {
               description={product.description}
             />
           ))}
-          <div className="md:w-full mx-auto flex flex-wrap">
-            {isLoading && <Loading />}
-          </div>
+  
         </section>
       </main>
     </>

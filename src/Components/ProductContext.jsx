@@ -9,7 +9,6 @@ function ProductProvider ( {children} ){
     const [products, setProducts] = useState([]);
     
           
-    const [isLoading, setIsLoading] = useState(true);
   
     useEffect(() => {
       async function fetchData() {
@@ -22,20 +21,16 @@ function ProductProvider ( {children} ){
             console.error("Error fetching data:", error);
         }
     
-          setIsLoading(false)
       }
       fetchData();
     }, []);
     
-    // const contextValue = {
-    //     products,
-    //     setProducts,
-    // };
-
     const contextValue = {
-        products: Array.isArray(products) ? products : [], // Säkerställ att products alltid är en array
+        products,
         setProducts,
-      };
+    };
+
+ 
 
     return (
         <>
