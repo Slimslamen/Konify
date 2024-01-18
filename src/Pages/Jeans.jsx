@@ -3,17 +3,14 @@ import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
 import { useContext } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
+
+
 function Jeans() {
 
 const { products, setProducts } = useContext(ProductContext)
 
 const filteredProducts = products.filter((product) => product.category.includes("jeans" || "news"));
 
-      setProducts(sweatshirtProducts);
-      setIsLoading(false);
-    }
-    fetchData();
-  }, []);
 
   return (
     <>
