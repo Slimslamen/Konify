@@ -1,6 +1,11 @@
 
+
 function AddtocartButton () {
-    return <p className='hover:font-semibold cursor-pointer' onClick={() => addToCart(id)}>Add to cart</p>
+    return 
+    
+   
+    <p className='hover:font-semibold cursor-pointer'>Add to cart</p>
+
 }
 
 export default AddtocartButton;

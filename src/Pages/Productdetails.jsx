@@ -7,18 +7,19 @@ import Favorites from "../Components/Favorites.jsx";
 import SelectSize from "../Productpage/SelectSize.jsx"
  
 const Productdetails = () => {
-  const { productId } = useParams();
-  const { products } = useContext(ProductContext);
+  const { selectedId } = useParams();
+  const { products, addToCart, productId } = useContext(ProductContext);
  
+
   const selectedProduct = products.find(
-    (product) => product.id === parseInt(productId)
+    (product) => product.id === parseInt(selectedId)
   );
  
-  console.log(selectedProduct.image);
  
   return (
     <div className="md:flex grid grid-col-1 flex-wrap mb-4 ">
     <div className="flex items-center justify-center mb-2 w-full md:justify-end md:w-1/2 ">
+        
         <img
           key={selectedProduct.id}
           src={`/${selectedProduct.image}`}
@@ -38,7 +39,8 @@ const Productdetails = () => {
       <p className="mx-4 mt-2 mt:my-6">Select Size</p>
       <SelectSize/>
    <div className="flex justify-around py-2 md:my-4  border-b-2">
-      <Favorites/> <AddtocartButton />
+      <Favorites/>  <AddtocartButton />
+    
     </div>
     </div>
    
