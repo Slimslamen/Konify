@@ -11,8 +11,7 @@ function SelectSize() {
   };
 
   return (
-    <div className="flex flex-row">
-      <p>Select size</p>
+    <div className="flex flex-row mx-2">
       <Size
         size="XS"
         onClick={handleSizeClick}
