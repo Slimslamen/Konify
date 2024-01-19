@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import Favorites from "../../Components/Favorites.jsx";
 import { Link } from "react-router-dom";
 
@@ -19,7 +18,7 @@ const Product = ({ id, imageUrl, title, sale, price }) => {
         </Link>
         {/* Putting the CardBtn component below the image */}
         <div className="flex mt-2 w-[225px] justify-between items-center">
-          <Link to={`/SingleProduct/${id}`}>  <p className="hover:font-semibold cursor-pointer" >View</p></Link>
+          <Link to={`/Productdetails/${id}`}>  <p className="hover:font-semibold cursor-pointer" >View</p></Link>
           <div className="flex items-center">
             <p className="text-sm text-red-500 mr-2">{sale}</p>
             <span className="text-sm mr-2">€{price}</span>

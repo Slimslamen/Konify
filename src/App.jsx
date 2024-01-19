@@ -9,7 +9,7 @@ import Sale from './Pages/Sale'
 import News from './Pages/News'
 import NavBar from './Firstpagefolder/NavBar'
 import Footer from './Firstpagefolder/Footer'
-import Productdetails from './Productpage/Productdetails'
+import Productdetails from './Pages/Productdetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProductProvider from './Components/ProductContext'
 
