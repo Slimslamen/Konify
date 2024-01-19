@@ -3,7 +3,6 @@ import React from "react";
 
 const Size = ({ size, onClick, isSelected }) => {
   const handleClick = () => {
-    // Invoke the onSelect callback with the selected size
     onClick(size);
   };
 

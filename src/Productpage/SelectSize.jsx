@@ -5,9 +5,7 @@ import Size from "./Size";
 function SelectSize() {
   const [selectedSize, setSelectedSize] = useState([]);
 
-  // Callback function to handle size selection
   const handleSizeClick = (size) => {
-    // Update the state with the selected size
     setSelectedSize(size);
     console.log(selectedSize);
   };
