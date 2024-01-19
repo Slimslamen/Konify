@@ -3,11 +3,18 @@ import { createContext, useEffect, useState } from "react";
 
 export const ProductContext = createContext()
 
+
 function ProductProvider ( {children} ){
     const PRODUCT_URL = "Assets/data.json";
 
     const [products, setProducts] = useState([]);
 
+    const addToCart = (productId) => {
+        setProducts((prev) => ({...prev, [productId]: prev[productId] + 1}));
+    };
+    const removeFromCart = (productId) => {
+        setProducts((prev) => ({...prev, [productId]: prev[productId] - 1}));
+    };
   
     useEffect(() => {
       async function fetchData() {
@@ -27,6 +34,8 @@ function ProductProvider ( {children} ){
      const contextValue = {
          products,
          setProducts,
+         addToCart,
+         removeFromCart,
      };
 
     return (

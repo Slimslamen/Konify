@@ -5,17 +5,17 @@ import AddtocartButton from "../Components/AddtocartButton.jsx";
 import ScrollToTop from "react-scroll-to-top";
 import Favorites from "../Components/Favorites.jsx";
 import SelectSize from "../Productpage/SelectSize.jsx"
-
+ 
 const Productdetails = () => {
   const { productId } = useParams();
   const { products } = useContext(ProductContext);
-
+ 
   const selectedProduct = products.find(
     (product) => product.id === parseInt(productId)
   );
-
+ 
   console.log(selectedProduct.image);
-
+ 
   return (
     <div className="md:flex grid grid-col-1 flex-wrap mb-4 ">
     <div className="flex items-center justify-center mb-2 w-full md:justify-end md:w-1/2 ">
@@ -46,5 +46,5 @@ const Productdetails = () => {
    
   );
 };
-
+ 
 export default Productdetails;
