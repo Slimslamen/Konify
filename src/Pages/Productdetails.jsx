@@ -36,6 +36,10 @@ const Productdetails = () => {
     </div>
     </div>
     </div>
+   
+    <ScrollToTop />
+    </div>
+   
   );
 };
 
