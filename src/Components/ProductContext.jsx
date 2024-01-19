@@ -3,10 +3,11 @@ import { createContext, useEffect, useState } from "react";
 
 export const ProductContext = createContext()
 
-function ProductProvider ( {children} ){
+function ProductProvider ({ children }){
     const PRODUCT_URL = "src/Assets/data.json";
 
     const [products, setProducts] = useState([]);
+
   
     useEffect(() => {
       async function fetchData() {
@@ -28,13 +29,6 @@ function ProductProvider ( {children} ){
          setProducts,
      };
 
-   /*  const contextValue = {
-        products: Array.isArray(products) ? products : [], // Säkerställ att products alltid är en array
-        setProducts,
-      }; */
-
- 
-
     return (
         <>
         <ProductContext.Provider value={contextValue}>
@@ -43,8 +37,6 @@ function ProductProvider ( {children} ){
         </>
     )
 }
-
-
 
   export default ProductProvider;
 

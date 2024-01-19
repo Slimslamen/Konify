@@ -1,11 +1,11 @@
+import { useContext } from "react";
 import Favorites from "../../Components/Favorites.jsx";
+import { Link } from "react-router-dom";
+import { ProductContext } from "../../Components/ProductContext.jsx";
 
 //an individual T-shirt item
 const Product = ({ id, imageUrl, title, sale, price }) => {
   console.log("Product:", { id, imageUrl, title });
-
-
-
   return (
     <div className="tshirt-item p-4 w-1/1 md:w-1/2 lg:w-1/4 flex flex-col items-center justify-center">
       <div className="min-h-[250px]">
@@ -17,12 +17,12 @@ const Product = ({ id, imageUrl, title, sale, price }) => {
         />
         {/* Putting the CardBtn component below the image */}
         <div className="flex mt-2 w-[225px] justify-between items-center">
-          <p className="hover:font-semibold cursor-pointer" onClick={e => {console.log(id);}}>View</p>
+          <Link to={`/SingleProduct/${id}`}>  <p className="hover:font-semibold cursor-pointer" >View</p></Link>
           <div className="flex items-center">
             <p className="text-sm text-red-500 mr-2">{sale}</p>
             <span className="text-sm mr-2">€{price}</span>
 
-            <Favorites className="ml-4" />
+             <Favorites className="ml-4" />
           </div>
         </div>
       </div>

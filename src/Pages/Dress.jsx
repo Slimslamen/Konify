@@ -34,7 +34,7 @@ function Dress() {
               op3="Colour"
             />
           </div>
-          <FilterSortButton
+          <FilterSortButton 
             name="Sort"
             op1="Högsta pris"
             op2="Lägsta pris"
@@ -51,6 +51,7 @@ function Dress() {
               price={product.price}
               sale={product.sale}
               description={product.description}
+              
             />
           ))}
   
