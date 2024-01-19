@@ -12,7 +12,7 @@ import Footer from './Firstpagefolder/Footer'
 import Productdetails from './Pages/Productdetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProductProvider from './Components/ProductContext'
-
+import Cart from './Cart/Cart.jsx'
 
 
 
@@ -34,10 +34,13 @@ function App() {
             <Route path="/Sales" element={<Sale />} />
             <Route path="/News" element={<News />} />
             <Route
-              path="/Productdetails/:productId"
+              path="/Productdetails/:selectedId"
               element={<Productdetails />}
             />
-            <Route path="/Cart"  element={<Cart />}/>
+            <Route
+              path="/Cart/:cartId"
+              element={<Cart />}
+            />
           </Routes>
         </ProductProvider>
 

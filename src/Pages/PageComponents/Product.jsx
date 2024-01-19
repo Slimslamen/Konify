@@ -1,8 +1,10 @@
 import Favorites from "../../Components/Favorites.jsx";
 import { Link } from "react-router-dom";
 
+
 //an individual T-shirt item
 const Product = ({ id, imageUrl, title, sale, price }) => {
+  
 
 
   return (
