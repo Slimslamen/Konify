@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
-import { ProductContext } from "../Components/ProductContext.jsx";
 
 const Productdetails = () => {
   const { productId } = useParams();
@@ -26,6 +25,7 @@ const Productdetails = () => {
         Price: €{selectedProduct.price}{" "}
         <span className="text-red-500">{selectedProduct.sale}</span>
       </p>
+    
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 //an individual T-shirt item
 const Product = ({ id, imageUrl, title, sale, price }) => {
 
+
   return (
     <div className="tshirt-item p-4 w-1/1 md:w-1/2 lg:w-1/4 flex flex-col items-center justify-center">
       <div className="min-h-[250px]">
