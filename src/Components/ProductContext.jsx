@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const ProductContext = createContext()
 
 function ProductProvider ( {children} ){
-    const PRODUCT_URL = "src/Assets/data.json";
+    const PRODUCT_URL = "Assets/data.json";
 
     const [products, setProducts] = useState([]);
   

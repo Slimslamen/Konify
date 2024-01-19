@@ -17,7 +17,7 @@ function Dress() {
       <main>
         <section className="flex md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
           <img
-            src="src/Assets/dress.jpg"
+            src="Assets/dress.jpg"
             alt="Girl with grey shirt"
             className="h-[300px] md:h-[500px] w-full"
           />
