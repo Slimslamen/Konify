@@ -34,6 +34,8 @@ const Productdetails = () => {
         <span className="text-red-500">{selectedProduct.sale}</span>
       </p>
     </div>
+    </div>
+    </div>
   );
 };
 
