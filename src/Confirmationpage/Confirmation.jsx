@@ -12,7 +12,7 @@ function Confirmation() {
           <p>First Name: {formData.firstName}</p>
           <p>Last Name: {formData.lastName}</p>
           <p>Email: {formData.email}</p>
-    
+ {/*    Du får lägga till/ta bort beroende på vilken info du vill visa här */}
       </>
       )}
     </div>
