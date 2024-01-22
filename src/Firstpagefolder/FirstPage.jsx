@@ -32,6 +32,7 @@ function FirstPage (){
 
                         </div>
                 </section>    
+                <Link to="/Confirmation"> <button>Confirmation</button></Link>
             </main>
             <Scroll />
         </>
