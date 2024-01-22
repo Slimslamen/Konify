@@ -20,7 +20,7 @@ function CustomerForm() {
       onSubmit={handleSubmit}
       className=" w-4/5 md:w-3/5 flex-wrap flex flex-col justify-center items-center mx-auto my-auto"
     >
-      <h1 className="text-2xl font-bold m-5">Your Information</h1>
+      <h1 className="text-5xl m-5">Your Information</h1>
       {<CountrySelector />}
       <input
         className="w-full border border-solid border-purple-200 border-opacity-50 rounded-lg p-4 mb-2"
