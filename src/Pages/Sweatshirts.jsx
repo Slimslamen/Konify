@@ -3,6 +3,7 @@ import ImageTitle from "../Components/ImageTitle.jsx";
 import Product from "./PageComponents/Product.jsx";
 import { useContext } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
+import Scroll from "../Scroll";
 
 function Sweatshirts({}) {
   const { products } = useContext(ProductContext);
@@ -48,6 +49,7 @@ function Sweatshirts({}) {
             )}
           </section>
         </main>
+        <Scroll />
         </>
       );
 
