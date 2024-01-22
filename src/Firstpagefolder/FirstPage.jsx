@@ -1,7 +1,8 @@
 import Scroll from "../Scroll";
 import { Link } from "react-router-dom";
 import ImageTitle from "../Components/ImageTitle";
-
+import CustomerForm from "../Confirmationpage/CustomerForm";
+import Confirmation from "../Confirmationpage/Confirmation";
 
 function FirstPage (){
 
@@ -32,7 +33,8 @@ function FirstPage (){
                         </div>
                 </section>    
             </main>
-            <Link to="/Confirmation"><button>hi</button></Link>
+            <Link to="/Checkout"> <p>Checkout</p></Link>
+           
             <Scroll />
         </>
     )
