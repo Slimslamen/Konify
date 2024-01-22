@@ -1,6 +1,4 @@
 // Size.js
-import React from "react";
-
 const Size = ({ size, onClick, isSelected }) => {
   const handleClick = () => {
     onClick(size);
