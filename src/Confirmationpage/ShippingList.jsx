@@ -9,7 +9,7 @@ function ShippingList() {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col p-10">
+    <div className="flex justify-center items-center flex-col p-5">
       <h1 className="text-2xl font-bold">Delivery</h1>
 
       {[1, 2, 3].map((index) => (
