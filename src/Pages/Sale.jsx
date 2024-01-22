@@ -3,6 +3,7 @@ import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
 import { useContext } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
+import Scroll from "../Scroll";
 
 function Sale() {
   const { products, setProducts } = useContext(ProductContext)
@@ -41,6 +42,7 @@ return (
             ))}
           </section>
         </main>
+        <Scroll />
         </>
       );
 

@@ -3,7 +3,7 @@ import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
 import { useContext } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
-
+import Scroll from "../Scroll";
 
 function Jeans() {
 
@@ -57,6 +57,7 @@ const filteredProducts = products.filter((product) => product.category.includes(
          
         </section>
       </main>
+      <Scroll />
     </>
   );
 }
