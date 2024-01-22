@@ -1,37 +1,20 @@
 import { ProductContext } from "../Components/ProductContext";
-import { useParams } from "react-router-dom";
+import Product from "../Pages/PageComponents/Product";
 
 function Cart() {
-    const { CartId } = useParams();
-      const { products } = useContext(ProductContext);
 
-    const selectedProduct = products.find(
-      (product) => product.id === parseInt(CartId)
-    );
-    return <div className="">
-        <div>
-            <h1>Shopping cart</h1>
-        </div>
-        <div className="">
-        {selectedProduct.map((product) => (
-            <div>
-              <img
-                id={product.id}
-                src={`/${product.image}`}
-              />
-              <p>
-                {product.title} 
-                </p>
-                 <p>
-                 {product.price} 
-                 </p>
-                  <p>
-                  {product.sale} 
-                  </p>
-                  </div>
-            ))}
-        </div>
+  const { cart } = useContext(ProductContext);
+
+  return <div className="cart">
+    <div>
+      <h1>Shopping cart</h1>
     </div>
+    <div className="cartItems">
+      {cart.map((product) => {
+        <Product key={product.id} product={product} />
+      })}
+    </div>
+  </div>
 }
 
 export default Cart;

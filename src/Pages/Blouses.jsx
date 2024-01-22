@@ -2,7 +2,7 @@ import Product from "./PageComponents/Product.jsx";
 import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
 import { useContext } from "react";
-import { ProductContext } from "../Components/ProductContext.jsx";
+import { ProductContext } from "../Components/ProductContext";
 
 function Blouses() {
   const { products, setProducts } = useContext(ProductContext)

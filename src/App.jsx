@@ -15,7 +15,6 @@ import ProductProvider from './Components/ProductContext'
 import Cart from './Cart/Cart.jsx'
 
 
-
 function App() {
   return (
     <>
@@ -23,6 +22,7 @@ function App() {
         <NavBar />
 
         <ProductProvider>
+          
           <Routes>
             <Route path="/" element={<FirstPage />} />
             <Route path="/Sweatshirt" element={<Sweatshirts />} />
@@ -38,7 +38,7 @@ function App() {
               element={<Productdetails />}
             />
             <Route
-              path="/Cart/:cartId"
+              path="/Cart"
               element={<Cart />}
             />
           </Routes>

@@ -1,9 +1,19 @@
+import React from 'react';
+import { ProductContext } from './ProductContext';
+import { useContext } from 'react';
 
+const AddtocartButton = ({ product }) => {
+    const { addToCart } = useContext(ProductContext);
 
-function AddtocartButton () {
-    return <p className='hover:font-semibold cursor-pointer'>Add to cart</p>
+    const handleAddToCart = () => {
+        addToCart(product);
+    };
 
-}
+    return (
+        <button onClick={handleAddToCart}>
+            Add to Cart
+        </button>
+    );
+};
 
 export default AddtocartButton;
-
