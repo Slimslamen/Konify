@@ -33,6 +33,8 @@ function FirstPage (){
                         </div>
                 </section>    
             </main>
+            <Link to="/Checkout"> <p>Checkout</p></Link>
+           
             <Scroll />
         </>
     )

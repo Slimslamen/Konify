@@ -10,7 +10,7 @@ function CountrySelector() {
     setValue(value)
   }
 
-  return <Select id='Country' options={options} value={value} onChange={changeHandler} required />
+  return <Select className='w-full mb-2' placeholder="Select your country" id='Country' options={options} value={value} onChange={changeHandler} required />
 }
 
 export default CountrySelector
