@@ -1,20 +1,16 @@
 import { ProductContext } from "../Components/ProductContext";
-import Product from "../Pages/PageComponents/Product";
+import { useContext } from "react";
+import ProductCart from "./productCart";
+
 
 function Cart() {
+  const { cart, cartCount } = useContext(ProductContext);
 
-  const { cart } = useContext(ProductContext);
-
-  return <div className="cart">
-    <div>
-      <h1>Shopping cart</h1>
-    </div>
-    <div className="cartItems">
-      {cart.map((product) => {
-        <Product key={product.id} product={product} />
-      })}
-    </div>
-  </div>
+  return <>
+    <ProductCart cart={cart} cartCount={cartCount} />
+    
+  </>
 }
+
 
 export default Cart;

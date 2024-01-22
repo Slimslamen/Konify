@@ -20,9 +20,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      <ProductProvider>
         <NavBar />
 
-        <ProductProvider>
+        
           
           <Routes>
             <Route path="/" element={<FirstPage />} />

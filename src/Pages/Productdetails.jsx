@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
-import AddtocartButton from "../Components/AddtocartButton.jsx";
 import ScrollToTop from "react-scroll-to-top";
 import Favorites from "../Components/Favorites.jsx";
 import SelectSize from "../Productpage/SelectSize.jsx"
+import AddtocartButton from "../Components/AddtocartButton.jsx";
 
 const Productdetails = () => {
   const { selectedId } = useParams();
-  const { products } = useContext(ProductContext);
+  const { products, addToCart } = useContext(ProductContext);
 
 
   const selectedProduct = products.find(
@@ -18,6 +18,11 @@ const Productdetails = () => {
   if (!selectedProduct) {
     return <p>Product not found</p>;
   }
+
+  // const handleAddToCart = () => {
+  //   // Logiken för att lägga till i varukorgen här
+  //   addToCart(selectedProduct);
+  // };
 
   return (
     <div className="md:flex grid grid-col-1 flex-wrap mb-4 ">
@@ -42,7 +47,7 @@ const Productdetails = () => {
         <p className="mx-4 mt-2 mt:my-6">Select Size</p>
         <SelectSize />
         <div className="flex justify-around py-2 md:my-4  border-b-2">
-          <Favorites />  <AddtocartButton product={selectedProduct} />
+          <Favorites />  <AddtocartButton addToCart={addToCart} product={selectedProduct} />
 
         </div>
       </div>

@@ -4,7 +4,7 @@ export const ProductContext = createContext();
 
 function ProductProvider({ children }) {
     const [formSubmitted, setFormSubmitted] = useState(false);
-  const PRODUCT_URL = "Assets/data.json";
+  const PRODUCT_URL = "/Assets/data.json";
 
   const [products, setProducts] = useState([]);
   const [formData, setFormData] = useState({
@@ -17,13 +17,14 @@ function ProductProvider({ children }) {
     mobile: "",
   });
 
-  const addToCart = (productId) => {
-    setProducts((prev) => ({ ...prev, [productId]: prev[productId] + 1 }));
+  const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0); 
+
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+    setCartCount(cartCount + 1);
   };
 
-  const removeFromCart = (productId) => {
-    setProducts((prev) => ({ ...prev, [productId]: prev[productId] - 1 }));
-  };
 
   const updateFormData = (fieldName, value) => {
     setFormData((prevData) => ({
@@ -51,11 +52,14 @@ function ProductProvider({ children }) {
     setProducts,
     formData,
     setFormData,
-    addToCart,
-    removeFromCart,
+    cart,
+    setCart,
     updateFormData,
     formSubmitted, 
-    setFormSubmitted
+    setFormSubmitted,
+    addToCart,
+    cartCount, 
+    setCartCount,
   };
 
   return (
