@@ -1,52 +1,68 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useContext } from "react";
 
+export const ProductContext = createContext();
 
-export const ProductContext = createContext()
+function ProductProvider({ children }) {
+    const [formSubmitted, setFormSubmitted] = useState(false);
+  const PRODUCT_URL = "Assets/data.json";
 
+  const [products, setProducts] = useState([]);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    postalCode: "",
+    address: "",
+    city: "",
+    mobile: "",
+  });
 
-function ProductProvider ( {children} ){
-    const PRODUCT_URL = "Assets/data.json";
+  const addToCart = (productId) => {
+    setProducts((prev) => ({ ...prev, [productId]: prev[productId] + 1 }));
+  };
 
-    const [products, setProducts] = useState([]);
+  const removeFromCart = (productId) => {
+    setProducts((prev) => ({ ...prev, [productId]: prev[productId] - 1 }));
+  };
 
-    const addToCart = (productId) => {
-        setProducts((prev) => ({...prev, [productId]: prev[productId] + 1}));
-    };
-    const removeFromCart = (productId) => {
-        setProducts((prev) => ({...prev, [productId]: prev[productId] - 1}));
-    };
-  
-    useEffect(() => {
-      async function fetchData() {
-        try{
-            const response = await fetch(PRODUCT_URL);
-            const jsonResponse = await response.json();
+  const updateFormData = (fieldName, value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [fieldName]: value,
+    }));
+  };
 
-            setProducts(jsonResponse.products);
-        }  catch (error) {
-            console.error("Error fetching data:", error);
-        }
-    
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(PRODUCT_URL);
+        const jsonResponse = await response.json();
+
+        setProducts(jsonResponse.products);
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
-      fetchData();
-    }, []);
-    
-     const contextValue = {
-         products,
-         setProducts,
-         addToCart,
-         removeFromCart,
-     };
+    }
+    fetchData();
+  }, []);
 
-    return (
-        <>
-        <ProductContext.Provider value={contextValue}>
-            {children}
-        </ProductContext.Provider>
-        </>
-    )
+  const contextValue = {
+    products,
+    setProducts,
+    formData,
+    setFormData,
+    addToCart,
+    removeFromCart,
+    updateFormData,
+    formSubmitted, 
+    setFormSubmitted
+  };
+
+  return (
+    <ProductContext.Provider value={contextValue}>
+      {children}
+    </ProductContext.Provider>
+  );
 }
 
-  export default ProductProvider;
-
-  
+export default ProductProvider;
