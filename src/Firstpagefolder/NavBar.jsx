@@ -1,10 +1,13 @@
 import { Icon } from '@iconify/react';
 import SidebarMenu from '../Components/SidebarMenu';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Searchbar from '../Components/Searchbar';
 import { Link } from 'react-router-dom';
+import { ProductContext } from '../Components/ProductContext';
+
 
 function NavBar() {
+  const { cartCount = 0 } = useContext(ProductContext);
   const [isMenuVisible, setMenuVisible] = useState(false)
   function toggleMenu() {
     return setMenuVisible(!isMenuVisible);
@@ -32,8 +35,17 @@ function NavBar() {
           <Link to="/"><Icon icon="material-symbols:home-outline" className='md:w-8 h-8' /></Link>
           <Icon icon="mdi:heart-outline" className=" md:w-8 h-8 text-gray-900" />
           <Icon icon="material-symbols:mail-outline" className=" md:w-8 h-8 text-gray-900" />
-          <Icon icon="mdi:cart-outline" className=" md:w-8 h-8 text-gray-900" />
+          {/* <Link to="/cart"><Icon icon="mdi:cart-outline" className="md:w-8 h-8 text-gray-900" /></Link> */}
+          <Link to="/cart" className="relative">
+        <Icon icon="mdi:cart-outline" className="md:w-8 h-8 text-gray-900" />
+        {cartCount > 0 && (
+          <span className="absolute -top-3 -right-2 bg-red-500 text-white rounded-full px-2">
+            {cartCount}
+          </span>
+        )}
+      </Link>
         </div>
+
       </div>
     </nav>
     {isMenuVisible &&(
