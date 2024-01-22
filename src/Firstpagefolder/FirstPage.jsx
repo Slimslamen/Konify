@@ -29,10 +29,8 @@ function FirstPage (){
                         <div className="buttonsMain flex flex-col md:flex-row absolute top-[57%] md:top-[80%] left-1/2 translate-x-[-50%] ">
             <Link to="/Sales"> <ImageTitle title="SALE" /></Link>
             <Link to="/News"> <ImageTitle title="NEWS" /></Link>
-
                         </div>
                 </section>    
-                <Link to="/Confirmation"> <button>Confirmation</button></Link>
             </main>
             <Scroll />
         </>
