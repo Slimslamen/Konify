@@ -2,10 +2,10 @@ import { useState } from "react";
 import Shipping from "./Shipping";
 
 function ShippingList() {
-  const [selectedButton, setSelectedButton] = useState(null);
+  const [selected, setselected] = useState(null);
 
   const handleCircle = (index) => {
-    setSelectedButton(index);
+    setselected(index);
   };
 
   return (
@@ -17,7 +17,9 @@ function ShippingList() {
           key={index}
           index={index}
           picture={index === 3 ? 'Assets/Instabox.png' : 'Assets/Postnord.jpeg'}
-          isSelected={selectedButton === index}
+          place={index === 1 ? "Utlämningsställe - Postnord":null || index === 2 ? "Hemleverans - Postnord":null || index === 3 ? "Paketskåp - Instabox":null}
+          time={index === 1 ? "39 SEK 1-3 arbetsdagars leverans":null || index === 2 ? "59 SEK 1-3 arbetsdagars leverans":null || index === 3 ? "39 SEK 1-3 arbetsdagars leverans":null}
+          isSelected={selected === index}
           onClick={handleCircle}
         />
       ))}
