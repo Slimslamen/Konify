@@ -1,6 +1,8 @@
 
+function Shipping({ index, picture, isSelected, onClick, place, time, price }) {
 
-function Shipping({ index, picture, isSelected, onClick, place, time }) {
+
+
   return (
     <div  onClick={() => onClick(index)} className="w-4/5 md:w-3/5 md:h-36 p-10 pb-20 md:p-10 border rounded-lg m-5 relative">
       <div
@@ -9,7 +11,7 @@ function Shipping({ index, picture, isSelected, onClick, place, time }) {
         {isSelected && <div className="w-3 h-3 bg-black rounded-full"></div>}
       </div>
       <h3 className="font-semibold text-sm md:text-lg">{place}</h3>
-      <p className="text-slate-400 text-sm md:text-md">{time}</p>
+      <p className="text-slate-400 text-sm md:text-md">{`${price} ${time}`}</p>
       <img
         src={`${picture}`}
         alt="Postnord"
