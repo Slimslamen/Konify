@@ -1,4 +1,4 @@
-
+import Scroll from "../Scroll";
 import Product from "./PageComponents/Product.jsx";
 import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
@@ -57,6 +57,7 @@ function Dress() {
   
         </section>
       </main>
+      <Scroll />
     </>
   );
 }

@@ -2,7 +2,8 @@ import Product from "./PageComponents/Product.jsx";
 import FilterSortButton from "./PageComponents/FilterSortButton.jsx";
 import ImageTitle from "../Components/ImageTitle.jsx";
 import { useContext } from "react";
-import { ProductContext } from "../Components/ProductContext";
+import { ProductContext } from "../Components/ProductContext.jsx";
+import Scroll from "../Scroll";
 
 function Blouses() {
   const { products, setProducts } = useContext(ProductContext)
@@ -44,6 +45,7 @@ function Blouses() {
       
         </section>
       </main>
+      <Scroll />
     </>
   );
 }

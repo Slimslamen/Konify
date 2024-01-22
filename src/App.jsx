@@ -13,6 +13,7 @@ import Productdetails from './Pages/Productdetails'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProductProvider from './Components/ProductContext'
 import Cart from './Cart/Cart.jsx'
+import { Confirmation } from './Confirmationpage/Confirmation.jsx'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/Dress" element={<Dress />} />
             <Route path="/Sales" element={<Sale />} />
             <Route path="/News" element={<News />} />
+            <Route path='/Confirmation' element={<Confirmation />} />
             <Route
               path="/Productdetails/:selectedId"
               element={<Productdetails />}
