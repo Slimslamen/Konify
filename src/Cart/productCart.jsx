@@ -2,6 +2,10 @@ import { useContext, useState, useEffect } from "react";
 import { ProductContext } from "../Components/ProductContext";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import { ProductContext } from "../Components/ProductContext";
+import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const ProductCart = ({ cart }) => {
   const [scores, setScores] = useState(cart.map(() => 1));
@@ -63,7 +67,7 @@ const ProductCart = ({ cart }) => {
         <div className="mr-2 text-right">
           <p>Remove Item</p>
         </div>
-
+        <div className="flex-grow text-center"></div>
       </div>
 
       <div className="md:w-100 border-t border-gray-300 md:mt-8 md:mb-0 md:m-20"></div>
@@ -125,7 +129,7 @@ const ProductCart = ({ cart }) => {
             <p>Total price: {totalPrice}</p>
           </div>
           <Link to="/Checkout">
-            <button className="bg-purple-300 text-black py-2 px-4 rounded md:ml-20">
+            <button className="bg-purple-300 shadow-lg py-2 px-4 rounded md:ml-20 bg-gradient-to-r hover:from-purple-300 hover:to-purple-400 text-white">
               Go to checkout
             </button>
           </Link>
