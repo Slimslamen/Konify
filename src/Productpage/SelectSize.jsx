@@ -1,9 +1,10 @@
 // SelectSize.js
-import { useState } from "react";
+import { ProductContext } from "../Components/ProductContext";
+import { useContext } from "react";
 import Size from "./Size";
 
 function SelectSize() {
-  const [selectedSize, setSelectedSize] = useState([]);
+  const {selectedSize, setSelectedSize} = useContext(ProductContext)
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
