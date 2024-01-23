@@ -1,4 +1,4 @@
-import Product from '../Pages/PageComponents/Product';
+
 import { Icon } from '@iconify/react';
 
 const ProductCart = ({ cart, cartCount }) => {
@@ -14,13 +14,16 @@ const ProductCart = ({ cart, cartCount }) => {
       <button className="relative -top-20 -right-80"><Icon icon="icomoon-free:bin" className=" md:w-8 h-8" /></button>
       </div>
         {cart.map((product) => (
-          <Product
-            key={product.id}
-            title={product.title}
-            price={product.price}
-            imageUrl={`${product.image}`}
-            sale={product.sale}
+          <div key={product.id}>
+          <img 
+          src={`/${product.image}`}
+          alt={product.title}
+          className="max-w-full mb-2 h-[100px] w-[100px] shadow-xl"
           />
+        <p className="">{product.title}</p>
+        <p>{product.price}</p>
+        <p>{product.sales}</p>
+        </div>
         ))}
       </div>
     </div>
