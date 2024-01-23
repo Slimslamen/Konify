@@ -1,6 +1,7 @@
 import { Icon } from '@iconify/react';
 
-const ProductCart = ({ cart, cartCount }) => {
+const ProductCart = ({ cart }) => {
+
   return (
     <div className="cart">
       <div>
@@ -40,7 +41,7 @@ const ProductCart = ({ cart, cartCount }) => {
                 ) : (
                   <p>{product.price}</p>
                 )}
-
+  
                 <button className="absolute right-0 md: mr-36">
                   <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
                 </button>
