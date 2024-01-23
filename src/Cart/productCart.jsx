@@ -81,6 +81,7 @@ const ProductCart = ({ cart }) => {
                 <p className='w-40'>{product.title}</p>
                 <p className='mt-5'>Size {productSizes[product.id]}</p>
               </div>
+              </div>
               <div className="ml-20">
                 {/*  If there is a sales price (product.sale), display it in red; otherwise, display the regular price (product.price).*/}
                 {product.sale ? (
@@ -89,16 +90,18 @@ const ProductCart = ({ cart }) => {
                   <p>{product.price}</p>
                 
                 )}
-                <button className="absolute right-0 md: mr-36">
-                  <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
-                </button>
+             
               </div>
-            </div>
-            <div className="flex">
+              <div className="flex ml-20">
             <button className="m-2" onClick={() => quantityRemove(idx)} >-</button>
             <p className="mt-12">{scores[idx]}</p>
             <button className="m-2" onClick={() => quantityAdd(idx)} >+</button>
             </div>
+            <button className="absolute right-0 md: mr-36">
+                  <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
+                </button>
+            
+
           </div>
         ))}
         <div className="flex items-end justify-end">
