@@ -12,10 +12,11 @@ function ProductProvider({ children }) {
     lastName: "",
     email: "",
     postalCode: "",
-    address: "",
+    adress: "",
     city: "",
     mobile: "",
   });
+  
 
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0); 

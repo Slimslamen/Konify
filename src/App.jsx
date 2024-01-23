@@ -14,6 +14,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ProductProvider from './Components/ProductContext'
 import Cart from './Cart/Cart.jsx'
 import Checkout from './Confirmationpage/Checkout.jsx'
+import Payment from './Confirmationpage/Payment.jsx'
+import Confirmation from './Confirmationpage/Confirmation.jsx'
 
 
 function App() {
@@ -44,6 +46,8 @@ function App() {
               element={<Cart />}
             />
             <Route path="/Checkout" element={<Checkout />} />
+            <Route path="/Payment" element={<Payment />} />
+            <Route path="/Confirmation" element={<Confirmation />} />
           </Routes>
         </ProductProvider>
 

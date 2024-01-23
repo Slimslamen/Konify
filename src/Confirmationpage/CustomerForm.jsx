@@ -1,10 +1,13 @@
 import { ProductContext } from "../Components/ProductContext";
-import { useContext } from "react";
+import { useContext  } from "react";
 import CountrySelector from "./CountrySelector";
+import { useNavigate } from "react-router-dom";
+
 
 function CustomerForm() {
   const { formData, updateFormData, setFormSubmitted } =
     useContext(ProductContext);
+    const navigate = useNavigate();
 
   function handleChange(evt) {
     const changedField = evt.target.name;
@@ -14,6 +17,21 @@ function CustomerForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormSubmitted(true);
+    if (isFormValid()) {
+        navigate("/payment");
+      }
+  };
+  const isFormValid = () => {
+    const isValid =
+      formData.email &&
+      formData.postalCode &&
+      formData.firstName &&
+      formData.lastName &&
+      formData.adress &&
+      formData.city &&
+      formData.mobile;
+  
+    return isValid;
   };
   return (
     <form
@@ -39,6 +57,8 @@ function CustomerForm() {
         placeholder="Postal Code"
         inputMode="numeric"
         pattern="^\s*\d{5}(-?\s*\d{4})?\s*$"
+        value={formData.postalCode}
+        onChange={handleChange}
         id="zip"
         required
       />
@@ -95,12 +115,18 @@ function CustomerForm() {
         id="mobile"
         required
       />
-      <button
-        className="bg-purple-200 md:self-end self-center rounded-lg p-2 m-2 text-slate-700 hover:bg-purple-300"
-        type="submit"
-      >
-        Continue
-      </button>
+      <div className="w-full flex justify-center items-center">
+        <button
+          type="submit"
+          className={`bg-purple-200 rounded-lg p-2 m-2 text-slate-700 hover:bg-purple-300 ${
+            isFormValid() ? "" : "opacity-50 cursor-not-allowed"
+          }`}
+          disabled={!isFormValid()}
+        >
+          Continue
+        </button>
+      </div>
+
     </form>
   );
 }
