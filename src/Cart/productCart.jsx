@@ -18,7 +18,7 @@ const ProductCart = ({ cart, cartCount }) => {
             key={product.id}
             title={product.title}
             price={product.price}
-            imageUrl={`${product.imageUrl}`}
+            imageUrl={`${product.image}`}
             sale={product.sale}
           />
         ))}
