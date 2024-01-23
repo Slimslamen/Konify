@@ -1,7 +1,7 @@
-import { useContext, useState, useEffect } from 'react';
-import { ProductContext } from '../Components/ProductContext';
-import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
+import { useContext, useState, useEffect } from "react";
+import { ProductContext } from "../Components/ProductContext";
+import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 const ProductCart = ({ cart }) => {
   const [scores, setScores] = useState(cart.map(() => 1));
@@ -46,79 +46,93 @@ const ProductCart = ({ cart }) => {
   return (
     <div className="cart">
       <div>
-        <h1 className="text-3xl flex items-center justify-center mt-5">
+        <h1 className="text-5xl text-wrap text-center m-5">
           Shopping cart
         </h1>
       </div>
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex-grow text-center">
+      <div className=" md:w-100 grid grid-cols-4 justify-between md:mt-8 md:mb-0 md:m-20">
+        <div className=" text-left ml-2">
           <p>Items</p>
         </div>
-        <div className="flex-grow text-center">
+        <div className="text-center">
           <p>Price per item</p>
         </div>
-        <div className="flex-grow text-center">
+        <div className=" text-center">
           <p>Quantity</p>
         </div>
-        <div className="flex-grow text-center">
+        <div className="mr-2 text-right">
           <p>Remove Item</p>
         </div>
-        <div className='flex-grow text-center'>
-         
-        </div>
+
       </div>
+
       <div className="md:w-100 border-t border-gray-300 md:mt-8 md:mb-0 md:m-20"></div>
       <div className="md:w-100 border border-gray-300 rounded md:p-4 md:mt-4 md:m-20">
-        {cart.map((product, idx) => (
-          <div key={product.id} className="flex flex-row">
-            <img
-              src={`/${product.image}`}
-              alt={product.title}
-              className="max-w-full h-[100px] w-[100px] shadow-xl flex flex-col justify-start mb-5"
-            />
-            <div className="flex ml-2">
-              <div className='flex flex-col'>
-                <p className='w-40'>{product.title}</p>
-                <p className='mt-5'>Size {productSizes[product.id]}</p>
-              </div>
-              </div>
-              <div className="ml-20">
-                {/*  If there is a sales price (product.sale), display it in red; otherwise, display the regular price (product.price).*/}
-                {product.sale ? (
-                  <p className="text-red-500">{product.sale}</p>
-                ) : (
-                  <p>{product.price}</p>
-                
-                )}
-             
-              </div>
-              <div className="flex ml-20">
-            <button className="m-2" onClick={() => quantityRemove(idx)} >-</button>
-            <p className="mt-12">{scores[idx]}</p>
-            <button className="m-2" onClick={() => quantityAdd(idx)} >+</button>
-            </div>
-            <button className="absolute right-0 md: mr-36">
-                  <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
-                </button>
-            
+      {cart.map((product, idx) => (
+  <div key={product.id} className="items-start grid grid-cols-4 gap-4 justify-between mb-4">
+    <div className="flex items-center">
+      <img
+        src={`/${product.image}`}
+        alt={product.title}
+        className="max-w-full h-[100px] w-[100px] shadow-xl mb-5"
+      />
+      <div className="flex flex-col ml-2">
+        <p className="w-40">{product.title}</p>
+        <p className="mt-2">Size {productSizes[product.id]}</p>
+      </div>
+    </div>
 
-          </div>
-        ))}
+    <div className="flex items-center justify-center">
+      {product.sale ? (
+        <p className="text-red-500">{product.sale}</p>
+      ) : (
+        <p>{product.price}</p>
+      )}
+    </div>
+
+    <div className="flex items-center justify-center">
+      <button
+        className="bg-gray-100 cursor-pointer m-2.5 w-[40px] font-bold border-none rounded-lg"
+        onClick={() => quantityRemove(idx)}
+      >
+        -
+      </button>
+      <input
+        type="text"
+        value={scores[idx]}
+        className="bg-gray-100 font-bold text-center w-[40px]"
+      />
+      <button
+        className="bg-gray-100 cursor-pointer m-2.5 w-[40px] font-bold border-none rounded-lg"
+        onClick={() => quantityAdd(idx)}
+      >
+        +
+      </button>
+    </div>
+
+    <div className="flex items-center justify-end">
+      <button>
+        <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
+      </button>
+    </div>
+  </div>
+))}
+
+
+
         <div className="flex items-end justify-end">
           <div>
             <p>Total price: {totalPrice}</p>
           </div>
-          <Link to="/Checkout"> 
-          <button className="bg-purple-300 text-black py-2 px-4 rounded md:ml-20">
-            Go to checkout
-          </button>
+          <Link to="/Checkout">
+            <button className="bg-purple-300 text-black py-2 px-4 rounded md:ml-20">
+              Go to checkout
+            </button>
           </Link>
         </div>
       </div>
     </div>
   );
 };
- 
-export default ProductCart;
- 
 
+export default ProductCart;
