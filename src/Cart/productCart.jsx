@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from 'react';
 import { ProductContext } from '../Components/ProductContext';
 import { Icon } from '@iconify/react';
+import { Link } from 'react-router-dom';
 
 const ProductCart = ({ cart }) => {
   const [scores, setScores] = useState(cart.map(() => 1));
@@ -104,9 +105,11 @@ const ProductCart = ({ cart }) => {
           <div>
             <p>Total price: {totalPrice}</p>
           </div>
+          <Link to="/Checkout"> 
           <button className="bg-purple-300 text-black py-2 px-4 rounded md:ml-20">
             Go to checkout
           </button>
+          </Link>
         </div>
       </div>
     </div>
