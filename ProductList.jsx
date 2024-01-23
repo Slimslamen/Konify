@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Product from "./Product.jsx";
+import Product from "./src/Pages/PageComponents/Product.jsx";
 
 // API URL for fetching product data
 const Product_URL = "https://api.escuelajs.co/api/v1/products";

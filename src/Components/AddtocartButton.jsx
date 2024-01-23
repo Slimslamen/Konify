@@ -3,10 +3,11 @@ import { ProductContext } from './ProductContext';
 import { useContext } from 'react';
 
 const AddtocartButton = ({ product }) => {
-    const { addToCart } = useContext(ProductContext);
+    const { addToCart, setSelectedSize } = useContext(ProductContext);
 
     const handleAddToCart = () => {
         addToCart(product);
+        setSelectedSize("")
     };
 
     return (

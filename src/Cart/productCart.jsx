@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { ProductContext } from '../Components/ProductContext';
 import { Icon } from '@iconify/react';
-
+ 
 const ProductCart = ({ cart }) => {
+ 
+  const { productSizes } = useContext(ProductContext)
 
   return (
     <div className="cart">
@@ -22,6 +26,9 @@ const ProductCart = ({ cart }) => {
         <div className="flex-grow text-center">
           <p>Remove Item</p>
         </div>
+        <div className='flex-grow text-center'>
+         
+        </div>
       </div>
       <div className="md:w-100 border-t border-gray-300 md:mt-8 md:mb-0 md:m-20"></div>
       <div className="md:w-100 border border-gray-300 rounded md:p-4 md:mt-4 md:m-20">
@@ -33,7 +40,10 @@ const ProductCart = ({ cart }) => {
               className="max-w-full h-[100px] w-[100px] shadow-xl flex flex-col justify-start mb-5"
             />
             <div className="flex ml-2">
-              <p>{product.title}</p>
+              <div className='flex flex-col'>
+                <p className='w-40'>{product.title}</p>
+                <p className='mt-5'>Size {productSizes[product.id]}</p>
+              </div>
               <div className="ml-20">
                 {/*  If there is a sales price (product.sale), display it in red; otherwise, display the regular price (product.price).*/}
                 {product.sale ? (
@@ -41,11 +51,11 @@ const ProductCart = ({ cart }) => {
                 ) : (
                   <p>{product.price}</p>
                 )}
-  
+
                 <button className="absolute right-0 md: mr-36">
                   <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
                 </button>
-
+ 
               </div>
             </div>
           </div>
@@ -63,6 +73,6 @@ const ProductCart = ({ cart }) => {
     </div>
   );
 };
-
+ 
 export default ProductCart;
-
+ 
