@@ -1,9 +1,15 @@
-import { createContext, useEffect, useState, useContext } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ProductContext = createContext();
 
 function ProductProvider({ children }) {
     const [formSubmitted, setFormSubmitted] = useState(false);
+
+    const [selectedSize, setSelectedSize] = useState("");
+    const [productSizes, setProductSizes] = useState({});
+    const [currentId, setCurrentId] = useState(null);
+
+
   const PRODUCT_URL = "/Assets/data.json";
 
   const [products, setProducts] = useState([]);
@@ -60,6 +66,12 @@ function ProductProvider({ children }) {
     addToCart,
     cartCount, 
     setCartCount,
+    selectedSize, 
+    setSelectedSize,
+    productSizes,
+    setProductSizes,
+    currentId,
+    setCurrentId,
   };
 
   return (

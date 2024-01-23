@@ -1,40 +1,45 @@
 // SelectSize.js
-import { useState } from "react";
+import { ProductContext } from "../Components/ProductContext";
+import { useContext } from "react";
 import Size from "./Size";
 
 function SelectSize() {
-  const [selectedSize, setSelectedSize] = useState([]);
+  const {selectedSize, setSelectedSize, setProductSizes, currentId} = useContext(ProductContext)
 
   const handleSizeClick = (size) => {
     setSelectedSize(size);
-    console.log(selectedSize);
+
+    setProductSizes(prevSizes => ({
+      ...prevSizes,
+      [currentId]: size,
+    }));
   };
 
   return (
     <div className="flex flex-row mx-2">
       <Size
         size="XS"
-        onClick={handleSizeClick}
+        onClick={() => handleSizeClick("XS")}
         isSelected={selectedSize === "XS"}
       />
       <Size
         size="S"
-        onClick={handleSizeClick}
+        onClick={() => handleSizeClick("S")}
         isSelected={selectedSize === "S"}
       />
       <Size
         size="M"
-        onClick={handleSizeClick}
+        onClick={() => handleSizeClick("M")}
         isSelected={selectedSize === "M"}
       />
       <Size
         size="L"
-        onClick={handleSizeClick}
+        onClick={() => handleSizeClick("L")}
         isSelected={selectedSize === "L"}
       />
       <Size
         size="XL"
-        onClick={handleSizeClick}
+        onClick={() => handleSizeClick("XL")}
         isSelected={selectedSize === "XL"}
       />
     </div>
