@@ -5,7 +5,10 @@ export const ProductContext = createContext();
 function ProductProvider({ children }) {
     const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const [selectedSize, setSelectedSize] = useState([]);
+    const [selectedSize, setSelectedSize] = useState("");
+    const [productSizes, setProductSizes] = useState({});
+    const [currentId, setCurrentId] = useState(null);
+
 
   const PRODUCT_URL = "/Assets/data.json";
 
@@ -64,7 +67,11 @@ function ProductProvider({ children }) {
     cartCount, 
     setCartCount,
     selectedSize, 
-    setSelectedSize
+    setSelectedSize,
+    productSizes,
+    setProductSizes,
+    currentId,
+    setCurrentId,
   };
 
   return (

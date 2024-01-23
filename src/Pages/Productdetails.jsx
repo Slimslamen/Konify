@@ -8,7 +8,7 @@ import AddtocartButton from "../Components/AddtocartButton.jsx";
 
 const Productdetails = () => {
   const { selectedId } = useParams();
-  const { products, addToCart } = useContext(ProductContext);
+  const { products, addToCart, setCurrentId  } = useContext(ProductContext);
 
 
   const selectedProduct = products.find(
@@ -19,6 +19,7 @@ const Productdetails = () => {
     return <p>Product not found</p>;
   }
 
+  setCurrentId(selectedProduct.id)
   return (
     <div className="md:flex grid grid-col-1 flex-wrap mb-4 ">
       <div className="flex items-center justify-center mb-2 w-full md:justify-end md:w-1/2 ">

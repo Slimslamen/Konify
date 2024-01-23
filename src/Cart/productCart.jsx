@@ -1,7 +1,12 @@
 
 import { Icon } from '@iconify/react';
+import { useContext } from 'react';
+import { ProductContext } from '../Components/ProductContext';
+
 
 const ProductCart = ({ cart, cartCount }) => {
+
+  const { productSizes } = useContext(ProductContext)
   return (
     <div className="cart">
       <div>
@@ -22,6 +27,7 @@ const ProductCart = ({ cart, cartCount }) => {
           />
         <p className="">{product.title}</p>
         <p>{product.price}</p>
+        <p>Size {productSizes[product.id]}</p>
         <p>{product.sales}</p>
         </div>
         ))}
