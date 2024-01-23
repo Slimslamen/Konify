@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
 import ScrollToTop from "react-scroll-to-top";
 import Favorites from "../Components/Favorites.jsx";
@@ -14,12 +14,12 @@ const Productdetails = () => {
   const selectedProduct = products.find(
     (product) => product.id === parseInt(selectedId)
   );
-
-  if (!selectedProduct) {
-    return <p>Product not found</p>;
-  }
-
-  setCurrentId(selectedProduct.id)
+  useEffect(() => {
+    if (selectedProduct) {
+      setCurrentId(selectedProduct.id);
+    }
+  }, []);
+  
   return (
     <div className="md:flex grid grid-col-1 flex-wrap mb-4 ">
       <div className="flex items-center justify-center mb-2 w-full md:justify-end md:w-1/2 ">
