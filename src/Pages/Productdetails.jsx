@@ -19,11 +19,6 @@ const Productdetails = () => {
     return <p>Product not found</p>;
   }
 
-  // const handleAddToCart = () => {
-  //   // Logiken för att lägga till i varukorgen här
-  //   addToCart(selectedProduct);
-  // };
-
   return (
     <div className="md:flex grid grid-col-1 flex-wrap mb-4 ">
       <div className="flex items-center justify-center mb-2 w-full md:justify-end md:w-1/2 ">
