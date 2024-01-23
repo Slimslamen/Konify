@@ -3,6 +3,8 @@ import { useContext } from 'react';
 
 function Confirmation() {
     const { formData, formSubmitted } = useContext(ProductContext);
+    console.log('formData:', formData);
+    console.log('formSubmitted:', formSubmitted);
 
   return (
     <div>
