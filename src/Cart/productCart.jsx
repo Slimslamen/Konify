@@ -51,7 +51,7 @@ const ProductCart = ({ cart }) => {
                 ) : (
                   <p>{product.price}</p>
                 )}
-
+                   
                 <button className="absolute right-0 md: mr-36">
                   <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
                 </button>
