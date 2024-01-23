@@ -2,10 +2,6 @@ import { useContext, useState, useEffect } from "react";
 import { ProductContext } from "../Components/ProductContext";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
-import { ProductContext } from "../Components/ProductContext";
-import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
 
 const ProductCart = ({ cart }) => {
   const [scores, setScores] = useState(cart.map(() => 1));
