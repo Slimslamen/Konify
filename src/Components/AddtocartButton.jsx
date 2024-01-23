@@ -11,7 +11,7 @@ const AddtocartButton = ({ product }) => {
     };
 
     return (
-        <button onClick={handleAddToCart}>
+        <button onClick={handleAddToCart} className=' hover:font-bold'>
             Add to Cart
         </button>
     );
