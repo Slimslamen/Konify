@@ -1,11 +1,11 @@
-import { Icon } from '@iconify/react';
 import { useContext } from 'react';
 import { ProductContext } from '../Components/ProductContext';
-
-
-const ProductCart = ({ cart, cartCount }) => {
-
+import { Icon } from '@iconify/react';
+ 
+const ProductCart = ({ cart }) => {
+ 
   const { productSizes } = useContext(ProductContext)
+
   return (
     <div className="cart">
       <div>
@@ -13,21 +13,9 @@ const ProductCart = ({ cart, cartCount }) => {
           Shopping cart
         </h1>
       </div>
-      <div className="w-100 h-80 flex items-center justify-center border border-gray-300 rounded p-4 mt-4 mb-4 m-20">
-        <div>
-      <button className="relative -top-20 -right-80"><Icon icon="icomoon-free:bin" className=" md:w-8 h-8" /></button>
-      </div>
-        {cart.map((product) => (
-          <div key={product.id}>
-          <img 
-          src={`/${product.image}`}
-          alt={product.title}
-          className="max-w-full mb-2 h-[100px] w-[100px] shadow-xl"
-          />
-        <p className="">{product.title}</p>
-        <p>{product.price}</p>
-        <p>Size {productSizes[product.id]}</p>
-        <p>{product.sales}</p>
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex-grow text-center">
+          <p>Items</p>
         </div>
         <div className="flex-grow text-center">
           <p>Price per item</p>
@@ -37,6 +25,9 @@ const ProductCart = ({ cart, cartCount }) => {
         </div>
         <div className="flex-grow text-center">
           <p>Remove Item</p>
+        </div>
+        <div className='flex-grow text-center'>
+         
         </div>
       </div>
       <div className="md:w-100 border-t border-gray-300 md:mt-8 md:mb-0 md:m-20"></div>
@@ -49,7 +40,10 @@ const ProductCart = ({ cart, cartCount }) => {
               className="max-w-full h-[100px] w-[100px] shadow-xl flex flex-col justify-start mb-5"
             />
             <div className="flex ml-2">
-              <p>{product.title}</p>
+              <div className='flex flex-col'>
+                <p className='w-40'>{product.title}</p>
+                <p className='mt-5'>Size {productSizes[product.id]}</p>
+              </div>
               <div className="ml-20">
                 {/*  If there is a sales price (product.sale), display it in red; otherwise, display the regular price (product.price).*/}
                 {product.sale ? (
@@ -57,11 +51,11 @@ const ProductCart = ({ cart, cartCount }) => {
                 ) : (
                   <p>{product.price}</p>
                 )}
-
+                   
                 <button className="absolute right-0 md: mr-36">
                   <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
                 </button>
-
+ 
               </div>
             </div>
           </div>
@@ -79,6 +73,6 @@ const ProductCart = ({ cart, cartCount }) => {
     </div>
   );
 };
-
+ 
 export default ProductCart;
-
+ 
