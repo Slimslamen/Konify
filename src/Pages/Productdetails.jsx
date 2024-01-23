@@ -21,7 +21,7 @@ const Productdetails = () => {
   }, []);
   
   return (
-    <div className="md:flex grid grid-col-1 flex-wrap mb-4 ">
+    <div className="md:flex max-[864px]:justify-center grid grid-col-1 flex-wrap mb-4 ">
       <div className="flex items-center justify-center mb-2 w-full md:justify-end md:w-1/2 ">
         <img
           key={selectedProduct.id}
