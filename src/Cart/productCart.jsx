@@ -67,7 +67,7 @@ const ProductCart = ({ cart }) => {
       </div>
 
       <div className="md:w-100 border-t border-gray-300 md:mt-8 md:mb-0 md:m-20"></div>
-      <div className="md:w-100 border border-gray-300 rounded md:p-4 md:mt-4 md:m-20 relative">
+      <div className="md:w-100 border border-gray-300 rounded md:p-4 md:mt-4 md:m-20 relative min-h-[20em]">
       {cart.map((product, idx) => (
   <div key={product.id} className="items-start grid grid-cols-4 md:grid-cols-6 gap-4 justify-between mb-4">
     <div className="flex items-center">
@@ -120,7 +120,7 @@ const ProductCart = ({ cart }) => {
 
 
 
-        <div className="flex flex-col justify-around it rounded-l-md bg-purple-300 w-64 h-72 md:top-[-18px] md:right-0 md:absolute text-white mx-auto mb-10">
+        <div className="flex flex-col justify-around it rounded-l-md bg-purple-300 w-64 h-72 md:top-[-18px] md:right-0 md:absolute text-black mx-auto mb-10">
           <img src="Assets/checkoutpic.png" alt="pile of clothes" className="w-[7em] absolute bottom-60 left-14 md:top-[-6.5em] md:left-[-3em] block md:hidden"/>
           <h2 className="mx-3 font-bold text-center">SUMMARY</h2>
           <div className="px-5 flex justify-between">
@@ -136,7 +136,7 @@ const ProductCart = ({ cart }) => {
             <p>Always.</p>
           </div>
           <Link to="/Checkout">
-            <button className="bg-purple-300 shadow-lg py-2 w-40 rounded md:ml-20 bg-gradient-to-r hover:from-purple-300 hover:to-purple-400 text-white absolute right-[6.5em] bottom-6 md:right-10 md:bottom-[-10px]">
+            <button className="bg-purple-300 shadow-lg py-2 w-40 rounded md:ml-20 bg-gradient-to-r hover:from-purple-300 hover:to-purple-400 text-black absolute right-[6.5em] bottom-6 md:right-10 md:bottom-[-10px]">
               Go to checkout
             </button>
           </Link>
