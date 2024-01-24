@@ -8,7 +8,7 @@ import Scroll from "../Scroll";
 function Tshirts() {
   const { products, setProducts } = useContext(ProductContext);
   const filteredProducts = products.filter((product) =>
-    product.category.includes("tshirts" || "news")
+    product.category.includes("t-shirts" || "news")
   );
 
   return (

@@ -154,7 +154,7 @@
       "price": 19.99,
       "description": "Elevate your casual wardrobe with our Classic T-shirt. Made from breathable cotton, this timeless piece ensures comfort without compromising style. With a versatile design, it's the perfect go-to shirt for everyday wear.",
       "image": "Assets/tshirt1.jpg",
-      "category": ["tshirts", "news"],
+      "category": ["t-shirts", "news"],
       "size": ""
     },
     {
@@ -163,7 +163,7 @@
       "price": 24.99,
       "description": "Express your personality with our Graphic Print T-shirt. Featuring unique and eye-catching graphics, this shirt adds a trendy touch to your wardrobe. The comfortable fabric ensures a relaxed fit, making it perfect for casual outings.",
       "image": "Assets/tshirt2.jpg",
-      "category": "tshirts",
+      "category": "t-shirts",
       "size": ""
     },
     {
@@ -173,7 +173,7 @@
       "description": "Enhance your casual look with our V-neck T-shirt. The stylish V-neck design adds a modern twist to the classic T-shirt, while the comfortable fabric ensures a relaxed fit. A wardrobe essential for a laid-back yet trendy style.",
       "image": "Assets/tshirt3.jpg",
       "sale": "€19.99",
-      "category": "tshirts",
+      "category": "t-shirts",
       "size": ""
     },
     {
@@ -182,7 +182,7 @@
       "price": 26.99,
       "description": "Express yourself with another graphic print T-shirt.",
       "image": "Assets/tshirt4.jpg",
-      "category": "tshirts",
+      "category": "t-shirts",
       "size": ""
     },
     {
@@ -191,7 +191,7 @@
       "price": 23.99,
       "description": "A striped V-neck T-shirt for a casual and stylish look.",
       "image": "Assets/tshirt5.jpg",
-      "category": ["tshirts", "news"],
+      "category": ["t-shirts", "news"],
       "size": ""
     },
     {
@@ -200,7 +200,7 @@
       "price": 18.99,
       "description": "Keep it simple and stylish with our Basic Crew Neck T-shirt. The classic design and comfortable fit make it a wardrobe essential for everyday wear. Pair it with jeans or shorts for a relaxed and timeless look.",
       "image": "Assets/tshirt6.jpg",
-      "category": "tshirts",
+      "category": "t-shirts",
       "size": ""
     },
     {
@@ -209,7 +209,7 @@
       "price": 17.99,
       "description": "Every wardrobe needs a Basic White T-shirt. Versatile and timeless, this shirt is a staple for casual and classic looks. The comfortable fit and high-quality cotton make it a must-have for everyday wear.",
       "image": "Assets/tshirt7.jpg",
-      "category": "tshirts",
+      "category": "t-shirts",
       "size": ""
     },
     {
@@ -218,7 +218,7 @@
       "price": 23.99,
       "description": "Make a statement with our Slogan T-shirt. Featuring a bold slogan, this shirt adds a touch of personality to your outfit. Express yourself and stay on-trend with this versatile and comfortable piece.",
       "image": "Assets/tshirt8.jpg",
-      "category": "tshirts",
+      "category": "t-shirts",
       "size": ""
     },
     {
