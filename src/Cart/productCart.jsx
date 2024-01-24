@@ -7,7 +7,7 @@ const ProductCart = ({ cart }) => {
   const [productCounts, setProductCounts] = useState(cart.map(() => 1));
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const { productSizes } = useContext(ProductContext);
+  const { productSizes, setCart, setCartCount } = useContext(ProductContext);
 
   const quantityAdd = (idx) => {
     setProductCounts((prevCounts) => {
@@ -30,6 +30,7 @@ const ProductCart = ({ cart }) => {
       return updatedCounts;
     });
   };
+  
 
   const updateTotalPrice = (updatedCounts) => {
     const newTotalPrice = updatedCounts.reduce((acc, productCounts, idx) => {
@@ -37,6 +38,18 @@ const ProductCart = ({ cart }) => {
       return acc + productCounts * product.price;
     }, 0);
     setTotalPrice(newTotalPrice);
+  };
+  const removeItem = (idx) => {
+    const updatedCart = [...cart];
+    updatedCart.splice(idx,1);
+    setProductCounts((prevCounts) => {
+      const updatedCounts = [...prevCounts]
+     updatedCounts.splice(idx, 1);
+      updateTotalPrice(updatedCounts);
+      return updatedCounts;
+    });
+    setCart(updatedCart);
+    setCartCount(updatedCart);
   };
 
   // Update total price when the components count change
@@ -113,7 +126,7 @@ const ProductCart = ({ cart }) => {
     </div>
 
     <div className="flex items-center justify-end">
-      <button>
+    <button onClick={() => removeItem()}>
         <Icon icon="icomoon-free:bin" className="md:w-8 h-8 md:mr-8" />
       </button>
     </div>
