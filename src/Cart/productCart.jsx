@@ -1,48 +1,48 @@
-import { useContext, useState, useEffect } from "react";
 import { ProductContext } from "../Components/ProductContext";
+import { useEffect, useState, useContext } from "react";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 
 const ProductCart = ({ cart }) => {
-  const [scores, setScores] = useState(cart.map(() => 1));
+  const [productCounts, setProductCounts] = useState(cart.map(() => 1));
   const [totalPrice, setTotalPrice] = useState(0);
 
   const { productSizes } = useContext(ProductContext);
 
   const quantityAdd = (idx) => {
-    setScores((prevScores) => {
-      const updatedScores = prevScores.map((score, i) => {
-        if (i === idx) return score + 1;
-        return score;
+    setProductCounts((prevCounts) => {
+      const updatedCounts = prevScores.map((count, i) => {
+        if (i === idx) return count + 1;
+        return count;
       });
-      updateTotalPrice(updatedScores);
-      return updatedScores;
+      updateTotalPrice(updatedCounts);
+      return updatedCounts;
     });
   };
 
   const quantityRemove = (idx) => {
-    setScores((prevScores) => {
-      const updatedScores = prevScores.map((score, i) => {
-        if (i === idx && score > 0) return score - 1;
-        return score;
+    setProductCounts((prevCounts) => {
+      const updatedCounts = prevCounts.map((count, i) => {
+        if (i === idx && count > 0) return count - 1;
+        return count;
       });
-      updateTotalPrice(updatedScores);
-      return updatedScores;
+      updateTotalPrice(updatedCounts);
+      return updatedCounts;
     });
   };
 
-  const updateTotalPrice = (updatedScores) => {
-    const newTotalPrice = updatedScores.reduce((acc, score, idx) => {
+  const updateTotalPrice = (updatedCounts) => {
+    const newTotalPrice = updatedCounts.reduce((acc, counts, idx) => {
       const product = cart[idx];
-      return acc + score * product.price;
+      return acc + counts * product.price;
     }, 0);
     setTotalPrice(newTotalPrice);
   };
 
   // Update total price when the component mounts or scores change
   useEffect(() => {
-    updateTotalPrice(scores);
-  }, [scores]);
+    updateTotalPrice(counts);
+  }, [counts]);
   return (
     <div className="cart">
       <div>
@@ -94,17 +94,19 @@ const ProductCart = ({ cart }) => {
       <button
         className="bg-gray-100 cursor-pointer m-2.5 w-[40px] font-bold border-none rounded-lg"
         onClick={() => quantityRemove(idx)}
+       
       >
         -
       </button>
       <input
         type="text"
-        value={scores[idx]}
+        value={counts[idx]}
         className="bg-gray-100 font-bold text-center w-[40px]"
       />
       <button
         className="bg-gray-100 cursor-pointer m-2.5 w-[40px] font-bold border-none rounded-lg"
         onClick={() => quantityAdd(idx)}
+        
       >
         +
       </button>
