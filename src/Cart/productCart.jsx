@@ -119,9 +119,6 @@ const ProductCart = ({ cart }) => {
     </div>
   </div>
 ))}
-
-
-
         <div className="flex flex-col justify-around it rounded-l-md bg-purple-300 w-60 h-72 md:top-[-18px] md:right-0 md:absolute text-black mx-auto mb-10 relative z-0">
           <img src="Assets/checkoutpic.png" alt="pile of clothes" className="w-[5em] absolute bottom-52 left-2 md:top-[-6.5em] md:left-[-3em] block md:hidden z-50"/>
           <div className="w-28 h-28 bg-purple-200 absolute rounded-full top-[-20px] left-[-10px] z-10"></div>
