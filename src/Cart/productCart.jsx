@@ -11,7 +11,7 @@ const ProductCart = ({ cart }) => {
 
   const quantityAdd = (idx) => {
     setProductCounts((prevCounts) => {
-      const updatedCounts = prevScores.map((count, i) => {
+      const updatedCounts = prevCounts.map((count, i) => {
         if (i === idx) return count + 1;
         return count;
       });
@@ -32,17 +32,17 @@ const ProductCart = ({ cart }) => {
   };
 
   const updateTotalPrice = (updatedCounts) => {
-    const newTotalPrice = updatedCounts.reduce((acc, counts, idx) => {
+    const newTotalPrice = updatedCounts.reduce((acc, productCounts, idx) => {
       const product = cart[idx];
-      return acc + counts * product.price;
+      return acc + productCounts * product.price;
     }, 0);
     setTotalPrice(newTotalPrice);
   };
 
-  // Update total price when the component mounts or scores change
+  // Update total price when the components count change
   useEffect(() => {
-    updateTotalPrice(counts);
-  }, [counts]);
+    updateTotalPrice(productCounts);
+  }, [productCounts]);
   return (
     <div className="cart">
       <div>
@@ -100,7 +100,7 @@ const ProductCart = ({ cart }) => {
       </button>
       <input
         type="text"
-        value={counts[idx]}
+        value={productCounts[idx]}
         className="bg-gray-100 font-bold text-center w-[40px]"
       />
       <button
