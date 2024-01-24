@@ -50,7 +50,7 @@ const ProductCart = ({ cart }) => {
           Shopping cart
         </h1>
       </div>
-      <div className=" md:w-100 grid grid-cols-4 md:grid-cols-6 justify-between md:mt-8 md:mb-0 md:m-20">
+      <div className=" md:w-100 grid grid-cols-4  md:grid-cols-6 justify-between md:mt-8 md:mb-0 md:m-20">
         <div className=" text-left ml-2">
           <p>Items</p>
         </div>
@@ -112,7 +112,7 @@ const ProductCart = ({ cart }) => {
 
     <div className="flex items-center justify-end">
       <button>
-        <Icon icon="icomoon-free:bin" className="md:w-8 h-8" />
+        <Icon icon="icomoon-free:bin" className="md:w-8 h-8 md:mr-8" />
       </button>
     </div>
   </div>
@@ -120,10 +120,12 @@ const ProductCart = ({ cart }) => {
 
 
 
-        <div className="flex flex-col justify-around it rounded-l-md bg-purple-300 w-64 h-72 md:top-[-18px] md:right-0 md:absolute text-black mx-auto mb-10">
-          <img src="Assets/checkoutpic.png" alt="pile of clothes" className="w-[7em] absolute bottom-60 left-14 md:top-[-6.5em] md:left-[-3em] block md:hidden"/>
-          <h2 className="mx-3 font-bold text-center">SUMMARY</h2>
-          <div className="px-5 flex justify-between">
+        <div className="flex flex-col justify-around it rounded-l-md bg-purple-300 w-60 h-72 md:top-[-18px] md:right-0 md:absolute text-black mx-auto mb-10 relative z-0">
+          <img src="Assets/checkoutpic.png" alt="pile of clothes" className="w-[5em] absolute bottom-52 left-2 md:top-[-6.5em] md:left-[-3em] block md:hidden z-50"/>
+          <div className="w-28 h-28 bg-purple-200 absolute rounded-full top-[-20px] left-[-10px] z-10"></div>
+          <div className="w-32 h-32 bg-purple-200 absolute rounded-full bottom-0 right-[-20px] z-10"></div>
+          <h2 className="mx-3 font-bold text-center z-20">SUMMARY</h2>
+          <div className="px-5 flex justify-between z-20">
             <p>Subtotal </p>
             <p>€{totalPrice}</p>
           </div>
@@ -131,12 +133,12 @@ const ProductCart = ({ cart }) => {
             <p>Taxes </p>
             <p>-</p>
           </div>
-          <div className="px-5 flex justify-between mb-5">
+          <div className="px-5 flex justify-between mb-5 z-20">
             <p>Happy </p>
             <p>Always.</p>
           </div>
           <Link to="/Checkout">
-            <button className="bg-purple-300 shadow-lg py-2 w-40 rounded md:ml-20 bg-gradient-to-r hover:from-purple-300 hover:to-purple-400 text-black absolute right-[6.5em] bottom-6 md:right-10 md:bottom-[-10px]">
+            <button className="z-20 bg-purple-300 shadow-lg py-2 w-40 rounded md:ml-20 bg-gradient-to-r hover:from-purple-300 hover:to-purple-400 text-black absolute right-[2.5em] bottom-[-10px] md:right-10 md:bottom-[-10px]">
               Go to checkout
             </button>
           </Link>
