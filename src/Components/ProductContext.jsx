@@ -27,13 +27,20 @@ function ProductProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0); 
 
+  const resetCart = () => {
+    setCart([]);
+  };
+
   const addToCart = (product) => {
     setCart([...cart, product]);
     setCartCount(cartCount + 1);
   };
-  const resetCartCount = () => {
-    setCartCount(0);
-  };
+  const [favorites, setFavorites] = useState([]);
+
+  const addToFavorites = (product) => {
+    setFavorites ([...favorites, product]);
+  }
+
   const updateFormData = (fieldName, value) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -74,7 +81,9 @@ function ProductProvider({ children }) {
     setProductSizes,
     currentId,
     setCurrentId,
-    resetCartCount,
+    addToFavorites,
+    favorites,
+    setFavorites
   };
 
   return (
