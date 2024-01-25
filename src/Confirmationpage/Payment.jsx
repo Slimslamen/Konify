@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Shipping from "./Shipping";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../Components/ProductContext";
+
+
 
 function Payment() {
+  const { resetCartCount, resetCart } = useContext(ProductContext);
   const [selected, setSelected] = useState(null);
 
   const handleCircle = (index) => {
@@ -39,12 +43,16 @@ function Payment() {
 
       <div className="w-4/5 md:w-3/5 mx-auto my-auto flex justify-center md:justify-end items-center">
       <Link to={isSelectedValid() ? "/Confirmation" : "#"}>
-    <button
+    <button onClick={() => {
+    resetCartCount();
+    resetCart();
+    }}
       className={`bg-purple-200 rounded-lg p-2 m-2 text-slate-700 hover:bg-purple-300 ${
         isSelectedValid() ? "" : "opacity-50 cursor-not-allowed"
       }`}
       type="submit"
       disabled={!isSelectedValid()}
+      
     >
       Continue
     </button>

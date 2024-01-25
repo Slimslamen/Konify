@@ -50,11 +50,13 @@ function App() {
             <Route path="/Checkout" element={<Checkout />} />
             <Route path="/Payment" element={<Payment />} />
             <Route path="/Confirmation" element={<Confirmation />} />
+            <Route path="/Aboutus" element={<Aboutus />} />
           </Routes>
         </ProductProvider>
 
         <Footer />
       </BrowserRouter>
+     
     </>
   );
 }

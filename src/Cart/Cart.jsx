@@ -4,7 +4,7 @@ import ProductCart from "./productCart";
 
 
 function Cart() {
-  const { cart, cartCount } = useContext(ProductContext);
+  const { cart, cartCount, } = useContext(ProductContext);
 
   return <>
     <ProductCart cart={cart} cartCount={cartCount} />
