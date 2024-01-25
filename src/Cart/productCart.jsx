@@ -7,7 +7,7 @@ const ProductCart = ({ cart }) => {
   const [productCounts, setProductCounts] = useState(cart.map(() => 1));
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const { productSizes, setCart, setCartCount } = useContext(ProductContext);
+  const { productSizes, setCart } = useContext(ProductContext);
 
   const quantityAdd = (idx) => {
     setProductCounts((prevCounts) => {

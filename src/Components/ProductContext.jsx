@@ -27,6 +27,10 @@ function ProductProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0); 
 
+  const resetCart = () => {
+    setCart([]);
+  };
+
   const addToCart = (product) => {
     setCart([...cart, product]);
     setCartCount(cartCount + 1);
@@ -75,6 +79,7 @@ function ProductProvider({ children }) {
     currentId,
     setCurrentId,
     resetCartCount,
+    resetCart,
   };
 
   return (
