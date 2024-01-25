@@ -16,6 +16,8 @@ import Cart from './Cart/Cart.jsx'
 import Checkout from './Confirmationpage/Checkout.jsx'
 import Payment from './Confirmationpage/Payment.jsx'
 import Confirmation from './Confirmationpage/Confirmation.jsx'
+import Aboutus from './Pages/Aboutus.jsx'
+
 
 
 function App() {
@@ -48,11 +50,13 @@ function App() {
             <Route path="/Checkout" element={<Checkout />} />
             <Route path="/Payment" element={<Payment />} />
             <Route path="/Confirmation" element={<Confirmation />} />
+            <Route path="/Aboutus" element={<Aboutus />} />
           </Routes>
         </ProductProvider>
 
         <Footer />
       </BrowserRouter>
+     
     </>
   );
 }
