@@ -4,13 +4,27 @@ import { useState, useContext } from "react";
 import Searchbar from "../Components/Searchbar";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../Components/ProductContext";
+import Product from "../Pages/PageComponents/Product";
 
 function NavBar() {
-  const { cartCount = 0 } = useContext(ProductContext);
+  const { cartCount = 0, products } = useContext(ProductContext);
+
+  const [searchfield, setSearchfield] = useState("");
   const [isMenuVisible, setMenuVisible] = useState(false);
+
+  const onSearchChange = (event) => {
+    setSearchfield(event.target.value);
+  };
+
+  const filtereditems = products.filter((item) => {
+    return item.title.toLowerCase().includes(searchfield.toLowerCase()) ;
+  });
+
   function toggleMenu() {
     return setMenuVisible(!isMenuVisible);
   }
+
+  console.log(filtereditems);
   return (
     <>
       <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
@@ -74,13 +88,26 @@ function NavBar() {
           className="bg-purple-300 w-[180px] h-96 md:w-65 md:h-96 space-y-3 fixed z-10 rounded-br-lg"
           onMouseLeave={toggleMenu}
         >
-          <Searchbar />
+          <Searchbar searchChange={onSearchChange} />
           <SidebarMenu />
         </div>
+      )}
+
+      {filtereditems.map((product) => 
+         
+           ( <Product
+              key={product.id}
+              id={product.id}
+              imageUrl={product.image}
+              title={product.title}
+              price={product.price}
+              sale={product.sale}
+              description={product.description}
+            />)
+ 
       )}
     </>
   );
 }
 
 export default NavBar;
-
