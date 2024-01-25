@@ -49,7 +49,6 @@ const ProductCart = ({ cart }) => {
       return updatedCounts;
     });
     setCart(updatedCart);
-    setCartCount(updatedCart);
   };
 
   // Update total price when the components count change
