@@ -1,21 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ProductContext } from "./ProductContext";
 
 function Searchbar() {
-  const SWEAT_URL = "src/data.json";
+
+  const{ products } = useContext(ProductContext)
 
   const [value, setValue] = useState("");
-  const [data, setData] = useState([])
 
-  async function onChange(e){
-    setValue(e.target.value)
-    try{
-    const response = await fetch(SWEAT_URL)
-    const data = await response.json()
-    setData(data)
-    } catch(error){
-      console.log(error);
-    }
-  }
+
+
 
 console.log(value);
   return (
@@ -56,4 +49,5 @@ console.log(value);
     </div>
   );
 }
+import { ProductContext } from "./ProductContext";
 export default Searchbar;
