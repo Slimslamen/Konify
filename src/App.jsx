@@ -16,8 +16,7 @@ import Cart from './Cart/Cart.jsx'
 import Checkout from './Confirmationpage/Checkout.jsx'
 import Payment from './Confirmationpage/Payment.jsx'
 import Confirmation from './Confirmationpage/Confirmation.jsx'
-import Aboutus from './Pages/Aboutus.jsx'
-
+import FavoritesPage from './Pages/FavoritesPage.jsx'
 
 
 function App() {
@@ -31,6 +30,7 @@ function App() {
           
           <Routes>
             <Route path="/" element={<FirstPage />} />
+            <Route path="/FavoritesPage" element={<FavoritesPage />} />
             <Route path="/Sweatshirt" element={<Sweatshirts />} />
             <Route path="/Tshirts" element={<Tshirts />} />
             <Route path="/Blouses" element={<Blouses />} />

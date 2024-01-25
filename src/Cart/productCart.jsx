@@ -7,7 +7,7 @@ const ProductCart = ({ cart }) => {
   const [productCounts, setProductCounts] = useState(cart.map(() => 1));
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const { productSizes, setCart } = useContext(ProductContext);
+  const { productSizes, setCart, setCartCount, cartCount } = useContext(ProductContext);
 
   const quantityAdd = (idx) => {
     setProductCounts((prevCounts) => {
@@ -39,6 +39,7 @@ const ProductCart = ({ cart }) => {
     }, 0);
     setTotalPrice(newTotalPrice);
   };
+
   const removeItem = (idx) => {
     const updatedCart = [...cart];
     updatedCart.splice(idx,1);
@@ -49,7 +50,9 @@ const ProductCart = ({ cart }) => {
       return updatedCounts;
     });
     setCart(updatedCart);
+    setCartCount(cartCount - 1);
   };
+
 
   // Update total price when the components count change
   useEffect(() => {

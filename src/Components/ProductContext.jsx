@@ -35,9 +35,12 @@ function ProductProvider({ children }) {
     setCart([...cart, product]);
     setCartCount(cartCount + 1);
   };
-  const resetCartCount = () => {
-    setCartCount(0);
-  };
+  const [favorites, setFavorites] = useState([]);
+
+  const addToFavorites = (product) => {
+    setFavorites ([...favorites, product]);
+  }
+
   const updateFormData = (fieldName, value) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -78,8 +81,9 @@ function ProductProvider({ children }) {
     setProductSizes,
     currentId,
     setCurrentId,
-    resetCartCount,
-    resetCart,
+    addToFavorites,
+    favorites,
+    setFavorites
   };
 
   return (
