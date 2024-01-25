@@ -31,7 +31,9 @@ function ProductProvider({ children }) {
     setCart([...cart, product]);
     setCartCount(cartCount + 1);
   };
-
+  const resetCartCount = () => {
+    setCartCount(0);
+  };
   const updateFormData = (fieldName, value) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -72,6 +74,7 @@ function ProductProvider({ children }) {
     setProductSizes,
     currentId,
     setCurrentId,
+    resetCartCount,
   };
 
   return (
