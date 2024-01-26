@@ -17,7 +17,7 @@ function FavoritesButton({ product}) {
     // Toggle the favorite status
     if (isFavorite) {
       // If already a favorite, remove it
-      removeFromFavorites(product.id);
+      removeFromFavorites(product);
     } else {
       // If not a favorite, add it
       addToFavorites(product);
