@@ -39,11 +39,11 @@ function Footer() {
               </h2>
             </a>
             <ul className="text-gray-500 dark:text-gray-400 font-medium hidden md:block">
-            {/* <Link to="/Aboutus" className="relative hover:underline">
+            <Link to="/Aboutus" className="relative hover:underline">
               <li className="mb-4">
                   About us
               </li>
-              </Link> */}
+              </Link>
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   Sustainability
