@@ -8,7 +8,7 @@ function Contact(){
         <form className="mb-8">
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-medium text-gray-600">
-              Name
+              Name:
             </label>
             <input
               type="text"
@@ -20,7 +20,7 @@ function Contact(){
           </div>
           <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-medium text-gray-600">
-              E-mail
+              E-mail:
             </label>
             <input
               type="email"
@@ -32,7 +32,7 @@ function Contact(){
           </div>
           <div className="mb-4">
             <label htmlFor="message" className="block text-sm font-medium text-gray-600">
-              Message
+              Message:
             </label>
             <textarea
               id="message"
