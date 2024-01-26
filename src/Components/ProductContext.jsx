@@ -46,7 +46,7 @@ function ProductProvider({ children }) {
     const updatedFavorites = favorites.filter(
       (favProduct) => favProduct.id !== productId
     );
-    addToFavorites(updatedFavorites);
+   setFavorites(updatedFavorites);
   };
   
 

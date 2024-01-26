@@ -1,7 +1,6 @@
 import { Icon } from "@iconify/react";
 import { ProductContext } from "./ProductContext";
 import { useContext } from "react";
-import Product from "../Pages/PageComponents/Product";
 
 function FavoritesButton({ product}) {
   const { addToFavorites, favorites, removeFromFavorites } = useContext(ProductContext);
@@ -14,10 +13,12 @@ function FavoritesButton({ product}) {
 
 
   const handleAddToFavorites = () => {
+    console.log("Clicked on FavoritesButton");
+    console.log("Is favorite:", isFavorite);
     // Toggle the favorite status
     if (isFavorite) {
       // If already a favorite, remove it
-      removeFromFavorites(product);
+      removeFromFavorites(product.id);
     } else {
       // If not a favorite, add it
       addToFavorites(product);
@@ -25,6 +26,7 @@ function FavoritesButton({ product}) {
   };
 
   return (
+    
     <Icon
       onClick={handleAddToFavorites}
       icon={isFavorite ? "mdi:heart" : "mdi:heart-outline"}
