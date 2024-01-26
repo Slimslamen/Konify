@@ -17,6 +17,7 @@ import Checkout from './Confirmationpage/Checkout.jsx'
 import Payment from './Confirmationpage/Payment.jsx'
 import Confirmation from './Confirmationpage/Confirmation.jsx'
 import FavoritesPage from './Pages/FavoritesPage.jsx'
+import Aboutus from './Pages/Aboutus.jsx'
 
 
 function App() {
