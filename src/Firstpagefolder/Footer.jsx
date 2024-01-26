@@ -2,7 +2,7 @@ import { Icon as FacebookIcon } from "@iconify/react";
 import { Icon as InstagramIcon } from "@iconify/react";
 import { Icon as PinterestIcon } from "@iconify/react";
 import { Link } from "react-router-dom";
-// import Aboutus from "../Pages/Aboutus";
+import Aboutus from "../Pages/Aboutus";
 
 function Footer() {
   return (
