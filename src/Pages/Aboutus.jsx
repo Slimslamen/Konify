@@ -1,3 +1,4 @@
+
 function Aboutus(){
     return (
         <div className="md: w-100 h-auto md:p-4 md:mt-4 md:m-20 relative min-h-[20em]">
@@ -33,7 +34,9 @@ function Aboutus(){
       <p className="font-libre mt-10">Varmt välkommen!</p>
 
       <p className="font-libre font-bold mt-10">Teamet på Konify</p>
+  
+    
         </div>
-    )
+     )
 }
 export default Aboutus;
