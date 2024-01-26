@@ -18,6 +18,7 @@ import Payment from './Confirmationpage/Payment.jsx'
 import Confirmation from './Confirmationpage/Confirmation.jsx'
 import FavoritesPage from './Pages/FavoritesPage.jsx'
 import Aboutus from './Pages/Aboutus.jsx'
+import Contact from "./Pages/Contact.jsx"
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
               path="/Cart"
               element={<Cart />}
             />
+            <Route path="/Contact" element={<Contact />} />
             <Route path="/Checkout" element={<Checkout />} />
             <Route path="/Payment" element={<Payment />} />
             <Route path="/Confirmation" element={<Confirmation />} />
