@@ -1,7 +1,9 @@
+import { useContext } from "react";
+import { ProductContext } from "./ProductContext";
 
 
 function Searchbar({ searchChange }) {
-
+   const{ searchfield } = useContext(ProductContext)
   return (
     <div className="p-2">
       <div className="border-r border-gray-500 absolute inset-y-50 left-1 flex items-center pl-2 pointer-events-none mt-3 ml-1">
