@@ -4,6 +4,7 @@ import { useContext } from "react";
 
 function FavoritesButton({ product }) {
     const { addToFavorites, favorites } = useContext(ProductContext);
+    /*  tests whether at least one element in the array passes the test implemented by the provided function */
   const isFavorite = product && product.id && favorites.some((favProduct) => favProduct.id === product.id);
 
   const handleAddToFavorites = () => {
