@@ -2,13 +2,10 @@ import { Icon as FacebookIcon } from "@iconify/react";
 import { Icon as InstagramIcon } from "@iconify/react";
 import { Icon as PinterestIcon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import Aboutus from "../Pages/Aboutus";
 
 function Footer() {
   return (
     <div >
-      <Aboutus />
-    
     <footer className="bg-purple-200 dark:bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl flex justify-center items-center  ">
         <div className=" md:bg-white md:mt-4 md:mb-4 md:rounded-2xl grid grid-cols-1 gap-8 px-4 pt-8 md:grid-cols-5 flex-col md:flex-row">
@@ -41,6 +38,7 @@ function Footer() {
             <ul className="text-gray-500 dark:text-gray-400 font-medium hidden md:block">
             <Link to="/Aboutus" className="relative hover:underline">
               <li className="mb-4">
+              
                   About us
               </li>
               </Link>
