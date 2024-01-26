@@ -2,7 +2,7 @@ import { Icon as FacebookIcon } from "@iconify/react";
 import { Icon as InstagramIcon } from "@iconify/react";
 import { Icon as PinterestIcon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import Aboutus from "../Pages/Aboutus";
+// import Aboutus from "../Pages/Aboutus";
 
 function Footer() {
   return (
@@ -39,11 +39,11 @@ function Footer() {
               </h2>
             </a>
             <ul className="text-gray-500 dark:text-gray-400 font-medium hidden md:block">
-            <Link to="/Aboutus" className="relative hover:underline">
+            {/* <Link to="/Aboutus" className="relative hover:underline">
               <li className="mb-4">
                   About us
               </li>
-              </Link>
+              </Link> */}
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   Sustainability
