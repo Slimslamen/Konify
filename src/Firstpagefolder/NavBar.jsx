@@ -1,12 +1,14 @@
 import { Icon } from "@iconify/react";
 import SidebarMenu from "../Components/SidebarMenu";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Searchbar from "../Components/Searchbar";
 import { Link } from "react-router-dom";
 import { ProductContext } from "../Components/ProductContext";
+import "./Navbar.css";
+
 
 function NavBar() {
-  const { cartCount = 0, products, onSearchChange, searchfield, setSearchfield } = useContext(ProductContext);
+  const { cartCount = 0, products, onSearchChange, searchfield, setSearchfield, favorites } = useContext(ProductContext);
   const [isMenuVisible, setMenuVisible] = useState(false);
   const filtereditems = products.filter((item) => {
     return item.title.toLowerCase().includes(searchfield.toLowerCase());
@@ -16,6 +18,20 @@ function NavBar() {
     setSearchfield("")
     return setMenuVisible(!isMenuVisible);
   }
+  const [pulsate, setPulsate] = useState(false);
+
+  useEffect(() => {
+    // Pulse when favorites change
+    if (favorites.length > 0) {
+      setPulsate(true);
+
+      // Reset pulsate after 1 second so it can pulse again
+      setTimeout(() => {
+        setPulsate(false);
+      }, 1000);
+    }
+  }, [favorites]);
+  
 
   return (
     <>
@@ -50,11 +66,11 @@ function NavBar() {
               />
             </Link>
             <Link to="/FavoritesPage">
-              <Icon
-                icon="mdi:heart-outline"
-                className=" md:w-8 h-8 text-gray-900"
-              />{" "}
-            </Link>
+        <Icon
+          icon="mdi:heart-outline"
+          className={`md:w-8 h-8 text-gray-900 ${pulsate && "pulsate"}`}
+        />
+      </Link>
             <Link to="/Contact">
             <Icon
               icon="material-symbols:mail-outline"
