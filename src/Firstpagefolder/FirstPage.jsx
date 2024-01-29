@@ -1,8 +1,6 @@
 import Scroll from "../Scroll";
 import { Link } from "react-router-dom";
 import ImageTitle from "../Components/ImageTitle";
-import CustomerForm from "../Confirmationpage/CustomerForm";
-import Confirmation from "../Confirmationpage/Confirmation";
 
 function FirstPage (){
 
