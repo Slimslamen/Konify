@@ -55,10 +55,12 @@ function NavBar() {
                 className=" md:w-8 h-8 text-gray-900"
               />{" "}
             </Link>
+            <Link to="/Contact">
             <Icon
               icon="material-symbols:mail-outline"
               className=" md:w-8 h-8 text-gray-900"
             />
+            </Link>
             {/* <Link to="/cart"><Icon icon="mdi:cart-outline" className="md:w-8 h-8 text-gray-900" /></Link> */}
             <Link to="/cart" className="relative">
               <Icon
