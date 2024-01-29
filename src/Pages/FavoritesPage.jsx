@@ -1,11 +1,11 @@
 import { ProductContext } from "../Components/ProductContext";
 import { useContext } from "react";
-import FavoritesCart from "./FavoritesCart";
+import FavoritesList from "./FavoritesList";
 
 function FavoritesPage() {
     const { favorites } = useContext(ProductContext);
   return (
-    <FavoritesCart favorites={favorites} />
+    <FavoritesList favorites={favorites} />
   )
 }
 
