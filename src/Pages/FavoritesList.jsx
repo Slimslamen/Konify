@@ -10,10 +10,10 @@ function FavoritesList({ favorites }) {
           Explore our products and add them to your favorites to have a look at them later.
         </p>
         <Link
-          to="/products"
+          to="/News"
           className="text-purple-500 hover:underline bg-purple-200 py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105"
         >
-          Browse Products
+          Browse News
         </Link>
       </div>
     );
