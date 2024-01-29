@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top";
 import FavoritesButton from "../Components/FavoritesButton.jsx";
 import SelectSize from "../Productpage/SelectSize.jsx";
 import AddtocartButton from "../Components/AddtocartButton.jsx";
-import Product from "./PageComponents/Product.jsx";
+
 
 const Productdetails = () => {
   const { selectedId } = useParams();
