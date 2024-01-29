@@ -13,7 +13,7 @@ function ShippingList() {
   return (
     <div className="flex justify-center items-center flex-col p-5">
       <h1 className="text-5xl mb-2">Delivery</h1>
-
+    {/* Mapping over each index, and each index has it's own text */}
       {[1, 2, 3].map((index) => (
         <Shipping
           key={index}

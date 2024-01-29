@@ -77,7 +77,9 @@ function NavBar() {
         </div>
       </nav>
      
+     {/* if searchbar is empty show first case that is dependable of a state, otherwise show the search div that is also dependable of the state */}
       {searchfield.length == 0 ? (
+
          isMenuVisible && (
           <div
             className="bg-purple-300 w-[180px] h-96 md:w-72 md:h-96 space-y-3 fixed z-10 rounded-br-lg"

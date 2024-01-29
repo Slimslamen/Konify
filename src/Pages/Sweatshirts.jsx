@@ -5,9 +5,11 @@ import { useContext } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
 import Scroll from "../Scroll";
 
-function Sweatshirts({}) {
+function Sweatshirts() {
+
   const { products } = useContext(ProductContext);
 
+    /* Filtering to select right category */
   const FilteredProducts = products.filter((product) =>
     product.category.includes("sweatshirts")
   );
@@ -33,6 +35,7 @@ function Sweatshirts({}) {
                     <FilterSortButton name="Sort" op1="Högsta pris" op2="Lägsta pris" op3="Pupularitet"/>
           </section>
           <section className="md:w-9/12 mx-auto flex flex-wrap">
+            {/* Mapping to get one product at a time */}
             {FilteredProducts.map((product) => (
               <Product       
                 key={product.id}
