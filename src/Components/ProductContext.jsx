@@ -23,6 +23,11 @@ function ProductProvider({ children }) {
     mobile: "",
   });
   
+  const onSearchChange = (event) => {
+    setSearchfield(event.target.value);
+  };
+
+  const [searchfield, setSearchfield] = useState("");
 
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0); 
@@ -93,7 +98,10 @@ function ProductProvider({ children }) {
     addToFavorites,
     favorites,
     setFavorites,
-    removeFromFavorites
+    removeFromFavorites,
+    onSearchChange,
+    searchfield, 
+    setSearchfield
   };
 
   return (
