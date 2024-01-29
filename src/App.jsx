@@ -1,35 +1,31 @@
-import FirstPage from './Firstpagefolder/FirstPage'
-import Blouses from './Pages/Blouses.jsx'
-import Tshirts from './Pages/Tshirts'
-import Sweatshirts from './Pages/Sweatshirts'
-import Jeans from './Pages/Jeans'
-import Skirts from './Pages/Skirts'
-import Dress from './Pages/Dress'
-import Sale from './Pages/Sale'
-import News from './Pages/News'
-import NavBar from './Firstpagefolder/NavBar'
-import Footer from './Firstpagefolder/Footer'
-import Productdetails from './Pages/Productdetails'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ProductProvider from './Components/ProductContext'
-import Cart from './Cart/Cart.jsx'
-import Checkout from './Confirmationpage/Checkout.jsx'
-import Payment from './Confirmationpage/Payment.jsx'
-import Confirmation from './Confirmationpage/Confirmation.jsx'
-import FavoritesPage from './Pages/FavoritesPage.jsx'
-import Aboutus from './Pages/Aboutus.jsx'
-import Contact from "./Pages/Contact.jsx"
-
+import FirstPage from "./Firstpagefolder/FirstPage";
+import Blouses from "./Pages/Blouses.jsx";
+import Tshirts from "./Pages/Tshirts";
+import Sweatshirts from "./Pages/Sweatshirts";
+import Jeans from "./Pages/Jeans";
+import Skirts from "./Pages/Skirts";
+import Dress from "./Pages/Dress";
+import Sale from "./Pages/Sale";
+import News from "./Pages/News";
+import NavBar from "./Firstpagefolder/NavBar";
+import Footer from "./Firstpagefolder/Footer";
+import Productdetails from "./Pages/Productdetails";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProductProvider from "./Components/ProductContext";
+import Cart from "./Cart/Cart.jsx";
+import Checkout from "./Confirmationpage/Checkout.jsx";
+import Payment from "./Confirmationpage/Payment.jsx";
+import Confirmation from "./Confirmationpage/Confirmation.jsx";
+import FavoritesPage from "./Pages/FavoritesPage.jsx";
+import Aboutus from "./Pages/Aboutus.jsx";
+import Contact from "./Pages/Contact.jsx";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-      <ProductProvider>
-        <NavBar />
-
-        
-          
+        <ProductProvider>
+          <NavBar />
           <Routes>
             <Route path="/" element={<FirstPage />} />
             <Route path="/FavoritesPage" element={<FavoritesPage />} />
@@ -45,10 +41,7 @@ function App() {
               path="/Productdetails/:selectedId"
               element={<Productdetails />}
             />
-            <Route
-              path="/Cart"
-              element={<Cart />}
-            />
+            <Route path="/Cart" element={<Cart />} />
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Checkout" element={<Checkout />} />
             <Route path="/Payment" element={<Payment />} />
@@ -56,10 +49,8 @@ function App() {
             <Route path="/Aboutus" element={<Aboutus />} />
           </Routes>
         </ProductProvider>
-
         <Footer />
       </BrowserRouter>
-     
     </>
   );
 }

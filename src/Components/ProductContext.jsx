@@ -35,6 +35,9 @@ function ProductProvider({ children }) {
   const resetCart = () => {
     setCart([]);
   };
+  const resetCartCount = () => {
+    setCartCount([]);
+  };
 
   const addToCart = (product) => {
     setCart([...cart, product]);
@@ -101,7 +104,9 @@ function ProductProvider({ children }) {
     removeFromFavorites,
     onSearchChange,
     searchfield, 
-    setSearchfield
+    setSearchfield,
+    resetCart,
+    resetCartCount,
   };
 
   return (
