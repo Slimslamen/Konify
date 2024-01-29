@@ -1,9 +1,6 @@
-import { useContext } from "react";
-import { ProductContext } from "./ProductContext";
 
 
 function Searchbar({ searchChange }) {
-   const{ searchfield } = useContext(ProductContext)
   return (
     <div className="p-2">
       <div className="border-r border-gray-500 absolute inset-y-50 left-1 flex items-center pl-2 pointer-events-none mt-3 ml-1">
@@ -26,7 +23,7 @@ function Searchbar({ searchChange }) {
       <input
         type="search"
         id="default-search"
-        className="text-end inset-shadow w-full px-2 py-2 pl-6 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+        className="text-center inset-shadow w-full px-2 py-2 pl-6 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
         placeholder="Search product..."
         required
         onChange={searchChange}
