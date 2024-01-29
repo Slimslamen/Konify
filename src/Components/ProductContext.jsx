@@ -41,6 +41,15 @@ function ProductProvider({ children }) {
     setFavorites ([...favorites, product]);
   }
 
+  const removeFromFavorites = (productId) => {
+    // Filter out the product with the specified id from favorites
+    const updatedFavorites = favorites.filter(
+      (favProduct) => favProduct.id !== productId
+    );
+   setFavorites(updatedFavorites);
+  };
+  
+
   const updateFormData = (fieldName, value) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -83,7 +92,8 @@ function ProductProvider({ children }) {
     setCurrentId,
     addToFavorites,
     favorites,
-    setFavorites
+    setFavorites,
+    removeFromFavorites
   };
 
   return (

@@ -51,48 +51,28 @@ function NavBar() {
             <h4 className="font-libre mt-0 text-xs tracking-widest">Fashion</h4>
           </div>
 
-          {/* Icons  right */}
-          <div className="md:col-span-1 flex items-center space-x-2 md:space-x-5 md:inline-flex justify-self-end cursor-pointer">
-            <a href="#" className="hidden sm:inline-block">
-              Login
-            </a>
-            <Link to="/">
-              <Icon
-                icon="material-symbols:home-outline"
-                className="md:w-8 h-8"
-              />
-            </Link>
-            <Link to="/FavoritesPage">
-              <Icon
-                icon="mdi:heart-outline"
-                className=" md:w-8 h-8 text-gray-900"
-              />{" "}
-            </Link>
-            <Icon
-              icon="material-symbols:mail-outline"
-              className=" md:w-8 h-8 text-gray-900"
-            />
-            {/* <Link to="/cart"><Icon icon="mdi:cart-outline" className="md:w-8 h-8 text-gray-900" /></Link> */}
-            <Link to="/cart" className="relative">
-              <Icon
-                icon="mdi:cart-outline"
-                className="md:w-8 h-8 text-gray-900"
-              />
-              {cartCount > 0 && (
-                <span className="absolute -top-3 -right-2 bg-red-500 text-white rounded-full px-2">
-                  {cartCount}
-                </span>
-              )}
-            </Link>
-          </div>
+        {/* Icons  right */}
+        <div className="md:col-span-1 flex items-center space-x-2 md:space-x-5 md:inline-flex justify-self-end cursor-pointer">
+          <a href="#" className="hidden sm:inline-block">Login</a>
+          <Link to="/"><Icon icon="material-symbols:home-outline" className='md:w-8 h-8' /></Link>
+          <Link to="/FavoritesPage"><Icon icon="mdi:heart-outline" className=" md:w-8 h-8 text-gray-900" /> </Link>
+          <Link to="/Contact"><Icon icon="material-symbols:mail-outline" className=" md:w-8 h-8 text-gray-900" /> </Link>
+          {/* <Link to="/cart"><Icon icon="mdi:cart-outline" className="md:w-8 h-8 text-gray-900" /></Link> */}
+          <Link to="/cart" className="relative">
+        <Icon icon="mdi:cart-outline" className="md:w-8 h-8 text-gray-900" />
+        {cartCount > 0 && (
+          <span className="absolute -top-3 -right-2 bg-red-500 text-white rounded-full px-2">
+            {cartCount}
+          </span>
+        )}
+      </Link>
         </div>
-      </nav>
-      {isMenuVisible && (
-        <div
-          className="bg-purple-300 w-[180px] h-96 md:w-72 md:h-96 space-y-3 fixed z-10 rounded-br-lg"
-          onMouseLeave={toggleMenu}
-        >
-          <Searchbar searchChange={onSearchChange}  />
+
+      </div>
+    </nav>
+    {isMenuVisible &&(
+        <div className="bg-purple-300 w-[180px] h-96 md:w-65 md:h-96 space-y-3 fixed z-10 rounded-br-lg" onMouseLeave={toggleMenu}>
+          <Searchbar />
           <SidebarMenu />
         </div>
       )}

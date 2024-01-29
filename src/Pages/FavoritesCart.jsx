@@ -2,11 +2,16 @@ import { Link } from "react-router-dom";
 import FavoritesButton from "../Components/FavoritesButton";
 
 function FavoritesCart({ favorites }) {
+  const handleClick = () => {
+  };
   return (
-    <main className="tshirt-item p-4 w-1/1 md:w-1/2 lg:w-1/4 flex flex-col items-center justify-center">
-     
+    <main onClick={handleClick}>
+    <h1 className="text-5xl mt-2 mb-4 text-center">Favorites</h1>
+    <section className="flex flex-wrap md:h-8/12 md:w-9/12 mx-auto bg-cover relative z-[-10] md:flex-row">
+       
       {favorites.map((product, index) => (
-        <div className="min-h-[250px]" key={index}>
+        <div className=" p-4 w-1/1 md:w-1/2 lg:w-1/4 flex flex-col items-center justify-center" key={index}>
+        <div className="min-h-[250px]">
           <>
             <Link to={`/Productdetails/${product.id}`}>
               <img
@@ -24,12 +29,15 @@ function FavoritesCart({ favorites }) {
               <div className="flex items-center">
                 <p className="text-sm text-red-500 mr-2">{product.sale}</p>
                 <span className="text-sm mr-2">€{product.price}</span>
-                <FavoritesButton className="ml-4" />
+                <FavoritesButton product={product} className="ml-4" />
               </div>
             </div>
           </>
         </div>
+        </div>
       ))}
+
+    </section>
     </main>
   );
 }
