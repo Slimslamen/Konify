@@ -6,8 +6,6 @@ import Productdetails from "../Productdetails.jsx";
 
 //an individual T-shirt item
 const Product = ({ id, imageUrl, title, sale, price }) => {
-
-  const { addToFavorites } = useContext(ProductContext);
   const productDetails = {
     id,
     imageUrl,
@@ -37,8 +35,7 @@ const Product = ({ id, imageUrl, title, sale, price }) => {
             <p className="text-sm text-red-500 mr-2">{sale}</p>
             <span className="text-sm mr-2">€{price}</span>
 
-           { <FavoritesButton  addToFavorites={addToFavorites}
-            product={productDetails} className="ml-4" />}
+            {<FavoritesButton product={productDetails} className="ml-4" />}
           </div>
         </div>
       </div>
