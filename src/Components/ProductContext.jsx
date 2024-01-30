@@ -38,12 +38,12 @@ function ProductProvider({ children }) {
   };
   const [searchfield, setSearchfield] = useState("");
 
-  // useState-hook används för att skapa en state-variabel 'cart' med initialvärdet en tom array,
+  // skapar en state-variabel 'cart' med initialvärdet en tom array,
   // och en uppdateringsfunktion 'setCart'.
   // 'cart' används för att hålla reda på produkterna i varukorgen.
   const [cart, setCart] = useState([]);
 
-  // useState-hook används för att skapa en state-variabel 'cartCount' med initialvärdet 0
+  // skapr en state-variabel 'cartCount' med initialvärdet 0
   // och en uppdateringsfunktion 'setCartCount'.
   // 'cartCount' används för att hålla reda på antalet produkter i varukorgen.
   const [cartCount, setCartCount] = useState(0);

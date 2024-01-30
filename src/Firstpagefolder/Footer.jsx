@@ -5,9 +5,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
+  // state för dropdown på konify länken i footern 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
+// funktion för att växla öppen eller stängd status för dropdown menyn på konify
   const handleToggleDropdown = () => {
+    // ändra state beroende på föregående värde
     setIsDropdownOpen((prevState) => !prevState);
   };
   return (
@@ -36,6 +38,7 @@ function Footer() {
           </div>
           <div className="text-center md:hidden">
           <button
+          // vid ett klick på konify kommer dropdown menyn att visas
                 onClick={handleToggleDropdown}
                 className="text-2xl md:text-left md:text-sm font-semibold text-gray-900 uppercase dark:text-white"
               >

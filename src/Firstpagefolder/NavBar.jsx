@@ -8,12 +8,15 @@ import "./Navbar.css";
 
 
 function NavBar() {
+  // hämtar nödvändigg värden och funktioner från productcontext
   const { cartCount = 0, products, onSearchChange, searchfield, setSearchfield, favorites } = useContext(ProductContext);
+ // state för att hålla reda på menyns synlighet
   const [isMenuVisible, setMenuVisible] = useState(false);
+
   const filtereditems = products.filter((item) => {
     return item.title.toLowerCase().includes(searchfield.toLowerCase());
   });
-
+// funktion för att visa och dölja menyn 
   function toggleMenu() {
     setSearchfield("")
     return setMenuVisible(!isMenuVisible);
