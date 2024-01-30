@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
-
+// funktion för categoires menyn
 function SidebarMenu () {
+// en array emd objekt som länkar till alla olika kategorier
     const links = [
         { title: "sweatshirts", path: "/Sweatshirt" },
         { title: "blouses", path: "/Blouses" },
