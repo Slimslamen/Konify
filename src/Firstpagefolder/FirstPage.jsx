@@ -8,14 +8,14 @@ function FirstPage (){
         <>
             <main className="flex justify-center items-center w-full mx-auto flex-col relative md:w-9/12">
                 {/* Hero image */}
-                <section className="md:h-8/12 ">
+                <section className="md:h-[700px] ">
                     <img 
                     src="Assets/heroimg.jpg" 
                     alt="Girl with orange shirt touching her hair" 
                     />
                 </section>
                 {/* Images for sale and news */}
-                <section className="flex flex-col md:flex-row md:h-[500px] md:w-full">
+                <section className="flex flex-col md:flex-row md:h-[500px] md:w-full items-center justify-center">
                     <img 
                     src="Assets/Sales.jpg" 
                     alt="Girl with orange sweater and 2 oranges infront of her eyes"

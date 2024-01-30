@@ -62,26 +62,26 @@ function NavBar() {
             <Link to="/">
               <Icon
                 icon="material-symbols:home-outline"
-                className="md:w-8 h-8"
+                className="w-6 h-6 md:w-8 md:h-8"
               />
             </Link>
             <Link to="/FavoritesPage">
         <Icon
           icon="mdi:heart-outline"
-          className={`md:w-8 h-8 text-gray-900 ${pulsate && "pulsate"}`}
+          className={`w-6 h-6 md:w-8 md:h-8 text-gray-900 ${pulsate && "pulsate"}`}
         />
       </Link>
             <Link to="/Contact">
             <Icon
               icon="material-symbols:mail-outline"
-              className=" md:w-8 h-8 text-gray-900"
+              className="w-6 h-6 md:w-8 md:h-8 text-gray-900"
             />
             </Link>
-            {/* <Link to="/cart"><Icon icon="mdi:cart-outline" className="md:w-8 h-8 text-gray-900" /></Link> */}
+            {/* <Link to="/cart"><Icon icon="mdi:cart-outline" className="md:w-6 h-6 md:w-8 md:h-8 text-gray-900" /></Link> */}
             <Link to="/cart" className="relative">
               <Icon
                 icon="mdi:cart-outline"
-                className="md:w-8 h-8 text-gray-900"
+                className="w-6 h-6 md:w-8 md:h-8 text-gray-900"
               />
               {cartCount > 0 && (
                 <span className="absolute -top-3 -right-2 bg-red-500 text-white rounded-full px-2">
