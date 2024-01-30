@@ -36,7 +36,7 @@ function NavBar() {
   return (
     <>
       <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
-        <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center">
+        <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center mx-6 md:mx-10">
           {/*Categories - left */}
 
           <a
@@ -68,7 +68,7 @@ function NavBar() {
             <Link to="/FavoritesPage">
         <Icon
           icon="mdi:heart-outline"
-          className={`md:w-8 h-8 text-gray-900 ${pulsate && "pulsate"}`}
+          className={`md:w-8 h-8 text-gray-900 ${pulsate && "pulse"}`}
         />
       </Link>
             <Link to="/Contact">

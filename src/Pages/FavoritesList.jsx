@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import FavoritesButton from "../Components/FavoritesButton";
+
 function FavoritesList({ favorites }) {
+
   if (favorites.length === 0) {
     return (
-        <div className="flex flex-col items-center justify-center m-10">
+      <div className="flex flex-col items-center justify-center m-10">
         <h1 className="text-5xl mb-4">Favorites</h1>
-        <h2 className="text-3xl mb-4 text-gray-600">Oops, it&#39;s really quiet in here...</h2>
+        <h2 className="text-3xl mb-4 text-gray-600">
+          Oops, it&#39;s really quiet in here...
+        </h2>
         <p className="text-lg mb-8 text-gray-500 ">
-          Explore our products and add them to your favorites to have a look at them later.
+          Explore our products and add them to your favorites to have a look at
+          them later.
         </p>
         <Link
           to="/News"
