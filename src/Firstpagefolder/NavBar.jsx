@@ -8,12 +8,15 @@ import "./Navbar.css";
 
 
 function NavBar() {
+  // hämtar nödvändigg värden och funktioner från productcontext
   const { cartCount = 0, products, onSearchChange, searchfield, setSearchfield, favorites } = useContext(ProductContext);
+ // state för att hålla reda på menyns synlighet
   const [isMenuVisible, setMenuVisible] = useState(false);
+
   const filtereditems = products.filter((item) => {
     return item.title.toLowerCase().includes(searchfield.toLowerCase());
   });
-
+// funktion för att visa och dölja menyn 
   function toggleMenu() {
     setSearchfield("")
     return setMenuVisible(!isMenuVisible);
@@ -38,8 +41,8 @@ function NavBar() {
       <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
         <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center mx-6 md:mx-10">
           {/*Categories - left */}
-
           <a
+          // när användaren för musen över "categories" visas menyn
             className="text-black text-sm md:text-lg md:mr-0 mr-auto justify-self-start cursor-pointer hover:font-semibold"
             onMouseEnter={toggleMenu}
           >
