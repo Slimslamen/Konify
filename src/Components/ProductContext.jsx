@@ -5,8 +5,11 @@ export const ProductContext = createContext();
 function ProductProvider({ children }) {
     const [formSubmitted, setFormSubmitted] = useState(false);
 
+    //sets the selected size, in the size selectsize component
     const [selectedSize, setSelectedSize] = useState("");
+    //sets the selected size, in the size selectsize component and shows it in the productcart component
     const [productSizes, setProductSizes] = useState({});
+
     const [currentId, setCurrentId] = useState(null);
 
 
@@ -23,10 +26,10 @@ function ProductProvider({ children }) {
     mobile: "",
   });
   
+  // onSearchChange is triggered when the value of the search input field changes. It updates the searchfield state with the new value entered by the user.
   const onSearchChange = (event) => {
     setSearchfield(event.target.value);
   };
-
   const [searchfield, setSearchfield] = useState("");
 
 // useState-hook används för att skapa en state-variabel 'cart' med initialvärdet en tom array,
