@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 //Function for an individual product card
 const Product = ({ id, imageUrl, title, sale, price }) => {
+  
   // Creating an object to represent the details of the product to use in favorites
   const productDetails = {
     id,
