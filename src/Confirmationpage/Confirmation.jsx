@@ -3,6 +3,8 @@ import { ProductContext } from "../Components/ProductContext";
 import { useContext } from "react";
 
 function Confirmation() {
+  
+  // Extracting functions and data from the ProductContext using the useContext hook
   const { formData, formSubmitted } = useContext(ProductContext);
 
   return (

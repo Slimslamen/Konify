@@ -1,26 +1,34 @@
 import { ProductContext } from "../Components/ProductContext";
-import { useContext  } from "react";
+import { useContext } from "react";
 import CountrySelector from "./CountrySelector";
 import { useNavigate } from "react-router-dom";
 
-
 function CustomerForm() {
+  // Destructuring values from the ProductContext using the useContext hook
   const { formData, updateFormData, setFormSubmitted } =
     useContext(ProductContext);
-    const navigate = useNavigate();
 
+  // Hook for navigating to different pages since Link doesnt work to navigate and submit the form
+  const navigate = useNavigate();
+
+  //Function to handel the input changes
   function handleChange(evt) {
     const changedField = evt.target.name;
     const newValue = evt.target.value;
     updateFormData(changedField, newValue);
   }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Setting the form as submitted
     setFormSubmitted(true);
+    // Navigating to the next page if the form is valid
     if (isFormValid()) {
-        navigate("/payment");
-      }
+      navigate("/payment");
+    }
   };
+
+  //Check if the form is valid
   const isFormValid = () => {
     const isValid =
       formData.email &&
@@ -30,16 +38,21 @@ function CustomerForm() {
       formData.adress &&
       formData.city &&
       formData.mobile;
-  
+
     return isValid;
   };
   return (
+    // Rendering the form with input fields, labels, and a submit button
     <form
       onSubmit={handleSubmit}
-      className=" w-4/5 md:w-3/5 flex-wrap flex flex-col justify-center items-center mx-auto my-auto"
+      className="w-4/5 md:w-3/5 flex-wrap flex flex-col justify-center items-center mx-auto my-auto"
     >
       <h1 className="text-5xl text-wrap text-center m-5">Your Information</h1>
+
+      {/* Country selector component */}
       {<CountrySelector />}
+
+      {/* Email input */}
       <input
         className="w-full border border-solid border-purple-200 border-opacity-50 rounded-lg p-4 mb-2"
         type="email"
@@ -50,6 +63,8 @@ function CustomerForm() {
         id="email"
         required
       />
+
+      {/* Postal Code input */}
       <input
         className="w-full border border-solid border-purple-200 border-opacity-50 rounded-lg p-4 mb-2"
         type="text"
@@ -62,6 +77,8 @@ function CustomerForm() {
         id="zip"
         required
       />
+
+      {/* First and Last Name inputs */}
       <div className="w-full flex mb-2">
         <input
           className="w-full border border-solid border-purple-200 border-opacity-50 rounded-l-lg p-4"
@@ -85,6 +102,8 @@ function CustomerForm() {
           required
         />
       </div>
+
+      {/* Address, City, and Mobile Phone inputs */}
       <input
         className="w-full border border-solid border-purple-200 border-opacity-50 rounded-lg p-4 mb-2"
         type="text"
@@ -115,6 +134,8 @@ function CustomerForm() {
         id="mobile"
         required
       />
+
+      {/* Submit button */}
       <div className="w-full flex justify-center items-center">
         <button
           type="submit"
@@ -126,7 +147,6 @@ function CustomerForm() {
           Continue
         </button>
       </div>
-
     </form>
   );
 }

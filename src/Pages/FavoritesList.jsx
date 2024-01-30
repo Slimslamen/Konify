@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import FavoritesButton from "../Components/FavoritesButton";
 
+// extract the favorites prop from the props object.
 function FavoritesList({ favorites }) {
 
+   // If the favorites array is empty, display the message 
   if (favorites.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center m-10">
@@ -23,11 +25,12 @@ function FavoritesList({ favorites }) {
       </div>
     );
   }
-
+ // If there are favorite products, display them
   return (
     <main>
       <h1 className="text-5xl mt-2 mb-4 text-center">Favorites</h1>
       <section className="flex flex-wrap md:h-8/12 md:w-9/12 mx-auto bg-cover relative md:flex-row">
+        {/* Mapping through favorites products and displaying individual product components */}
         {favorites.map((product) => (
           <div
             className=" p-4 w-1/1 md:w-1/2 lg:w-1/4 flex flex-col items-center justify-center"

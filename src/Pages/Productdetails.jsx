@@ -1,25 +1,31 @@
 import { useParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
-import ScrollToTop from "react-scroll-to-top";
 import FavoritesButton from "../Components/FavoritesButton.jsx";
 import SelectSize from "../Productpage/SelectSize.jsx";
 import AddtocartButton from "../Components/AddtocartButton.jsx";
 import Scroll from "../Scroll.jsx";
 
 const Productdetails = () => {
+  // Extracting the 'selectedId' parameter from the URL
   const { selectedId } = useParams();
+
+  // Extracting functions and data from the ProductContext using the useContext hook
   const { products, addToCart, setCurrentId, addToFavorites } =
     useContext(ProductContext);
-
+  
+    // Finding the product in the 'products' array that corresponds to the currently selected product ID ('selectedId')
   const selectedProduct = products.find(
     (product) => product.id === parseInt(selectedId)
   );
-  useEffect(() => {
-    if (selectedProduct) {
-      setCurrentId(selectedProduct.id);
-    }
-  }, []);
+
+useEffect(() => {
+  // Check if a product is selected
+  if (selectedProduct) {
+    // Set the ID of the selected product as the current product ID in the ProductContext
+    setCurrentId(selectedProduct.id);
+  }
+}, []);
 
   return (
     <div className="md:flex max-[864px]:justify-center grid grid-col-1 flex-wrap mb-4 ">

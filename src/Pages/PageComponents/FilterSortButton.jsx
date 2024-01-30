@@ -1,12 +1,17 @@
 import { useState } from 'react';
 
+/* accepts an object as its props, and within that object,
+expects specific properties */
 function FilterSortButton( {name, op1, op2, op3}) {
+
+  // State to manage the visibility of the dropdown
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  //Event handler that opens dropdown on mouse enter
   const handleHover = () => {
     setIsDropdownOpen(true);
   };
-
+  //Event handler that closes dropdown on mouse leave
   const handleLeave = () => {
     setIsDropdownOpen(false);
   };

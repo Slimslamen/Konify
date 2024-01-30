@@ -3,8 +3,12 @@ import { ProductContext } from "./ProductContext";
 import { Icon } from "@iconify/react";
 
 function FavoritesButton({ product }) {
+  
+  // Extracting functions and data from the ProductContext using the useContext hook
   const { addToFavorites, favorites, removeFromFavorites } = useContext(ProductContext);
 
+  // Checking if the current product is in the list of favorites
+  //The some method checks if there's any element in favorites whose id matches the id of the current product
   const isFavorite =
     product &&
     product.id &&

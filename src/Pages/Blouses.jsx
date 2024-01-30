@@ -5,12 +5,16 @@ import { useContext } from "react";
 import { ProductContext } from "../Components/ProductContext.jsx";
 import Scroll from "../Scroll";
 
+//Same functionality for all categories
 function Blouses() {
-  const { products, setProducts } = useContext(ProductContext)
+  // Accessing the products from the ProductContext using useContext hook
+  const { products } = useContext(ProductContext);
 
+  // Filtering products from products array based on the category
+  const filteredProducts = products.filter((product) =>
+    product.category.includes("blouses" || "news")
+  );
 
-  const filteredProducts = products.filter((product) => product.category.includes("blouses" || "news"));
-  
   return (
     <>
       <main>
@@ -26,11 +30,22 @@ function Blouses() {
         </section>
         <section className="flex flex-row justify-between m-5 text-xl md:mx-48">
           <div className="flex flex-row justify-between w-1/3">
-            <FilterSortButton name="Filter" op1="price-Range" op2="Size" op3="Colour" />
+            <FilterSortButton
+              name="Filter"
+              op1="price-Range"
+              op2="Size"
+              op3="Colour"
+            />
           </div>
-          <FilterSortButton name="Sort" op1="Högsta pris" op2="Lägsta pris" op3="Pupularitet" />
+          <FilterSortButton
+            name="Sort"
+            op1="Högsta pris"
+            op2="Lägsta pris"
+            op3="Pupularitet"
+          />
         </section>
         <section className="md:w-9/12 mx-auto flex flex-wrap">
+          {/* Mapping through filtered products and rendering individual product components */}
           {filteredProducts.map((product) => (
             <Product
               key={product.id}
@@ -42,7 +57,6 @@ function Blouses() {
               description={product.description}
             />
           ))}
-      
         </section>
       </main>
       <Scroll />
