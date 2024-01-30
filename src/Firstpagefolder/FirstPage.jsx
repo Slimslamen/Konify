@@ -10,7 +10,7 @@ function FirstPage (){
                 {/* Hero image */}
                 <section className="md:h-8/12 ">
                     <img 
-                    src="Assets/heroimg.jpg" 
+                    src="Assets/heroimage.jpg"
                     alt="Girl with orange shirt touching her hair" 
                     />
                 </section>
