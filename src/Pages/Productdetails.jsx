@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top";
 import FavoritesButton from "../Components/FavoritesButton.jsx";
 import SelectSize from "../Productpage/SelectSize.jsx";
 import AddtocartButton from "../Components/AddtocartButton.jsx";
-
+import Scroll from "../Scroll.jsx";
 
 const Productdetails = () => {
   const { selectedId } = useParams();
@@ -51,7 +51,7 @@ const Productdetails = () => {
         </div>
       </div>
 
-      <ScrollToTop />
+      <Scroll />
     </div>
   );
 };

@@ -36,7 +36,7 @@ function NavBar() {
   return (
     <>
       <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
-        <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center">
+        <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center mx-6 md:mx-10">
           {/*Categories - left */}
 
           <a
@@ -48,9 +48,11 @@ function NavBar() {
 
           {/* Konify with Fashion - center */}
           <div className=" flex flex-col items-center text-center justify-self-center">
+            <Link to="/">
             <h1 className="font-libre mb-0 font-bold xs:text-3xl sm:text-4xl">
               Konify .
             </h1>
+            </Link>
             <h4 className="font-libre mt-0 text-xs tracking-widest">Fashion</h4>
           </div>
 
@@ -68,7 +70,7 @@ function NavBar() {
             <Link to="/FavoritesPage">
         <Icon
           icon="mdi:heart-outline"
-          className={`w-6 h-6 md:w-8 md:h-8 text-gray-900 ${pulsate && "pulsate"}`}
+          className={`md:w-8 h-8 text-gray-900 ${pulsate && "pulse"}`}
         />
       </Link>
             <Link to="/Contact">
