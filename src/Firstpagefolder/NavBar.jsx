@@ -38,14 +38,14 @@ function NavBar() {
       <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
         <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center mx-6 md:mx-10">
           {/*Categories - left */}
-
+<div className="border transition duration-200 ease-in-out transform hover:scale-105 border-purple-200 justify-self-start p-2 rounded-xl ">
           <a
-            className="text-black text-sm md:text-lg md:mr-0 mr-auto justify-self-start cursor-pointer hover:font-semibold"
+            className="text-black tracking-wider text-sm md:text-lg md:mr-0 mr-auto cursor-pointer font-semibold"
             onMouseEnter={toggleMenu}
           >
             Categories
           </a>
-
+          </div>
           {/* Konify with Fashion - center */}
           <div className=" flex flex-col items-center text-center justify-self-center">
             <Link to="/">
