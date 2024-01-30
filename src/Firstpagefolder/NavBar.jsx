@@ -41,6 +41,7 @@ function NavBar() {
       <nav className="bg-purple-300 w-full p-2 sticky top-0 z-10">
         <div className="grid grid-cols-3 flex-row md:grid-cols-3 justify-items-center items-center mx-6 md:mx-10">
           {/*Categories - left */}
+          {/* när användaren för musen över "categories" visas menyn*/}
 <div className="border transition duration-200 ease-in-out transform hover:scale-105 border-purple-200 justify-self-start p-2 rounded-xl ">
           <a
             className="text-black tracking-wider text-sm md:text-lg md:mr-0 mr-auto cursor-pointer font-semibold"
