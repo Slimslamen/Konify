@@ -10,7 +10,7 @@
     }
   }
   
-  .pulsate {
+  .pulse {
     animation: pulse 1s;
     font-weight: bold;
   }
