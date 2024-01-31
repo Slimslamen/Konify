@@ -16,7 +16,7 @@ const Productdetails = () => {
   
     // Finding the product in the 'products' array that corresponds to the currently selected product ID ('selectedId')
   const selectedProduct = products.find(
-    (product) => product.id === parseInt(selectedId)h
+    (product) => product.id === parseInt(selectedId)
   );
 
 useEffect(() => {
