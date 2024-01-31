@@ -13,11 +13,13 @@ function NavBar() {
  // state för att hålla reda på menyns synlighet
   const [isMenuVisible, setMenuVisible] = useState(false);
 
+  //Filters out the products that match the entered values in the searchfield
   const filtereditems = products.filter((item) => {
     return item.title.toLowerCase().includes(searchfield.toLowerCase());
   });
 // funktion för att visa och dölja menyn 
   function toggleMenu() {
+    //resets the searchfield everytime the function triggers
     setSearchfield("")
     return setMenuVisible(!isMenuVisible);
   }
@@ -116,6 +118,7 @@ function NavBar() {
           onMouseLeave={toggleMenu}
           >
             <Searchbar searchChange={onSearchChange} />
+            {/* Mapping over each product that is showcased after you enter new values in searchfield */}
             {filtereditems.map((product) => {
               return (
                 <Link key={product.id} to={`/Productdetails/${product.id}`}>
