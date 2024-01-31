@@ -18,6 +18,28 @@ function ProductProvider({ children }) {
    // URL for fetching product data
   const PRODUCT_URL = "/Assets/data.json";
 
+  // useEffect hook to fetch product data when the component mounts
+useEffect(() => {
+  // Function to asynchronously fetch data
+  async function fetchData() {
+      try {
+          // Sending a request to the URL
+          const response = await fetch(PRODUCT_URL);
+          // Parsing the response as JSON
+          const jsonResponse = await response.json();
+
+          // Updating the state variable 'products' with the fetched product data
+          setProducts(jsonResponse.products);
+      } catch (error) {
+          // Logging an error message if there is an issue fetching the data
+          console.error("Error fetching data:", error);
+      }
+  }
+
+  // Invoking the fetchData function when the component mounts
+  fetchData();
+}, []);
+
  // State to store the list of products
   const [products, setProducts] = useState([]);
 
@@ -100,29 +122,6 @@ const removeFromFavorites = (productId) => {
       [fieldName]: value,
     }));
   };
-
-// useEffect hook to fetch product data when the component mounts
-useEffect(() => {
-  // Function to asynchronously fetch data
-  async function fetchData() {
-      try {
-          // Sending a request to the URL
-          const response = await fetch(PRODUCT_URL);
-          // Parsing the response as JSON
-          const jsonResponse = await response.json();
-
-          // Updating the state variable 'products' with the fetched product data
-          setProducts(jsonResponse.products);
-      } catch (error) {
-          // Logging an error message if there is an issue fetching the data
-          console.error("Error fetching data:", error);
-      }
-  }
-
-  // Invoking the fetchData function when the component mounts
-  fetchData();
-}, []);
-
 
   const contextValue = {
     products,

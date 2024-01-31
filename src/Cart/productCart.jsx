@@ -62,7 +62,7 @@ const ProductCart = ({ cart }) => {
     const newTotalPrice = updatedCounts.reduce((acc, productCounts, idx) => {
 // Hämta information om produkten från varukorgen.      
       const product = cart[idx];
-// Summera priset genom att multiplicera produktantalet med produkten priset.      
+// Summera priset genom att multiplicera produktantalet med produkt priset.      
       return acc + productCounts * product.price;
     }, 0);
 // Uppdatera det totala priset med setTotalPrice.
