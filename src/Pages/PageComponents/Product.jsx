@@ -38,6 +38,7 @@ const Product = ({ id, imageUrl, title, sale, price }) => {
 
           {/* Price, sale information, and the FavoritesButton component */}
           <div className="flex items-center">
+            
             {/* Displaying sale information if available */}
             <p className="text-sm text-red-500 mr-2">{sale}</p>
 
